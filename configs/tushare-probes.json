@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "endpoint": "https://api.tushare.pro",
+  "execution": "explicit-command-only",
+  "credential_environment": "TUSHARE_TOKEN",
+  "maximum_http_attempts_per_probe": 1,
+  "paper_coverage_verified": false,
+  "probes": [
+    {
+      "name": "old_bond_metadata",
+      "api_name": "cb_basic",
+      "params": {
+        "ts_code": "110001.SH"
+      },
+      "fields": "ts_code,list_date,delist_date,value_date,maturity_date,call_clause,put_clause,reset_clause"
+    },
+    {
+      "name": "early_bond_prices",
+      "api_name": "cb_daily",
+      "params": {
+        "ts_code": "110001.SH",
+        "start_date": "20000701",
+        "end_date": "20000731"
+      },
+      "fields": "ts_code,trade_date,close"
+    },
+    {
+      "name": "old_coupon_schedule",
+      "api_name": "cb_rate",
+      "params": {
+        "ts_code": "110001.SH"
+      },
+      "fields": "ts_code,rate_start_date,rate_end_date,coupon_rate,rate_freq"
+    },
+    {
+      "name": "conversion_history",
+      "api_name": "cb_price_chg",
+      "params": {
+        "ts_code": "110001.SH"
+      },
+      "fields": "ts_code,publish_date,change_date,convertprice_bef,convertprice_aft"
+    },
+    {
+      "name": "early_call_events",
+      "api_name": "cb_call",
+      "params": {
+        "start_date": "20000101",
+        "end_date": "20041231"
+      },
+      "fields": "ts_code,ann_date,call_date,call_price,payment_date"
+    },
+    {
+      "name": "early_spot_curve",
+      "api_name": "yc_cb",
+      "params": {
+        "ts_code": "1001.CB",
+        "curve_type": "1",
+        "trade_date": "20000731",
+        "curve_term": 1
+      },
+      "fields": "trade_date,curve_type,curve_term,yield"
+    },
+    {
+      "name": "recent_spot_curve",
+      "api_name": "yc_cb",
+      "params": {
+        "ts_code": "1001.CB",
+        "curve_type": "1",
+        "trade_date": "20220630",
+        "curve_term": 1
+      },
+      "fields": "trade_date,curve_type,curve_term,yield"
+    },
+    {
+      "name": "early_stock_prices",
+      "api_name": "daily",
+      "params": {
+        "ts_code": "600001.SH",
+        "start_date": "20000701",
+        "end_date": "20000731"
+      },
+      "fields": "ts_code,trade_date,close"
+    },
+    {
+      "name": "early_announcements",
+      "api_name": "anns_d",
+      "params": {
+        "ts_code": "600001.SH",
+        "start_date": "20000701",
+        "end_date": "20000731"
+      },
+      "fields": "ts_code,ann_date,title"
+    }
+  ]
+}

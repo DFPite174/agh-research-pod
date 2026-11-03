@@ -1,0 +1,150 @@
+[
+  {
+    "source": "github",
+    "reference": "lballabio/QuantLib",
+    "status": "PASS",
+    "bytes": 8487,
+    "metadata": {
+      "source": "github",
+      "reference": "lballabio/QuantLib",
+      "retrieved_at": "2026-11-03T04:09:39.765255+00:00",
+      "trust": "external-untrusted",
+      "url": "https://github.com/lballabio/QuantLib",
+      "revision": "fc344138ef3cd06df048768d503eec130ac7f95e",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "sha256": "fcff36836260a1eae1b05366c0babcbfc7bb3595be26cd63496a11f0db3a8288"
+    },
+    "seconds": 3.04
+  },
+  {
+    "source": "huggingface-model",
+    "reference": "sentence-transformers/all-MiniLM-L6-v2",
+    "status": "PASS",
+    "bytes": 18125,
+    "metadata": {
+      "source": "huggingface-model",
+      "reference": "sentence-transformers/all-MiniLM-L6-v2",
+      "retrieved_at": "2026-11-03T04:09:42.271225+00:00",
+      "trust": "external-untrusted",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "card": {
+        "base_model": [
+          "nreimers/MiniLM-L6-H384-uncased"
+        ],
+        "language": "en",
+        "license": "apache-2.0",
+        "library_name": "sentence-transformers",
+        "tags": [
+          "sentence-transformers",
+          "feature-extraction",
+          "sentence-similarity",
+          "transformers"
+        ],
+        "datasets": [
+          "s2orc",
+          "flax-sentence-embeddings/stackexchange_xml",
+          "ms_marco",
+          "gooaq",
+          "yahoo_answers_topics",
+          "code_search_net",
+          "search_qa",
+          "eli5",
+          "snli",
+          "multi_nli",
+          "wikihow",
+          "natural_questions",
+          "trivia_qa",
+          "embedding-data/sentence-compression",
+          "embedding-data/flickr30k-captions",
+          "embedding-data/altlex",
+          "embedding-data/simple-wiki",
+          "embedding-data/QQP",
+          "embedding-data/SPECTER",
+          "embedding-data/PAQ_pairs",
+          "embedding-data/WikiAnswers"
+        ],
+        "pipeline_tag": "sentence-similarity"
+      },
+      "sha256": "abb71bd9301d994c992d9f6469a4c66733beaf32fba0e1501df0f65d4340d39f"
+    },
+    "seconds": 2.05
+  },
+  {
+    "source": "huggingface-dataset",
+    "reference": "lhoestq/demo1",
+    "status": "PASS",
+    "bytes": 4230,
+    "metadata": {
+      "source": "huggingface-dataset",
+      "reference": "lhoestq/demo1",
+      "retrieved_at": "2026-11-03T04:09:44.324014+00:00",
+      "trust": "external-untrusted",
+      "url": "https://huggingface.co/datasets/lhoestq/demo1",
+      "revision": "87ecf163bedca9d80598b528940a9c4f99e14c11",
+      "card": {
+        "type": "demo"
+      },
+      "sha256": "0da1b7f8a0e39982dc8b3ce0442966fe943483d73622a52b454d1019c62fe83a"
+    },
+    "seconds": 2.09
+  },
+  {
+    "source": "arxiv",
+    "reference": "ti:convertible",
+    "status": "PASS",
+    "bytes": 8827,
+    "metadata": {
+      "source": "arxiv",
+      "reference": "ti:convertible",
+      "retrieved_at": "2026-11-03T04:09:46.415284+00:00",
+      "trust": "external-untrusted",
+      "url": "https://export.arxiv.org/api/query",
+      "entries": [
+        {
+          "id": "http://arxiv.org/abs/1408.3463v1",
+          "version": "1408.3463v1",
+          "title": "Convertibility of Observables",
+          "updated": "2014-08-15T04:02:52Z",
+          "published": "2014-08-15T04:02:52Z"
+        },
+        {
+          "id": "http://arxiv.org/abs/cond-mat/0104425v1",
+          "version": "cond-mat/0104425v1",
+          "title": "Converting the reset",
+          "updated": "2001-04-23T10:33:40Z",
+          "published": "2001-04-23T10:33:40Z"
+        },
+        {
+          "id": "http://arxiv.org/abs/2112.15190v1",
+          "version": "2112.15190v1",
+          "title": "Simulating a Positron Converter",
+          "updated": "2021-12-30T19:48:23Z",
+          "published": "2021-12-30T19:48:23Z"
+        },
+        {
+          "id": "http://arxiv.org/abs/physics/0111062v2",
+          "version": "physics/0111062v2",
+          "title": "GPIB Address Converter",
+          "updated": "2001-11-14T04:22:35Z",
+          "published": "2001-11-09T13:08:38Z"
+        },
+        {
+          "id": "http://arxiv.org/abs/1607.01538v1",
+          "version": "1607.01538v1",
+          "title": "Definition of Power Converters",
+          "updated": "2016-07-06T09:36:38Z",
+          "published": "2016-07-06T09:36:38Z"
+        }
+      ],
+      "sha256": "0c312cca673e2d60dd2373e232017a0d801e95cb06a31716c5f9f2723633043d"
+    },
+    "seconds": 0.92
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "spot": 10,
+  "conversion_price": 10,
+  "maturity": 1,
+  "risk_free": 0.03,
+  "credit_spread": 0.01,
+  "volatility": 0.25,
+  "face": 100,
+  "coupons": [{"time": 0.5, "amount": 2}, {"time": 1, "amount": 5}]
+}

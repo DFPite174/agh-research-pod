@@ -1,0 +1,27 @@
+{
+  "status": "NEEDS_OCR_OR_MANUAL_REVIEW",
+  "sha256": "0394f3f8cd4a617d88a6cf4517c637a21a7cfd50e047d6e4946379ab79cb95ff",
+  "empty_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "page_count": 18,
+  "extracted_characters": 0,
+  "provider_called": false
+}

@@ -1,0 +1,13 @@
+{
+  "data_source": {"kind": "duckdb", "path_environment": "AGH_DATA_LAKE_PATH", "read_only": true},
+  "account_backend": {
+    "repository": "https://github.com/DFPite174/ashare-nautilus-backtest-engine",
+    "revision": "e231d8fb15ad67e4ff9f3525a53376c3cd49db34",
+    "root_environment": "AGH_BACKTEST_ENGINE_ROOT",
+    "python_environment": "AGH_ENGINE_PYTHON",
+    "required_nautilus_version": "1.231.0",
+    "convertible_account_status": "BLOCKED_ENGINE_CAPABILITY"
+  },
+  "research_case": "zheng-2025-convertible",
+  "provider_policy": "Use the supplied local lake; external provider acquisition only for verified missing inputs."
+}

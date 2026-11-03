@@ -1,0 +1,3249 @@
+{
+  "schema_version": 1,
+  "targets": {
+    "sample.bonds": {
+      "value": 696,
+      "source_page": 179,
+      "unit": "count",
+      "atol": 0,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "sample.observations": {
+      "value": 14980,
+      "source_page": 179,
+      "unit": "count",
+      "atol": 0,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.BS.nobs": {
+      "value": 14980,
+      "source_page": 180,
+      "unit": "count",
+      "atol": 0,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.BS.mean": {
+      "value": 140.49,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.BS.std": {
+      "value": 54.69,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.BS.min": {
+      "value": 95.33,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.BS.median": {
+      "value": 130.34,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.BS.max": {
+      "value": 2088.56,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.TF.nobs": {
+      "value": 14980,
+      "source_page": 180,
+      "unit": "count",
+      "atol": 0,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.TF.mean": {
+      "value": 114.18,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.TF.std": {
+      "value": 52.89,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.TF.min": {
+      "value": 88.73,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.TF.median": {
+      "value": 100.72,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.TF.max": {
+      "value": 2068.73,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LW.nobs": {
+      "value": 14980,
+      "source_page": 180,
+      "unit": "count",
+      "atol": 0,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LW.mean": {
+      "value": 124.84,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LW.std": {
+      "value": 50.96,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LW.min": {
+      "value": 91.54,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LW.median": {
+      "value": 116.43,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LW.max": {
+      "value": 2068.73,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LYW.nobs": {
+      "value": 14980,
+      "source_page": 180,
+      "unit": "count",
+      "atol": 0,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LYW.mean": {
+      "value": 116.73,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LYW.std": {
+      "value": 12.7,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LYW.min": {
+      "value": 92.17,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LYW.median": {
+      "value": 114.84,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.LYW.max": {
+      "value": 349.19,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.ZL.nobs": {
+      "value": 14980,
+      "source_page": 180,
+      "unit": "count",
+      "atol": 0,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.ZL.mean": {
+      "value": 123.9,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.ZL.std": {
+      "value": 51.21,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.ZL.min": {
+      "value": 87.65,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.ZL.median": {
+      "value": 115.37,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table1.ZL.max": {
+      "value": 2072.98,
+      "source_page": 180,
+      "unit": "CNY",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q1": {
+      "value": 0.0174,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q1.t": {
+      "value": 3.45,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q2": {
+      "value": 0.0128,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q2.t": {
+      "value": 2.24,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q3": {
+      "value": 0.0079,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q3.t": {
+      "value": 1.71,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q4": {
+      "value": 0.0087,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q4.t": {
+      "value": 1.78,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q5": {
+      "value": 0.008,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.q5.t": {
+      "value": 1.49,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.low_minus_high": {
+      "value": 0.009399999999999999,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.low_minus_high.t": {
+      "value": 3.16,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.MKT_alpha": {
+      "value": 0.0076,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.BS.MKT_alpha.t": {
+      "value": 2.61,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q1": {
+      "value": 0.0146,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q1.t": {
+      "value": 2.96,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q2": {
+      "value": 0.0141,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q2.t": {
+      "value": 2.41,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q3": {
+      "value": 0.0091,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q3.t": {
+      "value": 2.31,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q4": {
+      "value": 0.0086,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q4.t": {
+      "value": 1.77,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q5": {
+      "value": 0.0077,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.q5.t": {
+      "value": 1.54,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.low_minus_high": {
+      "value": 0.0069,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.low_minus_high.t": {
+      "value": 2.15,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.MKT_alpha": {
+      "value": 0.0066,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.TF.MKT_alpha.t": {
+      "value": 1.89,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q1": {
+      "value": 0.013600000000000001,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q1.t": {
+      "value": 2.89,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q2": {
+      "value": 0.011000000000000001,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q2.t": {
+      "value": 2.51,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q3": {
+      "value": 0.0109,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q3.t": {
+      "value": 2.81,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q4": {
+      "value": 0.009399999999999999,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q4.t": {
+      "value": 1.8,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q5": {
+      "value": 0.0083,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.q5.t": {
+      "value": 1.31,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.low_minus_high": {
+      "value": 0.0054,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.low_minus_high.t": {
+      "value": 1.78,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.MKT_alpha": {
+      "value": 0.0079,
+      "source_page": 183,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LYW.MKT_alpha.t": {
+      "value": 3.05,
+      "source_page": 183,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q1": {
+      "value": 0.0161,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q1.t": {
+      "value": 3.62,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q2": {
+      "value": 0.012,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q2.t": {
+      "value": 2.19,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q3": {
+      "value": 0.0092,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q3.t": {
+      "value": 2.44,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q4": {
+      "value": 0.0086,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q4.t": {
+      "value": 1.85,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q5": {
+      "value": 0.0073,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.q5.t": {
+      "value": 1.2,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.low_minus_high": {
+      "value": 0.0088,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.low_minus_high.t": {
+      "value": 2.71,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.MKT_alpha": {
+      "value": 0.0098,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.LW.MKT_alpha.t": {
+      "value": 3.46,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q1": {
+      "value": 0.0187,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q1.t": {
+      "value": 3.63,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q2": {
+      "value": 0.013000000000000001,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q2.t": {
+      "value": 2.42,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q3": {
+      "value": 0.0104,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q3.t": {
+      "value": 1.92,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q4": {
+      "value": 0.0069,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q4.t": {
+      "value": 1.68,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q5": {
+      "value": 0.0058,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.q5.t": {
+      "value": 1.11,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.low_minus_high": {
+      "value": 0.0128,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.low_minus_high.t": {
+      "value": 4.62,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.MKT_alpha": {
+      "value": 0.0128,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.full.ZL.MKT_alpha.t": {
+      "value": 4.5,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q1": {
+      "value": 0.0168,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q1.t": {
+      "value": 2.67,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q2": {
+      "value": 0.0118,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q2.t": {
+      "value": 1.6,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q3": {
+      "value": 0.0075,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q3.t": {
+      "value": 1.25,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q4": {
+      "value": 0.01,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q4.t": {
+      "value": 1.56,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q5": {
+      "value": 0.0098,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.q5.t": {
+      "value": 1.39,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.low_minus_high": {
+      "value": 0.006999999999999999,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.low_minus_high.t": {
+      "value": 2.03,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.MKT_alpha": {
+      "value": 0.0054,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.BS.MKT_alpha.t": {
+      "value": 1.55,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q1": {
+      "value": 0.0132,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q1.t": {
+      "value": 2.11,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q2": {
+      "value": 0.0155,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q2.t": {
+      "value": 2.03,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q3": {
+      "value": 0.008,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q3.t": {
+      "value": 1.6,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q4": {
+      "value": 0.0086,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q4.t": {
+      "value": 1.35,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q5": {
+      "value": 0.0097,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.q5.t": {
+      "value": 1.51,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.low_minus_high": {
+      "value": 0.0034999999999999996,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.low_minus_high.t": {
+      "value": 0.93,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.MKT_alpha": {
+      "value": 0.0032,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.TF.MKT_alpha.t": {
+      "value": 0.77,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q1": {
+      "value": 0.0132,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q1.t": {
+      "value": 2.19,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q2": {
+      "value": 0.0104,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q2.t": {
+      "value": 1.83,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q3": {
+      "value": 0.0111,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q3.t": {
+      "value": 2.25,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q4": {
+      "value": 0.0105,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q4.t": {
+      "value": 1.54,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q5": {
+      "value": 0.0088,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.q5.t": {
+      "value": 1.07,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.low_minus_high": {
+      "value": 0.0045000000000000005,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.low_minus_high.t": {
+      "value": 1.2,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.MKT_alpha": {
+      "value": 0.0069,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LYW.MKT_alpha.t": {
+      "value": 2.23,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q1": {
+      "value": 0.015600000000000001,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q1.t": {
+      "value": 2.79,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q2": {
+      "value": 0.012,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q2.t": {
+      "value": 1.66,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q3": {
+      "value": 0.008199999999999999,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q3.t": {
+      "value": 1.74,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q4": {
+      "value": 0.0096,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q4.t": {
+      "value": 1.49,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q5": {
+      "value": 0.009300000000000001,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.q5.t": {
+      "value": 1.18,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.low_minus_high": {
+      "value": 0.0063,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.low_minus_high.t": {
+      "value": 1.57,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.MKT_alpha": {
+      "value": 0.0073,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.LW.MKT_alpha.t": {
+      "value": 2.15,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q1": {
+      "value": 0.018799999999999997,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q1.t": {
+      "value": 2.86,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q2": {
+      "value": 0.0127,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q2.t": {
+      "value": 1.81,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q3": {
+      "value": 0.0109,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q3.t": {
+      "value": 1.53,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q4": {
+      "value": 0.0062,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q4.t": {
+      "value": 1.19,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q5": {
+      "value": 0.0077,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.q5.t": {
+      "value": 1.12,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.low_minus_high": {
+      "value": 0.011200000000000002,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.low_minus_high.t": {
+      "value": 3.45,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.MKT_alpha": {
+      "value": 0.0113,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.pre2018.ZL.MKT_alpha.t": {
+      "value": 3.25,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q1": {
+      "value": 0.0189,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q1.t": {
+      "value": 2.51,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q2": {
+      "value": 0.0151,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q2.t": {
+      "value": 2.16,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q3": {
+      "value": 0.0089,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q3.t": {
+      "value": 1.69,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q4": {
+      "value": 0.0044,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q4.t": {
+      "value": 0.98,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q5": {
+      "value": 0.0021,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.q5.t": {
+      "value": 0.48,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.low_minus_high": {
+      "value": 0.0168,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.low_minus_high.t": {
+      "value": 3.13,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.MKT_alpha": {
+      "value": 0.0132,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.BS.MKT_alpha.t": {
+      "value": 3.19,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q1": {
+      "value": 0.0184,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q1.t": {
+      "value": 2.68,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q2": {
+      "value": 0.0098,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q2.t": {
+      "value": 1.63,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q3": {
+      "value": 0.0118,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q3.t": {
+      "value": 2.23,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q4": {
+      "value": 0.0086,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q4.t": {
+      "value": 1.62,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q5": {
+      "value": 0.0011,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.q5.t": {
+      "value": 0.18,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.low_minus_high": {
+      "value": 0.0173,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.low_minus_high.t": {
+      "value": 3.04,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.MKT_alpha": {
+      "value": 0.0154,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.TF.MKT_alpha.t": {
+      "value": 2.73,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q1": {
+      "value": 0.0147,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q1.t": {
+      "value": 4.45,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q2": {
+      "value": 0.0121,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q2.t": {
+      "value": 2.4,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q3": {
+      "value": 0.0103,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q3.t": {
+      "value": 1.95,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q4": {
+      "value": 0.006,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q4.t": {
+      "value": 1.11,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q5": {
+      "value": 0.006,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.q5.t": {
+      "value": 0.82,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.low_minus_high": {
+      "value": 0.0088,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.low_minus_high.t": {
+      "value": 1.8,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.MKT_alpha": {
+      "value": 0.011699999999999999,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LYW.MKT_alpha.t": {
+      "value": 3.33,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q1": {
+      "value": 0.0174,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q1.t": {
+      "value": 2.59,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q2": {
+      "value": 0.012,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q2.t": {
+      "value": 2.3,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q3": {
+      "value": 0.0118,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q3.t": {
+      "value": 2.12,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q4": {
+      "value": 0.006999999999999999,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q4.t": {
+      "value": 1.46,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q5": {
+      "value": 0.0009,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.q5.t": {
+      "value": 0.14,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.low_minus_high": {
+      "value": 0.0165,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.low_minus_high.t": {
+      "value": 3.44,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.MKT_alpha": {
+      "value": 0.0163,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.LW.MKT_alpha.t": {
+      "value": 3.37,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q1": {
+      "value": 0.018000000000000002,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q1.t": {
+      "value": 2.67,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q2": {
+      "value": 0.0138,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q2.t": {
+      "value": 2.27,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q3": {
+      "value": 0.0091,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q3.t": {
+      "value": 1.79,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q4": {
+      "value": 0.008100000000000001,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q4.t": {
+      "value": 1.47,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q5": {
+      "value": 0.0001,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.q5.t": {
+      "value": 0.01,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.low_minus_high": {
+      "value": 0.0179,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.low_minus_high.t": {
+      "value": 3.39,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.MKT_alpha": {
+      "value": 0.0175,
+      "source_page": 184,
+      "unit": "decimal_monthly_return",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table2.post2018.ZL.MKT_alpha.t": {
+      "value": 3.46,
+      "source_page": 184,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.Carhart4": {
+      "value": 0.0068000000000000005,
+      "source_page": 185,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.Carhart4.t": {
+      "value": 2.05,
+      "source_page": 185,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.FF5": {
+      "value": 0.0085,
+      "source_page": 185,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.FF5.t": {
+      "value": 2.69,
+      "source_page": 185,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.HXZ4": {
+      "value": 0.0068000000000000005,
+      "source_page": 185,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.HXZ4.t": {
+      "value": 2.09,
+      "source_page": 185,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.SY4": {
+      "value": 0.0072,
+      "source_page": 185,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.SY4.t": {
+      "value": 2.07,
+      "source_page": 185,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.DHS3": {
+      "value": 0.008100000000000001,
+      "source_page": 185,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.BS.DHS3.t": {
+      "value": 2.42,
+      "source_page": 185,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.Carhart4": {
+      "value": 0.0042,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.Carhart4.t": {
+      "value": 1.07,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.FF5": {
+      "value": 0.0053,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.FF5.t": {
+      "value": 1.38,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.HXZ4": {
+      "value": 0.0055000000000000005,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.HXZ4.t": {
+      "value": 1.46,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.SY4": {
+      "value": 0.0063,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.SY4.t": {
+      "value": 1.75,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.DHS3": {
+      "value": 0.0060999999999999995,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.TF.DHS3.t": {
+      "value": 1.7,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.Carhart4": {
+      "value": 0.009899999999999999,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.Carhart4.t": {
+      "value": 3.58,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.FF5": {
+      "value": 0.0088,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.FF5.t": {
+      "value": 2.7,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.HXZ4": {
+      "value": 0.009399999999999999,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.HXZ4.t": {
+      "value": 2.79,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.SY4": {
+      "value": 0.0077,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.SY4.t": {
+      "value": 2.7,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.DHS3": {
+      "value": 0.0063,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LYW.DHS3.t": {
+      "value": 2.0,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.Carhart4": {
+      "value": 0.0092,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.Carhart4.t": {
+      "value": 2.77,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.FF5": {
+      "value": 0.0077,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.FF5.t": {
+      "value": 2.15,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.HXZ4": {
+      "value": 0.0085,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.HXZ4.t": {
+      "value": 2.21,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.SY4": {
+      "value": 0.0089,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.SY4.t": {
+      "value": 2.89,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.DHS3": {
+      "value": 0.0078000000000000005,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.LW.DHS3.t": {
+      "value": 2.32,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.Carhart4": {
+      "value": 0.011000000000000001,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.Carhart4.t": {
+      "value": 3.29,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.FF5": {
+      "value": 0.012199999999999999,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.FF5.t": {
+      "value": 4.05,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.HXZ4": {
+      "value": 0.0123,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.HXZ4.t": {
+      "value": 3.75,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.SY4": {
+      "value": 0.0109,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.SY4.t": {
+      "value": 3.67,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.DHS3": {
+      "value": 0.011899999999999999,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.full.ZL.DHS3.t": {
+      "value": 3.83,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.Carhart4": {
+      "value": 0.0027,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.Carhart4.t": {
+      "value": 0.65,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.FF5": {
+      "value": 0.0060999999999999995,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.FF5.t": {
+      "value": 1.63,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.HXZ4": {
+      "value": 0.0024,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.HXZ4.t": {
+      "value": 0.63,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.SY4": {
+      "value": 0.0031,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.SY4.t": {
+      "value": 0.72,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.DHS3": {
+      "value": 0.0043,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.BS.DHS3.t": {
+      "value": 1.12,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.Carhart4": {
+      "value": -0.0015,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.Carhart4.t": {
+      "value": -0.31,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.FF5": {
+      "value": -0.0001,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.FF5.t": {
+      "value": -0.02,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.HXZ4": {
+      "value": 0.001,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.HXZ4.t": {
+      "value": 0.2,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.SY4": {
+      "value": 0.0011,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.SY4.t": {
+      "value": 0.24,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.DHS3": {
+      "value": 0.0018,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.TF.DHS3.t": {
+      "value": 0.42,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.Carhart4": {
+      "value": 0.009899999999999999,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.Carhart4.t": {
+      "value": 3.13,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.FF5": {
+      "value": 0.0097,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.FF5.t": {
+      "value": 2.65,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.HXZ4": {
+      "value": 0.0077,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.HXZ4.t": {
+      "value": 1.94,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.SY4": {
+      "value": 0.0083,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.SY4.t": {
+      "value": 2.51,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.DHS3": {
+      "value": 0.0058,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LYW.DHS3.t": {
+      "value": 1.54,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.Carhart4": {
+      "value": 0.0060999999999999995,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.Carhart4.t": {
+      "value": 1.56,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.FF5": {
+      "value": 0.0051,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.FF5.t": {
+      "value": 1.34,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.HXZ4": {
+      "value": 0.0039000000000000003,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.HXZ4.t": {
+      "value": 0.87,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.SY4": {
+      "value": 0.0069,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.SY4.t": {
+      "value": 1.86,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.DHS3": {
+      "value": 0.004699999999999999,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.LW.DHS3.t": {
+      "value": 1.21,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.Carhart4": {
+      "value": 0.0072,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.Carhart4.t": {
+      "value": 1.81,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.FF5": {
+      "value": 0.0095,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.FF5.t": {
+      "value": 2.75,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.HXZ4": {
+      "value": 0.0083,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.HXZ4.t": {
+      "value": 2.17,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.SY4": {
+      "value": 0.0078000000000000005,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.SY4.t": {
+      "value": 2.26,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.DHS3": {
+      "value": 0.0097,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.pre2018.ZL.DHS3.t": {
+      "value": 2.74,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.Carhart4": {
+      "value": 0.0154,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.Carhart4.t": {
+      "value": 3.36,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.FF5": {
+      "value": 0.016200000000000003,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.FF5.t": {
+      "value": 3.19,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.HXZ4": {
+      "value": 0.0158,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.HXZ4.t": {
+      "value": 3.37,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.SY4": {
+      "value": 0.0161,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.SY4.t": {
+      "value": 3.38,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.DHS3": {
+      "value": 0.0187,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.BS.DHS3.t": {
+      "value": 3.82,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.Carhart4": {
+      "value": 0.0139,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.Carhart4.t": {
+      "value": 2.83,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.FF5": {
+      "value": 0.015600000000000001,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.FF5.t": {
+      "value": 2.55,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.HXZ4": {
+      "value": 0.0152,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.HXZ4.t": {
+      "value": 2.74,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.SY4": {
+      "value": 0.016,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.SY4.t": {
+      "value": 2.85,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.DHS3": {
+      "value": 0.0179,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.TF.DHS3.t": {
+      "value": 3.22,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.Carhart4": {
+      "value": 0.014199999999999999,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.Carhart4.t": {
+      "value": 2.72,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.FF5": {
+      "value": 0.0127,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.FF5.t": {
+      "value": 2.72,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.HXZ4": {
+      "value": 0.013500000000000002,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.HXZ4.t": {
+      "value": 2.28,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.SY4": {
+      "value": 0.0074,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.SY4.t": {
+      "value": 1.39,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.DHS3": {
+      "value": 0.0084,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LYW.DHS3.t": {
+      "value": 1.48,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.Carhart4": {
+      "value": 0.0192,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.Carhart4.t": {
+      "value": 3.65,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.FF5": {
+      "value": 0.0184,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.FF5.t": {
+      "value": 4.26,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.HXZ4": {
+      "value": 0.018799999999999997,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.HXZ4.t": {
+      "value": 3.35,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.SY4": {
+      "value": 0.0147,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.SY4.t": {
+      "value": 2.8,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.DHS3": {
+      "value": 0.0168,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.LW.DHS3.t": {
+      "value": 3.07,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.Carhart4": {
+      "value": 0.0202,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.Carhart4.t": {
+      "value": 3.37,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.FF5": {
+      "value": 0.0202,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.FF5.t": {
+      "value": 3.62,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.HXZ4": {
+      "value": 0.02,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.HXZ4.t": {
+      "value": 3.2,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.SY4": {
+      "value": 0.0167,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.SY4.t": {
+      "value": 2.95,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.DHS3": {
+      "value": 0.0182,
+      "source_page": 186,
+      "unit": "decimal_monthly_alpha",
+      "atol": 5.000001e-05,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    },
+    "table3.post2018.ZL.DHS3.t": {
+      "value": 3.12,
+      "source_page": 186,
+      "unit": "t_statistic",
+      "atol": 0.005000001,
+      "rtol": 0,
+      "origin": "published_target_not_measurement"
+    }
+  },
+  "inventory": [
+    {
+      "id": "table1",
+      "scope": "main",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "figure1",
+      "scope": "main",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "figure2",
+      "scope": "main",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "figure3",
+      "scope": "main",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "table2",
+      "scope": "main",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "table3",
+      "scope": "main",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "I1",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "II1",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "II2",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III1",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III2",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III3",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III4",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III5",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III6",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III7",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III8",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III9",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III10",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III11",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "III12",
+      "scope": "appendix",
+      "status": "NOT_RUN"
+    }
+  ],
+  "note": "Published targets transcribed from user-supplied PDF, never computed observations. Appendix numerical targets require separate full transcription before their evaluation; inventory prevents omission."
+}

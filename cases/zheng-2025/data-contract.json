@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "required_manifest_fields": ["source", "license", "snapshot_date", "evidence_level", "sample_start", "sample_end", "files"],
+  "evidence_levels": ["synthetic", "alternative_vendor", "original_comparable"],
+  "observations_format": "JSONL, one historical monthend bond observation per line",
+  "observation_fields": ["date", "bond_id", "market_price", "next_return", "risk_free", "contract"],
+  "optional_observation_fields": ["issue_size", "outstanding_balance", "stock_market_cap", "book_to_market", "stock_pe", "completed", "moneyness"],
+  "contract": "See docs/pricing-methods.md; historical terms effective as of formation date, not today's contract.",
+  "return_convention": "Decimal next-month total return including coupons and terminal cashflows. Missing termination payoff is an error, not a zero return.",
+  "risk_free": "Decimal holding-month return; distinct from continuously compounded annual pricing rate.",
+  "factors_format": "CSV date, MKT plus Carhart4/FF5/HXZ4/SY4/DHS3 named columns; decimal monthly factor returns, provenance and vintage required.",
+  "pricing_curve": "Historical treasury spot/zero curve, interpolated to maturity, not assumed equivalent to bond YTM or Shibor.",
+  "private_storage": "External user-authorized directory, excluded from Git and default packages. Manifest stores SHA256 for every data file.",
+  "original_sources": ["Wind historical terms", "CSMAR prices and financials", "CSMAR Carhart4/FF5", "FactorWar HXZ4/SY4/DHS3"],
+  "required_clause_history": ["conversion price effective events", "call/put/reset periods and n-of-m thresholds", "redemption decision and payment", "coupon schedules", "reset legal floor", "pre-valuation rolling stock history"],
+  "prohibition": "No current-only survivor universe, reconstructed future-known clauses, silent missing months, or redistribution of restricted raw data."
+}

@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/DFPite174/ashare-nautilus-backtest-engine",
+  "revision": "e231d8fb15ad67e4ff9f3525a53376c3cd49db34",
+  "expected_revision": "e231d8fb15ad67e4ff9f3525a53376c3cd49db34",
+  "version_matches": true,
+  "tracked_worktree_clean": true,
+  "paper_short_leg_supported": false,
+  "convertible_cashflow_events_qualified": false,
+  "nautilus_version": "1.231.0",
+  "status": "BLOCKED_ENGINE_CAPABILITY",
+  "convertible_instrument_accepted": false,
+  "reason": "Only Shanghai/Shenzhen cash equities are supported",
+  "paper_reproduction_certified": false
+}

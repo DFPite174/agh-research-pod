@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agh-research-pod"
+version = "0.1.0"
+description = "Evidence-first research pod and Chinese convertible-bond replication workbench"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+  "numpy>=2.0,<3", "scipy>=1.14,<2", "pandas>=2.2,<3",
+  "statsmodels>=0.14,<0.15", "fastapi>=0.115,<1", "uvicorn>=0.30,<1",
+  "httpx>=0.27,<1", "pydantic>=2.9,<3", "jinja2>=3.1,<4", "pypdf>=5,<7", "duckdb>=1.5,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pyflakes==3.3.0", "build>=1.2,<2"]
+
+[project.scripts]
+agh = "agh_pod.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agh_pod"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"cases" = "agh_pod/case_data"

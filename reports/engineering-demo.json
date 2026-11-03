@@ -1,0 +1,111 @@
+{
+  "evidence_level": "synthetic",
+  "research_status": "not_evaluated",
+  "execution_status": "succeeded",
+  "prices": {
+    "BS": {
+      "price": 108.39303017999434,
+      "standard_error": 0.0,
+      "diagnostics": {
+        "model": "BS",
+        "empirical_reproduction": "NOT_VERIFIED",
+        "voluntary_conversion": "maturity only",
+        "credit_discount": "risk_free",
+        "assumptions": [],
+        "standard_error_scope": "0 denotes deterministic computation, not zero numerical/model error"
+      },
+      "method_status": "ANALYTIC_LIMITED_MODEL"
+    },
+    "TF": {
+      "price": 108.38377264649628,
+      "standard_error": 0.0,
+      "diagnostics": {
+        "model": "TF",
+        "empirical_reproduction": "NOT_VERIFIED",
+        "voluntary_conversion": "maturity only",
+        "credit_discount": "cash: risk_free+spread; equity: risk_free",
+        "assumptions": [
+          "Clause boundaries are paper proxies, not rolling stock triggers."
+        ],
+        "steps": 200,
+        "tree": "recombining trinomial, probabilities 1/6,2/3,1/6",
+        "coupon_grid_max_delay": 0.005,
+        "standard_error_scope": "0 denotes deterministic computation, not zero numerical/model error"
+      },
+      "method_status": "IMPLEMENTED_APPROXIMATION"
+    },
+    "LYW": {
+      "price": 108.38377264649628,
+      "standard_error": 0.0,
+      "diagnostics": {
+        "model": "LYW",
+        "empirical_reproduction": "NOT_VERIFIED",
+        "voluntary_conversion": "maturity only",
+        "credit_discount": "cash: risk_free+spread; equity: risk_free",
+        "assumptions": [
+          "Clause boundaries are paper proxies, not rolling stock triggers."
+        ],
+        "steps": 200,
+        "tree": "recombining trinomial, probabilities 1/6,2/3,1/6",
+        "coupon_grid_max_delay": 0.005,
+        "standard_error_scope": "0 denotes deterministic computation, not zero numerical/model error"
+      },
+      "method_status": "IMPLEMENTED_APPROXIMATION"
+    },
+    "LW": {
+      "price": 108.38377264649628,
+      "standard_error": 0.0,
+      "diagnostics": {
+        "model": "LW",
+        "empirical_reproduction": "NOT_VERIFIED",
+        "voluntary_conversion": "maturity only",
+        "credit_discount": "cash: risk_free+spread; equity: risk_free",
+        "assumptions": [
+          "Clause boundaries are paper proxies, not rolling stock triggers."
+        ],
+        "steps": 200,
+        "tree": "recombining trinomial, probabilities 1/6,2/3,1/6",
+        "coupon_grid_max_delay": 0.005,
+        "standard_error_scope": "0 denotes deterministic computation, not zero numerical/model error"
+      },
+      "method_status": "IMPLEMENTED_APPROXIMATION"
+    },
+    "ZL": {
+      "price": 108.50676163703154,
+      "standard_error": 0.18207128467009806,
+      "diagnostics": {
+        "model": "ZL",
+        "empirical_reproduction": "NOT_VERIFIED",
+        "voluntary_conversion": "maturity only",
+        "credit_discount": "risk_free",
+        "assumptions": [
+          "252 trading days/year; trigger checks include valuation-day spot.",
+          "History is oldest-first, excludes spot; past qualifications use the initial conversion price.",
+          "Historical qualification flags retain their original conversion-price basis after resets.",
+          "Current BS value at least put payment avoids reset/put; otherwise choose highest feasible reset price.",
+          "Maturity redemption takes precedence over clauses on maturity day; call precedes put on earlier days.",
+          "Coupons on a termination day are excluded unless included in the stated redemption payment."
+        ],
+        "paths": 10000,
+        "seed": 7,
+        "trading_days": 252,
+        "time_step": 0.003968253968253968,
+        "call_fraction": 0.0,
+        "put_fraction": 0.0,
+        "reset_fraction": 0.0,
+        "confidence_95": [
+          108.14990191907815,
+          108.86362135498494
+        ],
+        "standard_error_scope": "Monte Carlo sampling only; excludes discretization and model error"
+      },
+      "method_status": "IMPLEMENTED_APPROXIMATION"
+    }
+  },
+  "package_verification": {
+    "valid": true,
+    "errors": [],
+    "scientific_replication_certified": false
+  },
+  "scientific_replication_certified": false
+}

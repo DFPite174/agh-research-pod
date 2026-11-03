@@ -1,0 +1,51 @@
+{
+  "id": "zheng-2025-convertible",
+  "title": "中国可转债定价模型比较研究",
+  "authors": [
+    "郑振龙",
+    "竺添晟",
+    "陈蓉"
+  ],
+  "journal": "经济学（季刊）",
+  "year": 2025,
+  "doi": "10.13821/j.cnki.ceq.2025.01.11",
+  "article_url": "https://nsd.pku.edu.cn/docs/20250227142007660959.pdf",
+  "appendix_url": "https://nsd.pku.edu.cn/docs/20250227142513335689.pdf",
+  "sample": {
+    "start": "2000-07",
+    "end": "2022-06",
+    "bonds": 696,
+    "observations": 14980
+  },
+  "models": [
+    "BS",
+    "TF",
+    "LYW",
+    "LW",
+    "ZL"
+  ],
+  "parameters": {
+    "volatility_lookback_trading_days": 250,
+    "trinomial_steps": 200,
+    "mc_paths": 10000,
+    "hac_lags": 3
+  },
+  "evidence_level": "published_targets_only",
+  "original_data_available": false,
+  "license_note": "Original article and vendor observations are not redistributed. Published targets are transcribed with page provenance for comparison.",
+  "input_binding": {
+    "source": "user_supplied_duckdb",
+    "path_environment": "AGH_DATA_LAKE_PATH",
+    "audit_date": "2026-11-03",
+    "snapshot_sha256": "c9ff0f110a36b6ea2145807d0b724edd3b73e9f4d88d90d4772cb1985cd790c8",
+    "cb_rows": 240,
+    "monthends_with_rows": 0,
+    "qualified_for_paper": false
+  },
+  "account_backend": {
+    "repository": "https://github.com/DFPite174/ashare-nautilus-backtest-engine",
+    "revision": "e231d8fb15ad67e4ff9f3525a53376c3cd49db34",
+    "status": "BLOCKED_ENGINE_CAPABILITY",
+    "reason": "Only Shanghai/Shenzhen cash equities are supported"
+  }
+}

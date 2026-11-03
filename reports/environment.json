@@ -1,0 +1,17 @@
+{
+  "docker": {
+    "status": "BLOCKED",
+    "reason": "Docker daemon not reachable"
+  },
+  "credentials": {
+    "AGH_LLM_API_KEY": false,
+    "AGH_LLM_MODEL": false,
+    "OPENAI_API_KEY": false,
+    "ANTHROPIC_API_KEY": false,
+    "GITHUB_TOKEN": false,
+    "HF_TOKEN": false,
+    "TUSHARE_TOKEN": false
+  },
+  "untrusted_execution": "NOT_RUN; only a separately approved Docker route may execute external code",
+  "scope": "local single trusted user; no scientific replication certification"
+}
