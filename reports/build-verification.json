@@ -8,7 +8,8 @@
   "new_pdf_module_imported": true,
   "scientific_replication_certified": false,
   "artifacts": {
-    "agh_research_pod-0.1.0-py3-none-any.whl": "ef970c24de74b4bb9a4b4031fd39b71470fe850644bb2707af7a36dbbc11e982",
-    "agh_research_pod-0.1.0.tar.gz": "46d5a01aa12a2f8cfca193e7b49120bac5d12359187a9384fab950bbb6de1811"
-  }
+    "agh_research_pod-0.1.0-py3-none-any.whl": "05c47090e67888e43e151a634f918a0a488647404b0e63693ab4461f3aa98843",
+    "agh_research_pod-0.1.0.tar.gz": "f8d944a520747ac8d12e45d9e1eed344afa142c258785ddab92a34743abaecb2"
+  },
+  "build_source_commit": "f87d4f2385523a8bffc33a17c0e49e1b28044cb7"
 }
