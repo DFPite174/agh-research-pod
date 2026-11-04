@@ -1,8 +1,30 @@
 # AGH ResearchPod
 
-面向 Academic、GitHub、Hugging Face 的证据化研究工作台，首个案例为郑振龙、竺添晟、陈蓉（2025）《中国可转债定价模型比较研究》。
+面向 Academic、GitHub、Hugging Face 的证据化研究工作台，支持通用量化时序实验，保留可转债论文为专用案例。
 
 **当前定位：可运行的研究工程首版。原论文全历史实证仍被数据资格阻塞，不能称为完整复现，也没有实盘收益证据。** 合成演示、数学验证、替代数据研究和原设定复现使用不同标签。程序不从论文目标数字生成“实测结果”。
+
+## 代表性案例扩展验证
+
+已完成8项真实量化案例与2项合成对照，逐例交付包重跑一致。完整结果见 [直观表格报告](reports/representative-cases.html)、[Markdown表格](reports/representative-cases.md)和[本轮验收](reports/representative-acceptance.md)。
+
+运行 `python examples/quant/representative_cases.py`，首次从Kenneth French官方来源下载因子数据，后续可用runtime缓存重跑。固定参数、保留负面与分期不稳定结果，未建立PIT或真实交易收益证据。
+
+## 0.2 通用量化研究闭环
+
+用户确认：通用研究闭环优先，案例围绕量化，不绑定作者。新增任务书 → 冻结量化规格 → 数据哈希审批 → 扩展窗口训练 → 双基线比较 → 复核 → 可重跑数据交付包 → 接收/拒绝/继续研究反馈。
+
+内置 `quant` 配方接受 CSV 与来源 manifest；所有特征滞后一期，训练集内标准化，固定 ridge 参数，不自动搜索。支持不同数值目标与特征列；当前是单序列一步预测，不代表任意论文或跨截面组合都能自动实现。
+
+```powershell
+python examples/quant/validate.py
+agh --root runtime/quant-work quant-run runtime/quant-validation/inflation-task.json
+agh --root runtime/quant-work review RUN_ID --reviewer local --decision engineering_verified
+agh --root runtime/quant-work package RUN_ID
+agh --root runtime/quant-work receive PACKAGE_ID --receiver research --decision followup --reason "validate independent data"
+```
+
+`quant-run` 是明确执行授权：自动建立任务书、归档任务、冻结并批准该规格，然后执行；不自动复核或接收。网页也提供任务书、quant 规格和交付反馈表单。操作细节见 [通用量化指南](docs/general-quant.md)，本轮证据见 [升级验收](reports/general-acceptance.md)。
 
 ## 已实现的研究流程
 

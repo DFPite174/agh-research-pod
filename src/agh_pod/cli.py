@@ -61,7 +61,7 @@ def _parser():
     local.add_argument("path")
     local.add_argument("--title")
     listing = commands.add_parser("list")
-    listing.add_argument("kind", choices=["opportunity", "artifact", "spec", "run", "review", "package"])
+    listing.add_argument("kind", choices=["opportunity", "artifact", "spec", "run", "review", "package", "delivery"])
     listing.add_argument("--limit", type=int, default=200)
     listing.add_argument("--offset", type=int, default=0)
     approve = commands.add_parser("approve")
@@ -86,6 +86,19 @@ def _parser():
         command.add_argument("--manifest", required=True)
         if name == "case-run":
             command.add_argument("--idempotency-key")
+    quant = commands.add_parser("quant-run", help="execute an explicitly authorized frozen quant task JSON")
+    quant.add_argument("task")
+    review = commands.add_parser("review")
+    review.add_argument("run_id")
+    review.add_argument("--reviewer", required=True)
+    review.add_argument("--decision", required=True)
+    package = commands.add_parser("package")
+    package.add_argument("run_id")
+    receive = commands.add_parser("receive")
+    receive.add_argument("package_id")
+    receive.add_argument("--receiver", required=True)
+    receive.add_argument("--decision", choices=["accepted", "rejected", "followup"], required=True)
+    receive.add_argument("--reason", required=True)
     return parser
 
 
@@ -190,6 +203,26 @@ def main(argv=None):
             result = {"runs": [pod.execute(run["id"]) for run in pod.queued_runs()]}
         elif args.command == "recover":
             result = {"interrupted": pod.recover(), "workers_stopped": True}
+        elif args.command == "quant-run":
+            task_path = Path(args.task).resolve()
+            task = json.loads(task_path.read_text(encoding="utf-8-sig"))
+            payload = dict(task["experiment"])
+            if payload.get("recipe") != "quant":
+                raise ValueError("quant-run requires quant recipe")
+            payload["dataset"] = str((task_path.parent / payload["dataset"]).resolve())
+            op = pod.create_opportunity(task["title"], "investment_research", task["mandate"]["objective"])
+            pod.set_mandate(op["id"], task["mandate"])
+            artifact = pod.add_artifact("manual", task["title"], task_path.read_bytes(), {"kind":"authorized_task"})
+            pod.link_artifact(op["id"], artifact["id"])
+            spec = pod.create_spec(op["id"], payload)
+            pod.approve(spec["id"])
+            result = pod.run_spec(spec["id"])
+        elif args.command == "review":
+            result = pod.review(args.run_id, args.reviewer, args.decision)
+        elif args.command == "package":
+            result = pod.export_package(args.run_id)
+        elif args.command == "receive":
+            result = pod.receive_package(args.package_id, args.receiver, args.decision, args.reason)
         elif args.command == "case-run":
             payload = {"recipe": "paper", "dataset": str(Path(args.manifest).resolve())}
             previous = pod.get_request(args.idempotency_key) if args.idempotency_key else None
