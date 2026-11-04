@@ -62,6 +62,8 @@ def probe_tushare(*, client=None):
                                                attempts=1, max_bytes=2_000_000,
                                                json={'token': token, **{k: probe[k] for k in
                                                      ('api_name', 'params', 'fields')}}))
+                if not isinstance(response, dict):
+                    raise ValueError('invalid provider container')
                 code = response.get('code')
                 if code != 0:
                     summary['outcome'] = 'PERMISSION_DENIED' if code in {-2002, 2002} else 'PROVIDER_ERROR'

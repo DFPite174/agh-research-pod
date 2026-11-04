@@ -46,11 +46,11 @@
       "verdict": "全期改善，分期不稳定",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.157,
-      "run_id": "b7b3fd100c864d4bbb9189dd05c48991",
-      "package_id": "ba3890de2eb44372a78ed4f43fab3e83",
+      "seconds": 0.182,
+      "run_id": "dabd0fe3f024489689e39496c354010c",
+      "package_id": "070cf4f8a1ea4e93bb25c1369550bb92",
       "dataset_snapshot": {
-        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "manifest_sha256": "41e15b2a1bf4de5bbde7bbd5ac164f68cf16290972ef29ad62d58b993f33aa9b",
         "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
       }
     },
@@ -99,11 +99,11 @@
       "verdict": "全期及两分期均改善",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.153,
-      "run_id": "8aae421acfc541dcbdf83962a9f9322c",
-      "package_id": "680680b1777a46e68b1d0c682c5e7768",
+      "seconds": 0.183,
+      "run_id": "f9dccb2ec83d4cfbb963b2fa034b32f5",
+      "package_id": "5eedab5f19974c1f8c77e4da7bb625a8",
       "dataset_snapshot": {
-        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "manifest_sha256": "41e15b2a1bf4de5bbde7bbd5ac164f68cf16290972ef29ad62d58b993f33aa9b",
         "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
       }
     },
@@ -152,11 +152,11 @@
       "verdict": "全期改善，分期不稳定",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.134,
-      "run_id": "8e41b32d32d64d75bf6b78a822729864",
-      "package_id": "c72b1e8382044cbda9aca027834783fc",
+      "seconds": 0.213,
+      "run_id": "b0d6890a76dd453ebad110bf2febcd34",
+      "package_id": "09079d143c614c1aabf8a973f060f7ea",
       "dataset_snapshot": {
-        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "manifest_sha256": "41e15b2a1bf4de5bbde7bbd5ac164f68cf16290972ef29ad62d58b993f33aa9b",
         "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
       }
     },
@@ -205,11 +205,11 @@
       "verdict": "未优于强基线",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.149,
-      "run_id": "ef332ea6a9c94d199b980fc6f713b165",
-      "package_id": "e8049573595a4e82811114d02760f459",
+      "seconds": 0.197,
+      "run_id": "7e7ab4b4a64342efbd8a75b6bc2004ec",
+      "package_id": "5f89ed795bde4796a7393cedd2978b9c",
       "dataset_snapshot": {
-        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "manifest_sha256": "41e15b2a1bf4de5bbde7bbd5ac164f68cf16290972ef29ad62d58b993f33aa9b",
         "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
       }
     },
@@ -261,11 +261,11 @@
       "verdict": "未优于强基线",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.209,
-      "run_id": "134cbfe7d3be48fd8ed1f636839c674a",
-      "package_id": "f567a6973012455e8ec89c283bfdc6d0",
+      "seconds": 0.248,
+      "run_id": "4c367f4e36aa47e69232d7e4138e08ba",
+      "package_id": "4632b4801bbb46acb3cd1f7a36140e31",
       "dataset_snapshot": {
-        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "manifest_sha256": "bb1f072a8b5ee31e46cb97a993f68ae290cd37f58d9f723a41f55f085246d3e2",
         "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
       }
     },
@@ -317,11 +317,11 @@
       "verdict": "未优于强基线",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.191,
-      "run_id": "d6137a30aabf4685bec779784a4be14f",
-      "package_id": "1d0a926f44aa45aa86e41ee1c5d69443",
+      "seconds": 0.267,
+      "run_id": "d427d3e417e84f5f9f82c7b057eb8fcf",
+      "package_id": "0b1c63b962084adaa020c3bc0edfa70c",
       "dataset_snapshot": {
-        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "manifest_sha256": "bb1f072a8b5ee31e46cb97a993f68ae290cd37f58d9f723a41f55f085246d3e2",
         "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
       }
     },
@@ -373,11 +373,11 @@
       "verdict": "未优于强基线",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.196,
-      "run_id": "c8bc6084cf4643758f3d462ba84f66bb",
-      "package_id": "e6bb52aafe4149b2925cf09603e4289d",
+      "seconds": 0.274,
+      "run_id": "4ff5ce4900fa4a589169ed7ec940947e",
+      "package_id": "b32a88d0f2c34a48886c3bc9e7646c41",
       "dataset_snapshot": {
-        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "manifest_sha256": "bb1f072a8b5ee31e46cb97a993f68ae290cd37f58d9f723a41f55f085246d3e2",
         "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
       }
     },
@@ -429,11 +429,11 @@
       "verdict": "全期改善，分期不稳定",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.226,
-      "run_id": "30491044bd4c40d18f9ef557b83a877e",
-      "package_id": "3dcc289a1e9b4407bd331a25d86620ff",
+      "seconds": 0.261,
+      "run_id": "9efb14487550444190c4251e70e9e3b9",
+      "package_id": "dc0ed7859e5c4c91b2779b05d7f839a6",
       "dataset_snapshot": {
-        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "manifest_sha256": "bb1f072a8b5ee31e46cb97a993f68ae290cd37f58d9f723a41f55f085246d3e2",
         "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
       }
     },
@@ -479,9 +479,9 @@
       "verdict": "仅工程对照",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.193,
-      "run_id": "418c86a8bf364dcebfe69ff291158277",
-      "package_id": "ce88f32d3bce489e8c89f1beba88e831",
+      "seconds": 0.246,
+      "run_id": "ee6610f5f3f34b3fb1c9a23c56fc8750",
+      "package_id": "4ac90201113a4368974c442c939d8a54",
       "dataset_snapshot": {
         "manifest_sha256": "dca8a87b6c346ffcd7cb271a416304beb35bcbeddac5c023fbca5d663c0620ea",
         "csv_sha256": "d85bb5bd7404cd6fd1021351f75fddb9932bd5715588cf08f8ce9c434dea377c"
@@ -529,9 +529,9 @@
       "verdict": "仅工程对照",
       "workflow": "PASS",
       "package_replay": "PASS",
-      "seconds": 0.19,
-      "run_id": "043c64322dba415f83a487357468817e",
-      "package_id": "8a5ae1b740fb48ce8399d27bab0ed7e5",
+      "seconds": 0.284,
+      "run_id": "9b2b34e0d697418499b8a9f6a7428245",
+      "package_id": "a6931a19accb40a6acd032ba2c3652fb",
       "dataset_snapshot": {
         "manifest_sha256": "509ddab8635408c25cca2e628ee67767d2d38f4bd23a22d79a9cda5e703ad95d",
         "csv_sha256": "1c0ce67f1090b29dd4e3109b6540b039974c44e797fa9ab2453cc782d140a790"

@@ -61,7 +61,7 @@ def _parser():
     local.add_argument("path")
     local.add_argument("--title")
     listing = commands.add_parser("list")
-    listing.add_argument("kind", choices=["opportunity", "artifact", "spec", "run", "review", "package", "delivery"])
+    listing.add_argument("kind", choices=["opportunity", "artifact", "spec", "run", "review", "package", "delivery", "analysis"])
     listing.add_argument("--limit", type=int, default=200)
     listing.add_argument("--offset", type=int, default=0)
     approve = commands.add_parser("approve")
@@ -180,19 +180,8 @@ def main(argv=None):
             fetched = fetch_source(args.source, args.reference)
             result = pod.add_artifact(args.source, fetched["title"], fetched["content"], fetched.get("metadata", {}))
         elif args.command == "analyze":
-            from .analyst import analyze
-            from .documents import prepare_evidence
-            evidence = []
-            for artifact_id in args.artifact_ids:
-                artifact = pod.get("artifact", artifact_id)
-                prepared = prepare_evidence(pod.read_artifact(artifact_id))
-                if prepared["status"] != "READY":
-                    _print({"status": "BLOCKED_INPUT", "artifact_id": artifact_id,
-                            "reason": prepared["status"], "empty_pages": prepared["empty_pages"],
-                            "sha256": prepared["sha256"], "provider_called": False})
-                    return 1
-                evidence.append({"id": artifact_id, "title": artifact["title"], "content": prepared["text"]})
-            result = analyze(evidence, max_total_tokens=args.max_total_tokens, max_output_tokens=args.max_output_tokens)
+            result = pod.analyze_artifacts(args.artifact_ids, max_total_tokens=args.max_total_tokens,
+                                           max_output_tokens=args.max_output_tokens)
         elif args.command == "list":
             result = pod.list(args.kind, limit=args.limit, offset=args.offset)
         elif args.command == "approve":
@@ -240,7 +229,7 @@ def main(argv=None):
         _print(result)
         if isinstance(result, dict):
             runs = [result, result.get("run", {}), *result.get("runs", [])]
-            if any(run.get("status") == "failed" for run in runs):
+            if any(run.get("status") in {"failed", "FAILED", "BLOCKED_INPUT"} for run in runs):
                 return 1
         return 0
     except (ValueError, TypeError, KeyError, OSError, ImportError) as exc:

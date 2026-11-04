@@ -1,0 +1,16 @@
+{
+  "version": "0.2.1",
+  "tests_passed": 211,
+  "static_checks": "PASS",
+  "representative_cases": 10,
+  "case_metrics_unchanged": true,
+  "package_prediction_replays": "10/10 identical",
+  "independent_static_review": "PASS",
+  "wheel_and_sdist": "PASS",
+  "installed_wheel": "PASS",
+  "actual_http": "PASS",
+  "online_llm": "NOT_RUN",
+  "browser_visual_qa": "NOT_RUN",
+  "live_or_account_trading": "NOT_RUN",
+  "legacy_packages": "Missing required attachments must be re-exported; no bypass"
+}

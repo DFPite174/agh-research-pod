@@ -99,6 +99,8 @@ def analyze(artifacts, *, client=None, max_output_tokens=1200, max_total_tokens=
                                    'response_format': {'type': 'json_schema', 'json_schema': {
                                        'name': 'evidence_analysis', 'strict': True, 'schema': SCHEMA}}})
                 response = json.loads(raw)
+                if not isinstance(response, dict) or not isinstance(response.get('usage', {}), dict):
+                    raise ValueError('invalid provider response container')
                 reported = response.get('usage', {}).get('total_tokens')
                 if type(reported) is int and reported >= 0:
                     consumed += reported
