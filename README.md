@@ -4,6 +4,12 @@
 
 **当前定位：可运行的研究工程首版。原论文全历史实证仍被数据资格阻塞，不能称为完整复现，也没有实盘收益证据。** 合成演示、数学验证、替代数据研究和原设定复现使用不同标签。程序不从论文目标数字生成“实测结果”。
 
+## 代表性案例扩展验证
+
+已完成8项真实量化案例与2项合成对照，逐例交付包重跑一致。完整结果见 [直观表格报告](reports/representative-cases.html)、[Markdown表格](reports/representative-cases.md)和[本轮验收](reports/representative-acceptance.md)。
+
+运行 `python examples/quant/representative_cases.py`，首次从Kenneth French官方来源下载因子数据，后续可用runtime缓存重跑。固定参数、保留负面与分期不稳定结果，未建立PIT或真实交易收益证据。
+
 ## 0.2 通用量化研究闭环
 
 用户确认：通用研究闭环优先，案例围绕量化，不绑定作者。新增任务书 → 冻结量化规格 → 数据哈希审批 → 扩展窗口训练 → 双基线比较 → 复核 → 可重跑数据交付包 → 接收/拒绝/继续研究反馈。

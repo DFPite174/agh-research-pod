@@ -1,0 +1,545 @@
+{
+  "date": "2026-11-04",
+  "cases": [
+    {
+      "name": "inflation",
+      "evidence": "alternative_real",
+      "source": "statsmodels macrodata; FRED/BLS accessed 2009-12-15",
+      "source_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e",
+      "start": "1959-06-30",
+      "end": "2009-09-30",
+      "oos_start": "1974-09-30",
+      "oos_end": "2009-09-30",
+      "rows": 202,
+      "features": [
+        "inflation",
+        "unemployment",
+        "short_rate",
+        "gdp_growth"
+      ],
+      "min_train": 60,
+      "metrics": {
+        "n_oos": 141,
+        "mse": 8.075379277704288,
+        "baseline_mse": 11.81115694837405,
+        "oos_r2": 0.31629227238268454,
+        "persistence_mse": 8.767897872340425,
+        "r2_vs_persistence": 0.0789834239311552
+      },
+      "improvement": {
+        "vs_mean": 0.31629227238268454,
+        "vs_persistence": 0.0789834239311552,
+        "vs_stronger": 0.0789834239311552
+      },
+      "halves": [
+        {
+          "vs_mean": 0.3576617168166648,
+          "vs_persistence": -0.09118658653795464,
+          "vs_stronger": -0.09118658653795464
+        },
+        {
+          "vs_mean": 0.23774221203205625,
+          "vs_persistence": 0.2629062075901255,
+          "vs_stronger": 0.23774221203205625
+        }
+      ],
+      "verdict": "全期改善，分期不稳定",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.157,
+      "run_id": "b7b3fd100c864d4bbb9189dd05c48991",
+      "package_id": "ba3890de2eb44372a78ed4f43fab3e83",
+      "dataset_snapshot": {
+        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
+      }
+    },
+    {
+      "name": "unemployment",
+      "evidence": "alternative_real",
+      "source": "statsmodels macrodata; FRED/BLS accessed 2009-12-15",
+      "source_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e",
+      "start": "1959-06-30",
+      "end": "2009-09-30",
+      "oos_start": "1974-09-30",
+      "oos_end": "2009-09-30",
+      "rows": 202,
+      "features": [
+        "inflation",
+        "unemployment",
+        "short_rate",
+        "gdp_growth"
+      ],
+      "min_train": 60,
+      "metrics": {
+        "n_oos": 141,
+        "mse": 0.09885578896956512,
+        "baseline_mse": 2.682144813366912,
+        "oos_r2": 0.9631430083577512,
+        "persistence_mse": 0.13489361702127656,
+        "r2_vs_persistence": 0.2671574003833498
+      },
+      "improvement": {
+        "vs_mean": 0.9631430083577512,
+        "vs_persistence": 0.2671574003833498,
+        "vs_stronger": 0.2671574003833498
+      },
+      "halves": [
+        {
+          "vs_mean": 0.9655913799113498,
+          "vs_persistence": 0.26807247123275924,
+          "vs_stronger": 0.26807247123275924
+        },
+        {
+          "vs_mean": 0.9575731163177915,
+          "vs_persistence": 0.26546307879561293,
+          "vs_stronger": 0.26546307879561293
+        }
+      ],
+      "verdict": "全期及两分期均改善",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.153,
+      "run_id": "8aae421acfc541dcbdf83962a9f9322c",
+      "package_id": "680680b1777a46e68b1d0c682c5e7768",
+      "dataset_snapshot": {
+        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
+      }
+    },
+    {
+      "name": "gdp_growth",
+      "evidence": "alternative_real",
+      "source": "statsmodels macrodata; FRED/BLS accessed 2009-12-15",
+      "source_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e",
+      "start": "1959-06-30",
+      "end": "2009-09-30",
+      "oos_start": "1974-09-30",
+      "oos_end": "2009-09-30",
+      "rows": 202,
+      "features": [
+        "inflation",
+        "unemployment",
+        "short_rate",
+        "gdp_growth"
+      ],
+      "min_train": 60,
+      "metrics": {
+        "n_oos": 141,
+        "mse": 0.6807192191189159,
+        "baseline_mse": 0.7120605322163296,
+        "oos_r2": 0.044014956144054374,
+        "persistence_mse": 0.8511805920804574,
+        "r2_vs_persistence": 0.20026463778373926
+      },
+      "improvement": {
+        "vs_mean": 0.044014956144054374,
+        "vs_persistence": 0.20026463778373926,
+        "vs_stronger": 0.044014956144054374
+      },
+      "halves": [
+        {
+          "vs_mean": 0.1259085443011937,
+          "vs_persistence": 0.30029543849198326,
+          "vs_stronger": 0.1259085443011937
+        },
+        {
+          "vs_mean": -0.1546625633217691,
+          "vs_persistence": -0.08446724328652677,
+          "vs_stronger": -0.1546625633217691
+        }
+      ],
+      "verdict": "全期改善，分期不稳定",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.134,
+      "run_id": "8e41b32d32d64d75bf6b78a822729864",
+      "package_id": "c72b1e8382044cbda9aca027834783fc",
+      "dataset_snapshot": {
+        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
+      }
+    },
+    {
+      "name": "short_rate",
+      "evidence": "alternative_real",
+      "source": "statsmodels macrodata; FRED/BLS accessed 2009-12-15",
+      "source_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e",
+      "start": "1959-06-30",
+      "end": "2009-09-30",
+      "oos_start": "1974-09-30",
+      "oos_end": "2009-09-30",
+      "rows": 202,
+      "features": [
+        "inflation",
+        "unemployment",
+        "short_rate",
+        "gdp_growth"
+      ],
+      "min_train": 60,
+      "metrics": {
+        "n_oos": 141,
+        "mse": 1.1302373450571899,
+        "baseline_mse": 10.181918318102166,
+        "oos_r2": 0.8889956381748054,
+        "persistence_mse": 0.9656446808510638,
+        "r2_vs_persistence": -0.17044847599746893
+      },
+      "improvement": {
+        "vs_mean": 0.8889956381748054,
+        "vs_persistence": -0.17044847599746893,
+        "vs_stronger": -0.17044847599746893
+      },
+      "halves": [
+        {
+          "vs_mean": 0.8339860880318024,
+          "vs_persistence": -0.17395562626333505,
+          "vs_stronger": -0.17395562626333505
+        },
+        {
+          "vs_mean": 0.9710104215286484,
+          "vs_persistence": -0.14133641203822478,
+          "vs_stronger": -0.14133641203822478
+        }
+      ],
+      "verdict": "未优于强基线",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.149,
+      "run_id": "ef332ea6a9c94d199b980fc6f713b165",
+      "package_id": "e8049573595a4e82811114d02760f459",
+      "dataset_snapshot": {
+        "manifest_sha256": "6163c6ba94c19376cbc2e0b988863b73e73b071dcbf22e68f638690856df2e97",
+        "csv_sha256": "74aeb5a6bf4c4130cde3a3d8b90dcf92840a2de02900f7b2eac0aa40a91a992e"
+      }
+    },
+    {
+      "name": "market_return",
+      "evidence": "alternative_real",
+      "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+      "source_sha256": "a3894d74d553cab812eabbe706bdbf443c97eb20b24b05e3e5f3ce47e46b90bb",
+      "start": "1960-12-31",
+      "end": "2024-12-31",
+      "oos_start": "1981-01-31",
+      "oos_end": "2024-12-31",
+      "rows": 769,
+      "features": [
+        "market",
+        "size",
+        "value",
+        "rf",
+        "market_12m",
+        "squared_return",
+        "variance_12m"
+      ],
+      "min_train": 240,
+      "metrics": {
+        "n_oos": 528,
+        "mse": 0.0020320525474323463,
+        "baseline_mse": 0.002018650067801972,
+        "oos_r2": -0.006639327857833166,
+        "persistence_mse": 0.003874483617424241,
+        "r2_vs_persistence": 0.4755294516425763
+      },
+      "improvement": {
+        "vs_mean": -0.006639327857833166,
+        "vs_persistence": 0.4755294516425763,
+        "vs_stronger": -0.006639327857833166
+      },
+      "halves": [
+        {
+          "vs_mean": -0.019730693946869104,
+          "vs_persistence": 0.4604386016602342,
+          "vs_stronger": -0.019730693946869104
+        },
+        {
+          "vs_mean": 0.008020678444023877,
+          "vs_persistence": 0.49188871459618155,
+          "vs_stronger": 0.008020678444023877
+        }
+      ],
+      "verdict": "未优于强基线",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.209,
+      "run_id": "134cbfe7d3be48fd8ed1f636839c674a",
+      "package_id": "f567a6973012455e8ec89c283bfdc6d0",
+      "dataset_snapshot": {
+        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
+      }
+    },
+    {
+      "name": "size_factor",
+      "evidence": "alternative_real",
+      "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+      "source_sha256": "a3894d74d553cab812eabbe706bdbf443c97eb20b24b05e3e5f3ce47e46b90bb",
+      "start": "1960-12-31",
+      "end": "2024-12-31",
+      "oos_start": "1981-01-31",
+      "oos_end": "2024-12-31",
+      "rows": 769,
+      "features": [
+        "market",
+        "size",
+        "value",
+        "rf",
+        "market_12m",
+        "squared_return",
+        "variance_12m"
+      ],
+      "min_train": 240,
+      "metrics": {
+        "n_oos": 528,
+        "mse": 0.0008922159563287692,
+        "baseline_mse": 0.0008880186496607632,
+        "oos_r2": -0.004726597430819046,
+        "persistence_mse": 0.0018406070075757566,
+        "r2_vs_persistence": 0.5152599372617312
+      },
+      "improvement": {
+        "vs_mean": -0.004726597430819046,
+        "vs_persistence": 0.5152599372617312,
+        "vs_stronger": -0.004726597430819046
+      },
+      "halves": [
+        {
+          "vs_mean": 0.01499319092446727,
+          "vs_persistence": 0.524678571264028,
+          "vs_stronger": 0.01499319092446727
+        },
+        {
+          "vs_mean": -0.04129841513093213,
+          "vs_persistence": 0.497802378994761,
+          "vs_stronger": -0.04129841513093213
+        }
+      ],
+      "verdict": "未优于强基线",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.191,
+      "run_id": "d6137a30aabf4685bec779784a4be14f",
+      "package_id": "1d0a926f44aa45aa86e41ee1c5d69443",
+      "dataset_snapshot": {
+        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
+      }
+    },
+    {
+      "name": "value_factor",
+      "evidence": "alternative_real",
+      "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+      "source_sha256": "a3894d74d553cab812eabbe706bdbf443c97eb20b24b05e3e5f3ce47e46b90bb",
+      "start": "1960-12-31",
+      "end": "2024-12-31",
+      "oos_start": "1981-01-31",
+      "oos_end": "2024-12-31",
+      "rows": 769,
+      "features": [
+        "market",
+        "size",
+        "value",
+        "rf",
+        "market_12m",
+        "squared_return",
+        "variance_12m"
+      ],
+      "min_train": 240,
+      "metrics": {
+        "n_oos": 528,
+        "mse": 0.000983700462677961,
+        "baseline_mse": 0.0009794322794989846,
+        "oos_r2": -0.004357813468389704,
+        "persistence_mse": 0.0016600186931818172,
+        "r2_vs_persistence": 0.4074160328926977
+      },
+      "improvement": {
+        "vs_mean": -0.004357813468389704,
+        "vs_persistence": 0.4074160328926977,
+        "vs_stronger": -0.004357813468389704
+      },
+      "halves": [
+        {
+          "vs_mean": -0.03464839404627407,
+          "vs_persistence": 0.40822525999673176,
+          "vs_stronger": -0.03464839404627407
+        },
+        {
+          "vs_mean": 0.02637588944905289,
+          "vs_persistence": 0.4065410219971809,
+          "vs_stronger": 0.02637588944905289
+        }
+      ],
+      "verdict": "未优于强基线",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.196,
+      "run_id": "c8bc6084cf4643758f3d462ba84f66bb",
+      "package_id": "e6bb52aafe4149b2925cf09603e4289d",
+      "dataset_snapshot": {
+        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
+      }
+    },
+    {
+      "name": "volatility_proxy",
+      "evidence": "alternative_real",
+      "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+      "source_sha256": "a3894d74d553cab812eabbe706bdbf443c97eb20b24b05e3e5f3ce47e46b90bb",
+      "start": "1960-12-31",
+      "end": "2024-12-31",
+      "oos_start": "1981-01-31",
+      "oos_end": "2024-12-31",
+      "rows": 769,
+      "features": [
+        "market",
+        "size",
+        "value",
+        "rf",
+        "market_12m",
+        "squared_return",
+        "variance_12m"
+      ],
+      "min_train": 240,
+      "metrics": {
+        "n_oos": 528,
+        "mse": 1.4129784056304405e-05,
+        "baseline_mse": 1.4953448362654144e-05,
+        "oos_r2": 0.05508189725701118,
+        "persistence_mse": 2.547241126386795e-05,
+        "r2_vs_persistence": 0.445290675078445
+      },
+      "improvement": {
+        "vs_mean": 0.05508189725701118,
+        "vs_persistence": 0.445290675078445,
+        "vs_stronger": 0.05508189725701118
+      },
+      "halves": [
+        {
+          "vs_mean": -0.021346319376652767,
+          "vs_persistence": 0.4660199238103083,
+          "vs_stronger": -0.021346319376652767
+        },
+        {
+          "vs_mean": 0.1851511729280121,
+          "vs_persistence": 0.39520875326375404,
+          "vs_stronger": 0.1851511729280121
+        }
+      ],
+      "verdict": "全期改善，分期不稳定",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.226,
+      "run_id": "30491044bd4c40d18f9ef557b83a877e",
+      "package_id": "3dcc289a1e9b4407bd331a25d86620ff",
+      "dataset_snapshot": {
+        "manifest_sha256": "ff7f1b4c0f9ce819660ef53e556ed6940ef2692af7f584d15e83aff10c813b54",
+        "csv_sha256": "40dcc9d8351124975ce91466d0f0cb290b4113d3143010db1e18bdbaba6d9c35"
+      }
+    },
+    {
+      "name": "iid_control",
+      "evidence": "synthetic",
+      "source": "Generated Gaussian innovations; seed=20261104; AR coefficient=0.0",
+      "source_sha256": "d85bb5bd7404cd6fd1021351f75fddb9932bd5715588cf08f8ce9c434dea377c",
+      "start": "2000-01-03",
+      "end": "2002-04-19",
+      "oos_start": "2000-06-20",
+      "oos_end": "2002-04-19",
+      "rows": 600,
+      "features": [
+        "return"
+      ],
+      "min_train": 120,
+      "metrics": {
+        "n_oos": 479,
+        "mse": 0.00011149635925985242,
+        "baseline_mse": 0.00011084527154513872,
+        "oos_r2": -0.005873842931121809,
+        "persistence_mse": 0.00022137889965927226,
+        "r2_vs_persistence": 0.49635507525126277
+      },
+      "improvement": {
+        "vs_mean": -0.005873842931121809,
+        "vs_persistence": 0.49635507525126277,
+        "vs_stronger": -0.005873842931121809
+      },
+      "halves": [
+        {
+          "vs_mean": -0.008425662797597822,
+          "vs_persistence": 0.4967255095909445,
+          "vs_stronger": -0.008425662797597822
+        },
+        {
+          "vs_mean": -0.003609237177368385,
+          "vs_persistence": 0.4960242963859257,
+          "vs_stronger": -0.003609237177368385
+        }
+      ],
+      "verdict": "仅工程对照",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.193,
+      "run_id": "418c86a8bf364dcebfe69ff291158277",
+      "package_id": "ce88f32d3bce489e8c89f1beba88e831",
+      "dataset_snapshot": {
+        "manifest_sha256": "dca8a87b6c346ffcd7cb271a416304beb35bcbeddac5c023fbca5d663c0620ea",
+        "csv_sha256": "d85bb5bd7404cd6fd1021351f75fddb9932bd5715588cf08f8ce9c434dea377c"
+      }
+    },
+    {
+      "name": "ar_control",
+      "evidence": "synthetic",
+      "source": "Generated Gaussian innovations; seed=20261104; AR coefficient=0.8",
+      "source_sha256": "1c0ce67f1090b29dd4e3109b6540b039974c44e797fa9ab2453cc782d140a790",
+      "start": "2000-01-03",
+      "end": "2002-04-19",
+      "oos_start": "2000-06-20",
+      "oos_end": "2002-04-19",
+      "rows": 600,
+      "features": [
+        "return"
+      ],
+      "min_train": 120,
+      "metrics": {
+        "n_oos": 479,
+        "mse": 0.0001119326651875788,
+        "baseline_mse": 0.00033190842830872264,
+        "oos_r2": 0.6627604012409551,
+        "persistence_mse": 0.00012117067737404892,
+        "r2_vs_persistence": 0.07623966777005586
+      },
+      "improvement": {
+        "vs_mean": 0.6627604012409551,
+        "vs_persistence": 0.07623966777005586,
+        "vs_stronger": 0.07623966777005586
+      },
+      "halves": [
+        {
+          "vs_mean": 0.6644759062040889,
+          "vs_persistence": 0.06977418129364599,
+          "vs_stronger": 0.06977418129364599
+        },
+        {
+          "vs_mean": 0.6611999714511847,
+          "vs_persistence": 0.08198736660189532,
+          "vs_stronger": 0.08198736660189532
+        }
+      ],
+      "verdict": "仅工程对照",
+      "workflow": "PASS",
+      "package_replay": "PASS",
+      "seconds": 0.19,
+      "run_id": "043c64322dba415f83a487357468817e",
+      "package_id": "8a5ae1b740fb48ce8399d27bab0ed7e5",
+      "dataset_snapshot": {
+        "manifest_sha256": "509ddab8635408c25cca2e628ee67767d2d38f4bd23a22d79a9cda5e703ad95d",
+        "csv_sha256": "1c0ce67f1090b29dd4e3109b6540b039974c44e797fa9ab2453cc782d140a790"
+      }
+    }
+  ],
+  "source_header": "This file was created using the 202609 CRSP database.",
+  "selection": "All fixed cases retained; no tuning or claimed independent final holdout",
+  "engineering_passed": 10,
+  "independent_researcher_signoff": false
+}
