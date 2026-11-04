@@ -8,11 +8,11 @@
 </style>
 </head>
 <body><div class="shell">
-<aside><div class="brand">AGH <span style="font-weight:350">/ Pod</span></div><div class="edition">RESEARCH WORKBENCH · 0.1</div>
+<aside><div class="brand">AGH <span style="font-weight:350">/ Pod</span></div><div class="edition">RESEARCH WORKBENCH · 0.2</div>
 <nav aria-label="工作台导航"><a href="#opportunities">01　研究机会</a><a href="#artifacts">02　证据库</a><a href="#specs">03　规格与批准</a><a href="#runs">04　运行与复核</a><a href="#case">05　论文目标与缺口</a></nav>
 <div class="local">本地单用户工作台<br>发现 → 规格 → 批准 → 运行 → 复核<br><br>工程验收与科学复现分别记录。</div></aside>
 <main class="main"><header class="top"><div><div class="eyebrow">证据驱动的研究工作流</div><h1>把研究判断落到证据。</h1></div><span class="pill">LOCAL · 受信任单用户</span></header>
-<p class="lede muted">跟踪来源、冻结实验规格、保留运行与复核记录。首个研究案例：中国可转债五种定价模型比较。</p>
+<p class="lede muted">跟踪来源、冻结实验规格、保留运行与复核记录。支持宏观、收益等时序预测研究；可转债论文保留为专用案例。</p>
 <div class="notice"><strong>研究状态须以真实数据审计为准。</strong> Demo 使用合成数据（Synthetic），只检验工程与数学行为；缺少许可历史数据、条款或独立复跑时，完整论文复现仍为 BLOCKED。</div>
 <div class="stats"><div class="stat"><strong>{{ opportunities|length }}</strong><span>研究机会 · 最近 200 条</span></div><div class="stat"><strong>{{ artifacts|length }}</strong><span>来源证据 · 哈希归档</span></div><div class="stat"><strong>{{ specs|length }}</strong><span>不可变实验规格</span></div><div class="stat"><strong>{{ runs|length }}</strong><span>运行与失败记录</span></div></div>
 
@@ -20,12 +20,13 @@
 <form id="opportunity-form"><label>标题<input name="title" maxlength="300" required placeholder="例：检验信用利差对模型误定价的影响"></label><label>研究类型<select name="research_type"><option value="investment_research">投资研究</option><option value="capability_evaluation">能力评价</option></select></label><label>研究问题<input name="problem" maxlength="10000" placeholder="数据、假设与需要的证据"></label><button type="submit">创建机会</button></form>
 {% if opportunities %}<div class="table-wrap"><table><thead><tr><th>标题 / ID</th><th>类型</th><th>状态</th></tr></thead><tbody>{% for op in opportunities %}<tr><td>{{ op.title }}<div class="id">{{ op.id }}</div></td><td>{{ op.research_type }}</td><td><span class="badge">{{ op.status }}</span></td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty">还没有研究机会。创建后可在下一步冻结实验规格。</div>{% endif %}</section>
 
+<section id="mandate"><h2>研究任务书</h2><p>先确定问题、基线、验收及停止条件。冻结规格会保存当时的任务书。</p><form id="mandate-form"><label>机会<select name="opportunity_id" required>{% for op in opportunities %}<option value="{{ op.id }}">{{ op.title }}</option>{% endfor %}</select></label>{% for key,label in [('objective','研究目标'),('baseline','对照基线'),('acceptance','验收标准'),('stop_condition','停止条件'),('receiver','接收方')] %}<label>{{ label }}<input name="{{ key }}" required maxlength="3000"></label>{% endfor %}<button type="submit">保存任务书</button></form></section>
 <section id="artifacts"><div class="section-top"><h2>证据库</h2><span class="step">02 / TRACE</span></div><p class="section-note">论文与外部仓库内容是证据。通过 CLI 的 import / source-sync 归档；本页不提供任意文件读取或执行入口。</p>
 <form id="link-form"><label>研究机会<select name="opportunity_id" required><option value="">选择关联机会</option>{% for op in opportunities %}<option value="{{ op.id }}">{{ op.title }}</option>{% endfor %}</select></label><label>来源证据<select name="artifact_id" required><option value="">选择已有证据</option>{% for a in artifacts %}<option value="{{ a.id }}">{{ a.title }}</option>{% endfor %}</select></label><button type="submit">关联证据</button></form>
 {% if artifacts %}<div class="table-wrap"><table><thead><tr><th>来源</th><th>标题</th><th>SHA-256</th></tr></thead><tbody>{% for a in artifacts %}<tr><td>{{ a.source }}</td><td>{{ a.title }}</td><td class="id">{{ a.sha256 }}</td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty">证据库为空。可使用 agh import paper.pdf 或 source-sync 接入来源。</div>{% endif %}</section>
 
-<section id="specs"><div class="section-top"><h2>规格与批准</h2><span class="step">03 / FREEZE</span></div><p class="section-note">创建后不直接修改。批准只授权该规格执行；变更参数需创建新规格。仅支持已审查的 demo / paper 配方。</p>
-<form id="spec-form"><label>研究机会<select name="opportunity_id" required><option value="">选择机会</option>{% for op in opportunities %}<option value="{{ op.id }}">{{ op.title }}</option>{% endfor %}</select></label><label>配方<select name="recipe"><option value="demo">demo · 合成工程验证</option><option value="paper">paper · 许可数据研究</option></select></label><label>随机种子<input type="number" name="seed" value="7" min="0" max="4294967295" required></label><label>Paper manifest 路径<input name="dataset" placeholder="许可数据 manifest.json"></label><button type="submit">冻结新规格</button></form>
+<section id="specs"><div class="section-top"><h2>规格与批准</h2><span class="step">03 / FREEZE</span></div><p class="section-note">创建后不直接修改。批准只授权该规格执行；变更参数需创建新规格。支持已审查的 quant / demo / paper 配方。quant 使用 CSV 与来源清单，所有特征滞后一期。</p>
+<form id="spec-form"><label>研究机会<select name="opportunity_id" required><option value="">选择机会</option>{% for op in opportunities %}<option value="{{ op.id }}">{{ op.title }}</option>{% endfor %}</select></label><label>配方<select name="recipe"><option value="quant">quant · 通用量化时序实验</option><option value="demo">demo · 合成工程验证</option><option value="paper">paper · 许可数据研究</option></select></label><label>随机种子<input type="number" name="seed" value="7" min="0" max="4294967295" required></label><label>数据 manifest 路径<input name="dataset" placeholder="许可数据 manifest.json"></label><label>Quant 目标列<input name="target" placeholder="inflation"></label><label>Quant 特征列（逗号分隔）<input name="features" placeholder="inflation,tbill"></label><label>最小训练期<input type="number" name="min_train" value="36" min="12" max="2000"></label><button type="submit">冻结新规格</button></form>
 <div class="two"><form id="approve-form"><label>批准规格<select name="spec_id" required><option value="">选择 planned 规格</option>{% for s in specs if s.status == 'planned' %}<option value="{{ s.id }}">{{ s.id }} · {{ s.payload.recipe }}</option>{% endfor %}</select></label><button type="submit">批准</button></form><form id="run-form"><label>执行规格<select name="spec_id" required><option value="">选择 approved 规格</option>{% for s in specs if s.status == 'approved' %}<option value="{{ s.id }}">{{ s.id }} · {{ s.payload.recipe }}</option>{% endfor %}</select></label><button type="submit">提交运行</button></form></div>
 {% for s in specs %}<details><summary>{{ s.payload.recipe }} · {{ s.status }} · {{ s.id }}</summary><pre>{{ s|tojson(indent=2) }}</pre></details>{% endfor %}</section>
 
@@ -36,18 +37,21 @@
 {% for r in runs %}<details><summary>查看结果 · {{ r.id }}</summary><pre>{{ r|tojson(indent=2) }}</pre></details>{% endfor %}
 {% if reviews %}<details><summary>复核记录（{{ reviews|length }}）</summary><pre>{{ reviews|tojson(indent=2) }}</pre></details>{% endif %}{% if packages %}<details><summary>本地证据包（{{ packages|length }}）</summary><pre>{{ packages|tojson(indent=2) }}</pre></details>{% endif %}</section>
 
+<section id="delivery"><h2>交付与反馈</h2><p>接收结论是本地声明；拒绝和继续研究也是有效产出。</p><form id="delivery-form"><label>证据包<select name="package_id" required>{% for p in packages %}<option value="{{ p.id }}">{{ p.id }}</option>{% endfor %}</select></label><label>接收方<input name="receiver" required maxlength="3000"></label><label>决定<select name="decision"><option value="accepted">接收</option><option value="followup">继续研究</option><option value="rejected">拒绝</option></select></label><label>依据<input name="reason" required maxlength="3000"></label><button type="submit">记录反馈</button></form>{% for d in deliveries %}<pre>{{ d|tojson(indent=2) }}</pre>{% endfor %}</section>
 <section id="case"><div class="section-top"><h2>论文目标与缺口</h2><span class="step">05 / EVALUATE</span></div><p class="section-note">逐项保留论文目标、实测值与状态。缺测保持 NOT_RUN / BLOCKED；不能复制原文数字填补。以下展示配方登记状态。</p><pre>{{ case|tojson(indent=2) }}</pre></section>
 <section id="response-panel" aria-live="polite"><div class="section-top"><h2>操作回执</h2><button class="secondary" id="reload" type="button">刷新工作台</button></div><p class="section-note">提交成功后先阅读回执，再刷新查看持久化状态。</p><pre id="response">等待操作。</pre></section>
-<footer>AGH ResearchPod · 0.1 · 本地可信工作台。审批与复核者身份是本地声明，不构成外部身份认证。</footer>
+<footer>AGH ResearchPod · 0.2 · 本地可信工作台。审批与复核者身份是本地声明，不构成外部身份认证。</footer>
 </main></div>
 <script>
 const output=document.getElementById('response');
 document.getElementById('reload').addEventListener('click',()=>location.reload());
 async function send(path,body,button,headers={}){button.disabled=true;output.textContent='正在提交…';try{const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify(body)});const data=await response.json();output.textContent=JSON.stringify({http_status:response.status,...data},null,2);document.getElementById('response-panel').scrollIntoView({behavior:'smooth'});}catch(error){output.textContent='请求失败：'+error.message;}finally{button.disabled=false;}}
 function bind(id,action){document.getElementById(id).addEventListener('submit',event=>{event.preventDefault();const form=event.currentTarget;action(Object.fromEntries(new FormData(form)),form.querySelector('button'));});}
+bind('mandate-form',(data,button)=>{const id=data.opportunity_id;delete data.opportunity_id;send('/v1/opportunities/'+encodeURIComponent(id)+'/mandate',data,button);});
+bind('delivery-form',(data,button)=>{const id=data.package_id;delete data.package_id;send('/v1/packages/'+encodeURIComponent(id)+'/receive',data,button);});
 bind('opportunity-form',(data,button)=>send('/v1/opportunities',data,button));
 bind('link-form',(data,button)=>{const id=data.opportunity_id;delete data.opportunity_id;send('/v1/opportunities/'+encodeURIComponent(id)+'/artifacts',data,button);});
-bind('spec-form',(data,button)=>{const id=data.opportunity_id;delete data.opportunity_id;data.seed=Number(data.seed);if(!data.dataset)delete data.dataset;send('/v1/opportunities/'+encodeURIComponent(id)+'/specs',data,button);});
+bind('spec-form',(data,button)=>{const id=data.opportunity_id;delete data.opportunity_id;data.seed=Number(data.seed);if(data.recipe==='quant'){data.features=data.features.split(',').map(x=>x.trim());data.min_train=Number(data.min_train);}else{delete data.features;delete data.target;delete data.min_train;}if(!data.dataset)delete data.dataset;send('/v1/opportunities/'+encodeURIComponent(id)+'/specs',data,button);});
 bind('approve-form',(data,button)=>send('/v1/specs/'+encodeURIComponent(data.spec_id)+'/approve',{},button));
 bind('run-form',(data,button)=>send('/v1/specs/'+encodeURIComponent(data.spec_id)+'/runs',{},button,{'Idempotency-Key':'ui:'+data.spec_id}));
 bind('review-form',(data,button)=>{const id=data.run_id;delete data.run_id;send('/v1/runs/'+encodeURIComponent(id)+'/reviews',data,button);});

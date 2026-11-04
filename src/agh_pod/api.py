@@ -21,11 +21,31 @@ class OpportunityRequest(StrictRequest):
 
 
 class SpecRequest(StrictRequest):
-    recipe: Literal["demo", "paper"]
+    recipe: Literal["demo", "paper", "quant"]
     seed: int = Field(default=7, ge=0, lt=2**32)
     dataset: str | None = Field(default=None, max_length=4096)
     steps: int = Field(default=200, ge=2, le=2000)
     paths: int = Field(default=10000, ge=2, le=100000)
+
+
+    target: str | None = Field(default=None, max_length=200)
+    features: list[str] | None = Field(default=None, max_length=30)
+    min_train: int = Field(default=36, ge=12, le=2000)
+    ridge: float = Field(default=1.0, gt=0, le=1000000)
+
+
+class MandateRequest(StrictRequest):
+    objective: str = Field(min_length=1, max_length=3000)
+    baseline: str = Field(min_length=1, max_length=3000)
+    acceptance: str = Field(min_length=1, max_length=3000)
+    stop_condition: str = Field(min_length=1, max_length=3000)
+    receiver: str = Field(min_length=1, max_length=3000)
+
+
+class DeliveryRequest(StrictRequest):
+    receiver: str = Field(min_length=1, max_length=3000)
+    decision: Literal["accepted", "rejected", "followup"]
+    reason: str = Field(min_length=1, max_length=3000)
 
 
 class EmptyRequest(StrictRequest):
@@ -44,7 +64,7 @@ class ArtifactLinkRequest(StrictRequest):
 def create_app(root="./runtime"):
     """Bind an app to one local Pod. No arbitrary code or file-serving routes."""
     pod = Pod(root)
-    app = FastAPI(title="AGH ResearchPod", version="0.1.0")
+    app = FastAPI(title="AGH ResearchPod", version="0.2.0")
     app.state.pod = pod
     templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
 
@@ -73,6 +93,14 @@ def create_app(root="./runtime"):
     @app.post("/v1/opportunities", status_code=201)
     def create_opportunity(body: OpportunityRequest):
         return pod.create_opportunity(**body.model_dump())
+
+    @app.post("/v1/opportunities/{opportunity_id}/mandate")
+    def mandate(opportunity_id: str, body: MandateRequest):
+        return pod.set_mandate(opportunity_id, body.model_dump())
+
+    @app.post("/v1/packages/{package_id}/receive")
+    def receive(package_id: str, body: DeliveryRequest):
+        return pod.receive_package(package_id, **body.model_dump())
 
     @app.get("/v1/artifacts")
     def artifacts(limit: Annotated[int, Query(ge=1, le=1000)] = 200,
@@ -122,7 +150,7 @@ def create_app(root="./runtime"):
         return templates.TemplateResponse(request=request, name="index.html", context={
             "opportunities": pod.list("opportunity"), "artifacts": pod.list("artifact"),
             "specs": pod.list("spec"), "runs": pod.list("run"), "reviews": pod.list("review"),
-            "packages": pod.list("package"), "case": case_status(),
+            "packages": pod.list("package"), "deliveries": pod.list("delivery"), "case": case_status(),
         })
 
     return app

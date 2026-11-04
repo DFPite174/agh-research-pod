@@ -32,7 +32,7 @@ def now():
 
 def approval_digest(spec):
     return digest(canonical({"payload": spec["payload"], "dataset_snapshot": spec.get("dataset_snapshot"),
-                             "evidence": spec.get("evidence", [])}))
+                             "evidence": spec.get("evidence", []), **({"mandate": spec["mandate"]} if "mandate" in spec else {})}))
 
 
 class Pod:
@@ -98,6 +98,37 @@ class Pod:
             raise ValueError("title must contain 1..300 characters")
         return self._new("opportunity", title=title, research_type=research_type, problem=problem, status="discovered")
 
+    def set_mandate(self, opportunity_id, mandate):
+        required = {"objective", "baseline", "acceptance", "stop_condition", "receiver"}
+        if not isinstance(mandate, dict) or set(mandate) != required or any(
+                not isinstance(v, str) or not v.strip() or len(v) > 3000 for v in mandate.values()):
+            raise ValueError("mandate requires objective, baseline, acceptance, stop_condition, receiver")
+        with self._connection() as c:
+            c.execute("BEGIN IMMEDIATE")
+            row = c.execute("SELECT body FROM objects WHERE kind='opportunity' AND id=?", (opportunity_id,)).fetchone()
+            if not row:
+                raise KeyError(opportunity_id)
+            op = json.loads(row[0])
+            op.update(mandate=mandate, status="planned")
+            return self._save("opportunity", op, connection=c)
+
+    def receive_package(self, package_id, receiver, decision, reason):
+        if decision not in {"accepted", "rejected", "followup"}:
+            raise ValueError("invalid delivery decision")
+        if any(not isinstance(v, str) or not v.strip() or len(v)>3000 for v in (receiver, reason)):
+            raise ValueError("receiver and reason required")
+        package = self.get("package", package_id)
+        if not self.verify_package(package["path"])["valid"]:
+            raise IntegrityError("delivery package verification failed")
+        run = self.get("run", package["run_id"])
+        spec = self.get("spec", run["spec_id"])
+        feedback = self._new("delivery", package_id=package_id, receiver=receiver,
+                             decision=decision, reason=reason, identity="local assertion; not external authentication")
+        op = self.get("opportunity", spec["opportunity_id"])
+        op.update(status={"accepted":"received", "rejected":"rejected", "followup":"followup"}[decision])
+        self._save("opportunity", op)
+        return feedback
+
     def add_artifact(self, source, title, content, metadata=None):
         if not isinstance(content, bytes) or len(content) > 25_000_000:
             raise ValueError("artifact must be bytes, maximum25MB")
@@ -140,9 +171,9 @@ class Pod:
 
     def create_spec(self, opportunity_id, payload):
         opportunity = self.get("opportunity", opportunity_id)
-        if payload.get("recipe") not in {"demo", "paper"}:
+        if payload.get("recipe") not in {"demo", "paper", "quant"}:
             raise ValueError("unknown trusted recipe")
-        unknown = set(payload) - {"recipe", "seed", "dataset", "steps", "paths"}
+        unknown = set(payload) - {"recipe", "seed", "dataset", "steps", "paths", "target", "features", "min_train", "ridge"}
         if unknown:
             raise ValueError(f"unknown spec fields: {sorted(unknown)}")
         for key, upper in (("steps", 2000), ("paths", 100000)):
@@ -150,13 +181,18 @@ class Pod:
                 raise ValueError(f"invalid {key} budget")
         if "seed" in payload and (type(payload["seed"]) is not int or not 0 <= payload["seed"] < 2**32):
             raise ValueError("invalid seed")
+        if payload["recipe"] == "quant":
+            from .quant import validate_payload
+            validate_payload(payload)
+        elif set(payload) & {"target", "features", "min_train", "ridge"}:
+            raise ValueError("quant fields require quant recipe")
         evidence = []
         for artifact_id in opportunity.get("artifacts", []):
             artifact = self.get("artifact", artifact_id)
             self.read_artifact(artifact_id)
             evidence.append({k: artifact[k] for k in ("id", "source", "title", "sha256", "metadata")})
         return self._new("spec", opportunity_id=opportunity_id, payload=payload, evidence=evidence,
-                         sha256=digest(canonical(payload)), status="planned")
+                         sha256=digest(canonical(payload)), status="planned", mandate=opportunity.get("mandate", {}))
 
     def approve(self, spec_id):
         with self._connection() as c:
@@ -172,7 +208,11 @@ class Pod:
                 path = Path(dataset).resolve()
                 if not path.is_file():
                     raise ValueError("dataset manifest not found")
-                spec["dataset_snapshot"] = digest(path.read_bytes())
+                if spec["payload"]["recipe"] == "quant":
+                    from .quant import snapshot_dataset
+                    spec["dataset_snapshot"] = snapshot_dataset(path)
+                else:
+                    spec["dataset_snapshot"] = digest(path.read_bytes())
             for evidence in spec.get("evidence", []):
                 if digest(self.read_artifact(evidence["id"])) != evidence["sha256"]:
                     raise IntegrityError("source changed before approval")
@@ -220,7 +260,11 @@ class Pod:
                 raise IntegrityError("spec checksum mismatch")
             if spec["payload"].get("dataset"):
                 path = Path(spec["payload"]["dataset"]).resolve()
-                if not path.is_file() or digest(path.read_bytes()) != spec.get("dataset_snapshot"):
+                if spec["payload"]["recipe"] == "quant":
+                    from .quant import snapshot_dataset
+                    if snapshot_dataset(path) != spec.get("dataset_snapshot"):
+                        raise IntegrityError("approved quant dataset changed")
+                elif not path.is_file() or digest(path.read_bytes()) != spec.get("dataset_snapshot"):
                     raise IntegrityError("approved dataset manifest changed")
             if spec.get("approval_sha256") != approval_digest(spec):
                 raise IntegrityError("approval checksum mismatch")
@@ -228,7 +272,11 @@ class Pod:
                 if digest(self.read_artifact(evidence["id"])) != evidence["sha256"]:
                     raise IntegrityError("approved source changed")
             from .cases import execute_recipe
-            result = execute_recipe(spec["payload"])
+            if spec["payload"]["recipe"] == "quant":
+                from .quant import execute_quant
+                result = execute_quant(spec["payload"])
+            else:
+                result = execute_recipe(spec["payload"])
             run.update(result=result, evidence_level=result["evidence_level"], research_status=result["research_status"], status=result.get("execution_status", "succeeded"))
         except Exception as exc:
             # Built-in recipes never include credentials in their exception messages.
@@ -286,13 +334,30 @@ class Pod:
             raise StateError("accepted review required")
         spec = self.get("spec", run["spec_id"])
         opportunity = self.get("opportunity", spec["opportunity_id"])
+        attachments = {}
+        for evidence in spec.get("evidence", []):
+            content = self.read_artifact(evidence["id"])
+            if digest(content) != evidence["sha256"]:
+                raise IntegrityError("source changed before export")
+            attachments["evidence-" + evidence["sha256"] + ".bin"] = content
+        if spec["payload"]["recipe"] == "quant":
+            from .quant import snapshot_dataset
+            dataset = Path(spec["payload"]["dataset"]).resolve()
+            if snapshot_dataset(dataset) != spec.get("dataset_snapshot"):
+                raise IntegrityError("quant dataset changed before export")
+            metadata = json.loads(dataset.read_text(encoding="utf-8-sig"))
+            attachments["dataset.csv"] = (dataset.parent / metadata["csv"]).read_bytes()
+            attachments["dataset-manifest-original.json"] = dataset.read_bytes()
+            attachments["dataset-manifest.json"] = canonical({**metadata, "csv":"dataset.csv"})
         package_id = uuid.uuid4().hex
         path = self.root / "packages" / package_id
         path.mkdir()
         values = {"run.json": run, "spec.json": spec, "opportunity.json": opportunity, "reviews.json": reviews}
         for name, value in values.items():
             (path / name).write_bytes(canonical(value))
-        manifest = {"schema_version": 1, "id": package_id, "created_at": now(), "evidence_level": run.get("evidence_level", "none"), "scientific_replication_certified": False, "files": {name: digest((path / name).read_bytes()) for name in values}}
+        for name, content in attachments.items():
+            (path / name).write_bytes(content)
+        manifest = {"schema_version": 1, "id": package_id, "created_at": now(), "evidence_level": run.get("evidence_level", "none"), "scientific_replication_certified": False, "files": {name: digest((path / name).read_bytes()) for name in [*values, *attachments]}}
         (path / "manifest.json").write_bytes(canonical(manifest))
         return self._new("package", path=str(path), run_id=run_id, manifest=manifest)
 

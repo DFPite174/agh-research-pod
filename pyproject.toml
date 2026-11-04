@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agh-research-pod"
-version = "0.1.0"
-description = "Evidence-first research pod and Chinese convertible-bond replication workbench"
+version = "0.2.0"
+description = "Evidence-first quantitative research workflows and reproducible experiments"
 requires-python = ">=3.12"
 license = "MIT"
 dependencies = [

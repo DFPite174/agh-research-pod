@@ -1,0 +1,2322 @@
+{
+  "baseline_commit": "261a700",
+  "method": "Fixed expanding ridge=1; all inputs lagged one row; no tuning",
+  "real_cases": [
+    {
+      "target": "inflation",
+      "metrics": {
+        "n_oos": 141,
+        "mse": 7.918149917326768,
+        "baseline_mse": 11.81115694837405,
+        "oos_r2": 0.32960420795891654,
+        "persistence_mse": 8.767897872340425,
+        "r2_vs_persistence": 0.0969158135035203
+      },
+      "sample_start": "1959-06-30",
+      "sample_end": "2009-09-30",
+      "evidence_level": "alternative_real",
+      "data_snapshot": {
+        "manifest_sha256": "10fd92bedd6857de94e635c97d97d1d13c6a2adf5431eda798a61c04900a9708",
+        "csv_sha256": "26c62a256324686bbe3a1762c5037cd6bec8b75949ffc99e749cc840c329b601"
+      },
+      "run_id": "776bc031383b451e86dea362cb97d14e",
+      "package_id": "f06e6ca5115d461c927c1fd71bab1944",
+      "delivery_decision": "followup",
+      "predictions": [
+        {
+          "date": "1974-09-30T00:00:00",
+          "actual": 13.56,
+          "forecast": 9.01596246413518,
+          "baseline": 3.5031666666666665,
+          "persistence": 9.86,
+          "train_count": 60
+        },
+        {
+          "date": "1974-12-31T00:00:00",
+          "actual": 10.07,
+          "forecast": 10.623052930440586,
+          "baseline": 3.668032786885246,
+          "persistence": 13.56,
+          "train_count": 61
+        },
+        {
+          "date": "1975-03-31T00:00:00",
+          "actual": 5.32,
+          "forecast": 8.752239287783494,
+          "baseline": 3.771290322580645,
+          "persistence": 10.07,
+          "train_count": 62
+        },
+        {
+          "date": "1975-06-30T00:00:00",
+          "actual": 7.48,
+          "forecast": 6.203009034672238,
+          "baseline": 3.7958730158730156,
+          "persistence": 5.32,
+          "train_count": 63
+        },
+        {
+          "date": "1975-09-30T00:00:00",
+          "actual": 6.61,
+          "forecast": 6.930449442568751,
+          "baseline": 3.8534375,
+          "persistence": 7.48,
+          "train_count": 64
+        },
+        {
+          "date": "1975-12-31T00:00:00",
+          "actual": 6.5,
+          "forecast": 7.743911495941899,
+          "baseline": 3.895846153846154,
+          "persistence": 6.61,
+          "train_count": 65
+        },
+        {
+          "date": "1976-03-31T00:00:00",
+          "actual": 2.14,
+          "forecast": 5.925201384360273,
+          "baseline": 3.9353030303030305,
+          "persistence": 6.5,
+          "train_count": 66
+        },
+        {
+          "date": "1976-06-30T00:00:00",
+          "actual": 6.37,
+          "forecast": 4.58844080117522,
+          "baseline": 3.908507462686567,
+          "persistence": 2.14,
+          "train_count": 67
+        },
+        {
+          "date": "1976-09-30T00:00:00",
+          "actual": 6.27,
+          "forecast": 5.486015231806567,
+          "baseline": 3.9447058823529413,
+          "persistence": 6.37,
+          "train_count": 68
+        },
+        {
+          "date": "1976-12-31T00:00:00",
+          "actual": 5.49,
+          "forecast": 5.207900060509954,
+          "baseline": 3.9784057971014493,
+          "persistence": 6.27,
+          "train_count": 69
+        },
+        {
+          "date": "1977-03-31T00:00:00",
+          "actual": 8.76,
+          "forecast": 4.4882534383977735,
+          "baseline": 4.0,
+          "persistence": 5.49,
+          "train_count": 70
+        },
+        {
+          "date": "1977-06-30T00:00:00",
+          "actual": 5.3,
+          "forecast": 4.866077948705974,
+          "baseline": 4.067042253521127,
+          "persistence": 8.76,
+          "train_count": 71
+        },
+        {
+          "date": "1977-09-30T00:00:00",
+          "actual": 5.23,
+          "forecast": 5.290568084750808,
+          "baseline": 4.0841666666666665,
+          "persistence": 5.3,
+          "train_count": 72
+        },
+        {
+          "date": "1977-12-31T00:00:00",
+          "actual": 7.08,
+          "forecast": 6.367561383117232,
+          "baseline": 4.099863013698631,
+          "persistence": 5.23,
+          "train_count": 73
+        },
+        {
+          "date": "1978-03-31T00:00:00",
+          "actual": 7.58,
+          "forecast": 6.975116718537564,
+          "baseline": 4.140135135135135,
+          "persistence": 7.08,
+          "train_count": 74
+        },
+        {
+          "date": "1978-06-30T00:00:00",
+          "actual": 9.89,
+          "forecast": 7.134698833054005,
+          "baseline": 4.186,
+          "persistence": 7.58,
+          "train_count": 75
+        },
+        {
+          "date": "1978-09-30T00:00:00",
+          "actual": 9.65,
+          "forecast": 7.837763991281415,
+          "baseline": 4.261052631578947,
+          "persistence": 9.89,
+          "train_count": 76
+        },
+        {
+          "date": "1978-12-31T00:00:00",
+          "actual": 8.26,
+          "forecast": 9.340251618637783,
+          "baseline": 4.331038961038961,
+          "persistence": 9.65,
+          "train_count": 77
+        },
+        {
+          "date": "1979-03-31T00:00:00",
+          "actual": 12.08,
+          "forecast": 11.235238866157552,
+          "baseline": 4.3814102564102555,
+          "persistence": 8.26,
+          "train_count": 78
+        },
+        {
+          "date": "1979-06-30T00:00:00",
+          "actual": 13.37,
+          "forecast": 12.20644705958385,
+          "baseline": 4.47886075949367,
+          "persistence": 12.08,
+          "train_count": 79
+        },
+        {
+          "date": "1979-09-30T00:00:00",
+          "actual": 11.88,
+          "forecast": 12.140175887753767,
+          "baseline": 4.59,
+          "persistence": 13.37,
+          "train_count": 80
+        },
+        {
+          "date": "1979-12-31T00:00:00",
+          "actual": 14.62,
+          "forecast": 13.948232796021179,
+          "baseline": 4.68,
+          "persistence": 11.88,
+          "train_count": 81
+        },
+        {
+          "date": "1980-03-31T00:00:00",
+          "actual": 14.6,
+          "forecast": 16.484241369478337,
+          "baseline": 4.8012195121951216,
+          "persistence": 14.62,
+          "train_count": 82
+        },
+        {
+          "date": "1980-06-30T00:00:00",
+          "actual": 8.32,
+          "forecast": 19.03405501825084,
+          "baseline": 4.919277108433735,
+          "persistence": 14.6,
+          "train_count": 83
+        },
+        {
+          "date": "1980-09-30T00:00:00",
+          "actual": 10.04,
+          "forecast": 8.977129082538628,
+          "baseline": 4.959761904761905,
+          "persistence": 8.32,
+          "train_count": 84
+        },
+        {
+          "date": "1980-12-31T00:00:00",
+          "actual": 11.64,
+          "forecast": 12.110781562499364,
+          "baseline": 5.019529411764706,
+          "persistence": 10.04,
+          "train_count": 85
+        },
+        {
+          "date": "1981-03-31T00:00:00",
+          "actual": 8.62,
+          "forecast": 16.935104734482447,
+          "baseline": 5.096511627906977,
+          "persistence": 11.64,
+          "train_count": 86
+        },
+        {
+          "date": "1981-06-30T00:00:00",
+          "actual": 10.63,
+          "forecast": 12.432092614786178,
+          "baseline": 5.1370114942528735,
+          "persistence": 8.62,
+          "train_count": 87
+        },
+        {
+          "date": "1981-09-30T00:00:00",
+          "actual": 8.22,
+          "forecast": 13.649939128105046,
+          "baseline": 5.199431818181818,
+          "persistence": 10.63,
+          "train_count": 88
+        },
+        {
+          "date": "1981-12-31T00:00:00",
+          "actual": 4.26,
+          "forecast": 10.743156715241751,
+          "baseline": 5.233370786516854,
+          "persistence": 8.22,
+          "train_count": 89
+        },
+        {
+          "date": "1982-03-31T00:00:00",
+          "actual": 2.53,
+          "forecast": 6.011950840462906,
+          "baseline": 5.222555555555555,
+          "persistence": 4.26,
+          "train_count": 90
+        },
+        {
+          "date": "1982-06-30T00:00:00",
+          "actual": 10.39,
+          "forecast": 4.537072068674541,
+          "baseline": 5.192967032967032,
+          "persistence": 2.53,
+          "train_count": 91
+        },
+        {
+          "date": "1982-09-30T00:00:00",
+          "actual": 2.45,
+          "forecast": 10.28836141482845,
+          "baseline": 5.24945652173913,
+          "persistence": 10.39,
+          "train_count": 92
+        },
+        {
+          "date": "1982-12-31T00:00:00",
+          "actual": -0.82,
+          "forecast": 3.6857640596067416,
+          "baseline": 5.219354838709677,
+          "persistence": 2.45,
+          "train_count": 93
+        },
+        {
+          "date": "1983-03-31T00:00:00",
+          "actual": 3.66,
+          "forecast": 0.9026324136965158,
+          "baseline": 5.1551063829787225,
+          "persistence": -0.82,
+          "train_count": 94
+        },
+        {
+          "date": "1983-06-30T00:00:00",
+          "actual": 4.03,
+          "forecast": 4.1875084663647,
+          "baseline": 5.139368421052631,
+          "persistence": 3.66,
+          "train_count": 95
+        },
+        {
+          "date": "1983-09-30T00:00:00",
+          "actual": 3.99,
+          "forecast": 4.5679070780654465,
+          "baseline": 5.1278125,
+          "persistence": 4.03,
+          "train_count": 96
+        },
+        {
+          "date": "1983-12-31T00:00:00",
+          "actual": 5.13,
+          "forecast": 4.690706916804503,
+          "baseline": 5.116082474226804,
+          "persistence": 3.99,
+          "train_count": 97
+        },
+        {
+          "date": "1984-03-31T00:00:00",
+          "actual": 4.67,
+          "forecast": 5.51504669746955,
+          "baseline": 5.116224489795918,
+          "persistence": 5.13,
+          "train_count": 98
+        },
+        {
+          "date": "1984-06-30T00:00:00",
+          "actual": 3.09,
+          "forecast": 5.448284733035809,
+          "baseline": 5.111717171717172,
+          "persistence": 4.67,
+          "train_count": 99
+        },
+        {
+          "date": "1984-09-30T00:00:00",
+          "actual": 3.82,
+          "forecast": 4.587988243426333,
+          "baseline": 5.0915,
+          "persistence": 3.09,
+          "train_count": 100
+        },
+        {
+          "date": "1984-12-31T00:00:00",
+          "actual": 2.28,
+          "forecast": 5.0708911754938635,
+          "baseline": 5.078910891089109,
+          "persistence": 3.82,
+          "train_count": 101
+        },
+        {
+          "date": "1985-03-31T00:00:00",
+          "actual": 4.89,
+          "forecast": 3.5123032860068317,
+          "baseline": 5.051470588235294,
+          "persistence": 2.28,
+          "train_count": 102
+        },
+        {
+          "date": "1985-06-30T00:00:00",
+          "actual": 2.61,
+          "forecast": 5.224348121878336,
+          "baseline": 5.049902912621359,
+          "persistence": 4.89,
+          "train_count": 103
+        },
+        {
+          "date": "1985-09-30T00:00:00",
+          "actual": 2.96,
+          "forecast": 3.495801570871466,
+          "baseline": 5.0264423076923075,
+          "persistence": 2.61,
+          "train_count": 104
+        },
+        {
+          "date": "1985-12-31T00:00:00",
+          "actual": 5.13,
+          "forecast": 3.713119706739791,
+          "baseline": 5.006761904761905,
+          "persistence": 2.96,
+          "train_count": 105
+        },
+        {
+          "date": "1986-03-31T00:00:00",
+          "actual": -4.39,
+          "forecast": 5.143818940979965,
+          "baseline": 5.007924528301887,
+          "persistence": 5.13,
+          "train_count": 106
+        },
+        {
+          "date": "1986-06-30T00:00:00",
+          "actual": 2.93,
+          "forecast": -1.11504660292705,
+          "baseline": 4.920093457943926,
+          "persistence": -4.39,
+          "train_count": 107
+        },
+        {
+          "date": "1986-09-30T00:00:00",
+          "actual": 2.55,
+          "forecast": 3.468415102679139,
+          "baseline": 4.901666666666666,
+          "persistence": 2.93,
+          "train_count": 108
+        },
+        {
+          "date": "1986-12-31T00:00:00",
+          "actual": 4.33,
+          "forecast": 3.0786434500348747,
+          "baseline": 4.880091743119266,
+          "persistence": 2.55,
+          "train_count": 109
+        },
+        {
+          "date": "1987-03-31T00:00:00",
+          "actual": 4.64,
+          "forecast": 4.216822081941518,
+          "baseline": 4.875090909090909,
+          "persistence": 4.33,
+          "train_count": 110
+        },
+        {
+          "date": "1987-06-30T00:00:00",
+          "actual": 3.89,
+          "forecast": 4.4882190801918815,
+          "baseline": 4.872972972972973,
+          "persistence": 4.64,
+          "train_count": 111
+        },
+        {
+          "date": "1987-09-30T00:00:00",
+          "actual": 4.2,
+          "forecast": 4.118078790245913,
+          "baseline": 4.864196428571428,
+          "persistence": 3.89,
+          "train_count": 112
+        },
+        {
+          "date": "1987-12-31T00:00:00",
+          "actual": 3.46,
+          "forecast": 4.4953984569156615,
+          "baseline": 4.858318584070797,
+          "persistence": 4.2,
+          "train_count": 113
+        },
+        {
+          "date": "1988-03-31T00:00:00",
+          "actual": 4.12,
+          "forecast": 3.9611177620881817,
+          "baseline": 4.846052631578948,
+          "persistence": 3.46,
+          "train_count": 114
+        },
+        {
+          "date": "1988-06-30T00:00:00",
+          "actual": 4.41,
+          "forecast": 4.391090111731994,
+          "baseline": 4.839739130434783,
+          "persistence": 4.12,
+          "train_count": 115
+        },
+        {
+          "date": "1988-09-30T00:00:00",
+          "actual": 4.7,
+          "forecast": 4.786583029873529,
+          "baseline": 4.836034482758621,
+          "persistence": 4.41,
+          "train_count": 116
+        },
+        {
+          "date": "1988-12-31T00:00:00",
+          "actual": 4.31,
+          "forecast": 5.14527041644754,
+          "baseline": 4.834871794871796,
+          "persistence": 4.7,
+          "train_count": 117
+        },
+        {
+          "date": "1989-03-31T00:00:00",
+          "actual": 6.22,
+          "forecast": 5.148703754676439,
+          "baseline": 4.830423728813559,
+          "persistence": 4.31,
+          "train_count": 118
+        },
+        {
+          "date": "1989-06-30T00:00:00",
+          "actual": 4.52,
+          "forecast": 6.48016459040338,
+          "baseline": 4.842100840336135,
+          "persistence": 6.22,
+          "train_count": 119
+        },
+        {
+          "date": "1989-09-30T00:00:00",
+          "actual": 2.88,
+          "forecast": 5.304070812442732,
+          "baseline": 4.839416666666667,
+          "persistence": 4.52,
+          "train_count": 120
+        },
+        {
+          "date": "1989-12-31T00:00:00",
+          "actual": 6.64,
+          "forecast": 4.157293186518291,
+          "baseline": 4.823223140495868,
+          "persistence": 2.88,
+          "train_count": 121
+        },
+        {
+          "date": "1990-03-31T00:00:00",
+          "actual": 4.37,
+          "forecast": 6.384654224048084,
+          "baseline": 4.838114754098361,
+          "persistence": 6.64,
+          "train_count": 122
+        },
+        {
+          "date": "1990-06-30T00:00:00",
+          "actual": 4.93,
+          "forecast": 5.086583889007458,
+          "baseline": 4.834308943089431,
+          "persistence": 4.37,
+          "train_count": 123
+        },
+        {
+          "date": "1990-09-30T00:00:00",
+          "actual": 8.79,
+          "forecast": 5.386379174637028,
+          "baseline": 4.83508064516129,
+          "persistence": 4.93,
+          "train_count": 124
+        },
+        {
+          "date": "1990-12-31T00:00:00",
+          "actual": 3.88,
+          "forecast": 7.501253914756093,
+          "baseline": 4.866719999999999,
+          "persistence": 8.79,
+          "train_count": 125
+        },
+        {
+          "date": "1991-03-31T00:00:00",
+          "actual": 1.19,
+          "forecast": 4.38888579720833,
+          "baseline": 4.858888888888888,
+          "persistence": 3.88,
+          "train_count": 126
+        },
+        {
+          "date": "1991-06-30T00:00:00",
+          "actual": 3.24,
+          "forecast": 2.5020653297241764,
+          "baseline": 4.83,
+          "persistence": 1.19,
+          "train_count": 127
+        },
+        {
+          "date": "1991-09-30T00:00:00",
+          "actual": 2.93,
+          "forecast": 3.5681811955756055,
+          "baseline": 4.817578125,
+          "persistence": 3.24,
+          "train_count": 128
+        },
+        {
+          "date": "1991-12-31T00:00:00",
+          "actual": 3.19,
+          "forecast": 3.2698781515307784,
+          "baseline": 4.8029457364341095,
+          "persistence": 2.93,
+          "train_count": 129
+        },
+        {
+          "date": "1992-03-31T00:00:00",
+          "actual": 3.17,
+          "forecast": 3.1045309965062517,
+          "baseline": 4.790538461538462,
+          "persistence": 3.19,
+          "train_count": 130
+        },
+        {
+          "date": "1992-06-30T00:00:00",
+          "actual": 3.14,
+          "forecast": 2.966493169729268,
+          "baseline": 4.778167938931298,
+          "persistence": 3.17,
+          "train_count": 131
+        },
+        {
+          "date": "1992-09-30T00:00:00",
+          "actual": 3.4,
+          "forecast": 2.815098578088249,
+          "baseline": 4.7657575757575765,
+          "persistence": 3.14,
+          "train_count": 132
+        },
+        {
+          "date": "1992-12-31T00:00:00",
+          "actual": 3.09,
+          "forecast": 2.8458074666203834,
+          "baseline": 4.755488721804511,
+          "persistence": 3.4,
+          "train_count": 133
+        },
+        {
+          "date": "1993-03-31T00:00:00",
+          "actual": 2.79,
+          "forecast": 2.754683886023886,
+          "baseline": 4.7430597014925375,
+          "persistence": 3.09,
+          "train_count": 134
+        },
+        {
+          "date": "1993-06-30T00:00:00",
+          "actual": 1.94,
+          "forecast": 2.5714692284756895,
+          "baseline": 4.728592592592594,
+          "persistence": 2.79,
+          "train_count": 135
+        },
+        {
+          "date": "1993-09-30T00:00:00",
+          "actual": 3.03,
+          "forecast": 2.1136266991869603,
+          "baseline": 4.708088235294118,
+          "persistence": 1.94,
+          "train_count": 136
+        },
+        {
+          "date": "1993-12-31T00:00:00",
+          "actual": 1.92,
+          "forecast": 2.8108076937242403,
+          "baseline": 4.695839416058393,
+          "persistence": 3.03,
+          "train_count": 137
+        },
+        {
+          "date": "1994-03-31T00:00:00",
+          "actual": 2.45,
+          "forecast": 2.2095272389993155,
+          "baseline": 4.675724637681159,
+          "persistence": 1.92,
+          "train_count": 138
+        },
+        {
+          "date": "1994-06-30T00:00:00",
+          "actual": 3.25,
+          "forecast": 2.627466468634366,
+          "baseline": 4.659712230215828,
+          "persistence": 2.45,
+          "train_count": 139
+        },
+        {
+          "date": "1994-09-30T00:00:00",
+          "actual": 2.69,
+          "forecast": 3.355417356532214,
+          "baseline": 4.649642857142857,
+          "persistence": 3.25,
+          "train_count": 140
+        },
+        {
+          "date": "1994-12-31T00:00:00",
+          "actual": 2.93,
+          "forecast": 3.191296663532017,
+          "baseline": 4.635744680851063,
+          "persistence": 2.69,
+          "train_count": 141
+        },
+        {
+          "date": "1995-03-31T00:00:00",
+          "actual": 3.44,
+          "forecast": 3.622331034755855,
+          "baseline": 4.623732394366197,
+          "persistence": 2.93,
+          "train_count": 142
+        },
+        {
+          "date": "1995-06-30T00:00:00",
+          "actual": 2.1,
+          "forecast": 3.97984591601747,
+          "baseline": 4.615454545454545,
+          "persistence": 3.44,
+          "train_count": 143
+        },
+        {
+          "date": "1995-09-30T00:00:00",
+          "actual": 2.35,
+          "forecast": 3.1047418669629705,
+          "baseline": 4.59798611111111,
+          "persistence": 2.1,
+          "train_count": 144
+        },
+        {
+          "date": "1995-12-31T00:00:00",
+          "actual": 3.11,
+          "forecast": 3.1878071622285775,
+          "baseline": 4.5824827586206895,
+          "persistence": 2.35,
+          "train_count": 145
+        },
+        {
+          "date": "1996-03-31T00:00:00",
+          "actual": 3.6,
+          "forecast": 3.6045769423021117,
+          "baseline": 4.572397260273972,
+          "persistence": 3.11,
+          "train_count": 146
+        },
+        {
+          "date": "1996-06-30T00:00:00",
+          "actual": 2.3,
+          "forecast": 3.838858755666312,
+          "baseline": 4.565782312925171,
+          "persistence": 3.6,
+          "train_count": 147
+        },
+        {
+          "date": "1996-09-30T00:00:00",
+          "actual": 3.05,
+          "forecast": 3.122976484129887,
+          "baseline": 4.550472972972973,
+          "persistence": 2.3,
+          "train_count": 148
+        },
+        {
+          "date": "1996-12-31T00:00:00",
+          "actual": 3.02,
+          "forecast": 3.57803114829167,
+          "baseline": 4.540402684563758,
+          "persistence": 3.05,
+          "train_count": 149
+        },
+        {
+          "date": "1997-03-31T00:00:00",
+          "actual": 1.25,
+          "forecast": 3.542355858641601,
+          "baseline": 4.530266666666666,
+          "persistence": 3.02,
+          "train_count": 150
+        },
+        {
+          "date": "1997-06-30T00:00:00",
+          "actual": 1.25,
+          "forecast": 2.5403816255962135,
+          "baseline": 4.508543046357616,
+          "persistence": 1.25,
+          "train_count": 151
+        },
+        {
+          "date": "1997-09-30T00:00:00",
+          "actual": 2.73,
+          "forecast": 2.5289519496569035,
+          "baseline": 4.487105263157894,
+          "persistence": 1.25,
+          "train_count": 152
+        },
+        {
+          "date": "1997-12-31T00:00:00",
+          "actual": 1.24,
+          "forecast": 3.4143047380299683,
+          "baseline": 4.47562091503268,
+          "persistence": 2.73,
+          "train_count": 153
+        },
+        {
+          "date": "1998-03-31T00:00:00",
+          "actual": 0.49,
+          "forecast": 2.56933061592218,
+          "baseline": 4.45461038961039,
+          "persistence": 1.24,
+          "train_count": 154
+        },
+        {
+          "date": "1998-06-30T00:00:00",
+          "actual": 2.46,
+          "forecast": 2.073900673449146,
+          "baseline": 4.429032258064516,
+          "persistence": 0.49,
+          "train_count": 155
+        },
+        {
+          "date": "1998-09-30T00:00:00",
+          "actual": 1.71,
+          "forecast": 3.2688328729765734,
+          "baseline": 4.4164102564102565,
+          "persistence": 2.46,
+          "train_count": 156
+        },
+        {
+          "date": "1998-12-31T00:00:00",
+          "actual": 1.95,
+          "forecast": 2.6624850337857824,
+          "baseline": 4.399171974522293,
+          "persistence": 1.71,
+          "train_count": 157
+        },
+        {
+          "date": "1999-03-31T00:00:00",
+          "actual": 2.9,
+          "forecast": 2.780180329965436,
+          "baseline": 4.383670886075949,
+          "persistence": 1.95,
+          "train_count": 158
+        },
+        {
+          "date": "1999-06-30T00:00:00",
+          "actual": 1.92,
+          "forecast": 3.3638560015810444,
+          "baseline": 4.374339622641509,
+          "persistence": 2.9,
+          "train_count": 159
+        },
+        {
+          "date": "1999-09-30T00:00:00",
+          "actual": 3.35,
+          "forecast": 2.79396064582445,
+          "baseline": 4.359,
+          "persistence": 1.92,
+          "train_count": 160
+        },
+        {
+          "date": "1999-12-31T00:00:00",
+          "actual": 2.85,
+          "forecast": 3.719483984441899,
+          "baseline": 4.352732919254658,
+          "persistence": 3.35,
+          "train_count": 161
+        },
+        {
+          "date": "2000-03-31T00:00:00",
+          "actual": 3.76,
+          "forecast": 3.531398016959753,
+          "baseline": 4.343456790123457,
+          "persistence": 2.85,
+          "train_count": 162
+        },
+        {
+          "date": "2000-06-30T00:00:00",
+          "actual": 4.19,
+          "forecast": 4.195430522829072,
+          "baseline": 4.339877300613497,
+          "persistence": 3.76,
+          "train_count": 163
+        },
+        {
+          "date": "2000-09-30T00:00:00",
+          "actual": 2.77,
+          "forecast": 4.508661489239452,
+          "baseline": 4.338963414634146,
+          "persistence": 4.19,
+          "train_count": 164
+        },
+        {
+          "date": "2000-12-31T00:00:00",
+          "actual": 3.89,
+          "forecast": 3.6790752956188566,
+          "baseline": 4.329454545454545,
+          "persistence": 2.77,
+          "train_count": 165
+        },
+        {
+          "date": "2001-03-31T00:00:00",
+          "actual": 1.82,
+          "forecast": 4.274126751997259,
+          "baseline": 4.326807228915663,
+          "persistence": 3.89,
+          "train_count": 166
+        },
+        {
+          "date": "2001-06-30T00:00:00",
+          "actual": 2.26,
+          "forecast": 2.646019403844458,
+          "baseline": 4.3117964071856285,
+          "persistence": 1.82,
+          "train_count": 167
+        },
+        {
+          "date": "2001-09-30T00:00:00",
+          "actual": 0.45,
+          "forecast": 2.6786077422645898,
+          "baseline": 4.299583333333333,
+          "persistence": 2.26,
+          "train_count": 168
+        },
+        {
+          "date": "2001-12-31T00:00:00",
+          "actual": 0.23,
+          "forecast": 1.3232566759730853,
+          "baseline": 4.27680473372781,
+          "persistence": 0.45,
+          "train_count": 169
+        },
+        {
+          "date": "2002-03-31T00:00:00",
+          "actual": 3.59,
+          "forecast": 0.8647749389097852,
+          "baseline": 4.253,
+          "persistence": 0.23,
+          "train_count": 170
+        },
+        {
+          "date": "2002-06-30T00:00:00",
+          "actual": 1.56,
+          "forecast": 2.918948320377974,
+          "baseline": 4.249122807017543,
+          "persistence": 3.59,
+          "train_count": 171
+        },
+        {
+          "date": "2002-09-30T00:00:00",
+          "actual": 2.66,
+          "forecast": 1.649248983949959,
+          "baseline": 4.233488372093023,
+          "persistence": 1.56,
+          "train_count": 172
+        },
+        {
+          "date": "2002-12-31T00:00:00",
+          "actual": 3.08,
+          "forecast": 2.3158960584014783,
+          "baseline": 4.224393063583815,
+          "persistence": 2.66,
+          "train_count": 173
+        },
+        {
+          "date": "2003-03-31T00:00:00",
+          "actual": 1.31,
+          "forecast": 2.4808051503938833,
+          "baseline": 4.217816091954023,
+          "persistence": 3.08,
+          "train_count": 174
+        },
+        {
+          "date": "2003-06-30T00:00:00",
+          "actual": 1.09,
+          "forecast": 1.3676395812675608,
+          "baseline": 4.2012,
+          "persistence": 1.31,
+          "train_count": 175
+        },
+        {
+          "date": "2003-09-30T00:00:00",
+          "actual": 2.6,
+          "forecast": 1.1561325754616392,
+          "baseline": 4.183522727272727,
+          "persistence": 1.09,
+          "train_count": 176
+        },
+        {
+          "date": "2003-12-31T00:00:00",
+          "actual": 3.02,
+          "forecast": 2.100687252361011,
+          "baseline": 4.1745762711864405,
+          "persistence": 2.6,
+          "train_count": 177
+        },
+        {
+          "date": "2004-03-31T00:00:00",
+          "actual": 2.35,
+          "forecast": 2.3993955934262874,
+          "baseline": 4.168089887640449,
+          "persistence": 3.02,
+          "train_count": 178
+        },
+        {
+          "date": "2004-06-30T00:00:00",
+          "actual": 3.61,
+          "forecast": 2.015950140480134,
+          "baseline": 4.157932960893855,
+          "persistence": 2.35,
+          "train_count": 179
+        },
+        {
+          "date": "2004-09-30T00:00:00",
+          "actual": 3.58,
+          "forecast": 2.883362872770886,
+          "baseline": 4.154888888888889,
+          "persistence": 3.61,
+          "train_count": 180
+        },
+        {
+          "date": "2004-12-31T00:00:00",
+          "actual": 2.09,
+          "forecast": 2.9935708586705405,
+          "baseline": 4.1517127071823205,
+          "persistence": 3.58,
+          "train_count": 181
+        },
+        {
+          "date": "2005-03-31T00:00:00",
+          "actual": 4.15,
+          "forecast": 2.204027697395821,
+          "baseline": 4.140384615384615,
+          "persistence": 2.09,
+          "train_count": 182
+        },
+        {
+          "date": "2005-06-30T00:00:00",
+          "actual": 1.85,
+          "forecast": 3.5847150226450673,
+          "baseline": 4.140437158469945,
+          "persistence": 4.15,
+          "train_count": 183
+        },
+        {
+          "date": "2005-09-30T00:00:00",
+          "actual": 9.14,
+          "forecast": 2.270751296879124,
+          "baseline": 4.127989130434782,
+          "persistence": 1.85,
+          "train_count": 184
+        },
+        {
+          "date": "2005-12-31T00:00:00",
+          "actual": 0.4,
+          "forecast": 6.798359114146066,
+          "baseline": 4.1550810810810805,
+          "persistence": 9.14,
+          "train_count": 185
+        },
+        {
+          "date": "2006-03-31T00:00:00",
+          "actual": 2.6,
+          "forecast": 1.761917192898888,
+          "baseline": 4.1348924731182795,
+          "persistence": 0.4,
+          "train_count": 186
+        },
+        {
+          "date": "2006-06-30T00:00:00",
+          "actual": 3.97,
+          "forecast": 3.1436186861893582,
+          "baseline": 4.126684491978609,
+          "persistence": 2.6,
+          "train_count": 187
+        },
+        {
+          "date": "2006-09-30T00:00:00",
+          "actual": -1.58,
+          "forecast": 3.9887383236818974,
+          "baseline": 4.125851063829787,
+          "persistence": 3.97,
+          "train_count": 188
+        },
+        {
+          "date": "2006-12-31T00:00:00",
+          "actual": 3.3,
+          "forecast": 0.8859677511245323,
+          "baseline": 4.095661375661376,
+          "persistence": -1.58,
+          "train_count": 189
+        },
+        {
+          "date": "2007-03-31T00:00:00",
+          "actual": 4.58,
+          "forecast": 3.6503914368846746,
+          "baseline": 4.091473684210526,
+          "persistence": 3.3,
+          "train_count": 190
+        },
+        {
+          "date": "2007-06-30T00:00:00",
+          "actual": 2.75,
+          "forecast": 4.351527114876112,
+          "baseline": 4.094031413612566,
+          "persistence": 4.58,
+          "train_count": 191
+        },
+        {
+          "date": "2007-09-30T00:00:00",
+          "actual": 3.45,
+          "forecast": 3.2860961861675704,
+          "baseline": 4.08703125,
+          "persistence": 2.75,
+          "train_count": 192
+        },
+        {
+          "date": "2007-12-31T00:00:00",
+          "actual": 6.38,
+          "forecast": 3.4594390272361792,
+          "baseline": 4.0837305699481865,
+          "persistence": 3.45,
+          "train_count": 193
+        },
+        {
+          "date": "2008-03-31T00:00:00",
+          "actual": 2.82,
+          "forecast": 4.805102122588171,
+          "baseline": 4.095567010309278,
+          "persistence": 6.38,
+          "train_count": 194
+        },
+        {
+          "date": "2008-06-30T00:00:00",
+          "actual": 8.53,
+          "forecast": 2.4593919180279222,
+          "baseline": 4.089025641025641,
+          "persistence": 2.82,
+          "train_count": 195
+        },
+        {
+          "date": "2008-09-30T00:00:00",
+          "actual": -3.16,
+          "forecast": 5.654706760582171,
+          "baseline": 4.111683673469387,
+          "persistence": 8.53,
+          "train_count": 196
+        },
+        {
+          "date": "2008-12-31T00:00:00",
+          "actual": -8.79,
+          "forecast": -0.8120970279989805,
+          "baseline": 4.07477157360406,
+          "persistence": -3.16,
+          "train_count": 197
+        },
+        {
+          "date": "2009-03-31T00:00:00",
+          "actual": 0.94,
+          "forecast": -4.426622376310485,
+          "baseline": 4.009797979797979,
+          "persistence": -8.79,
+          "train_count": 198
+        },
+        {
+          "date": "2009-06-30T00:00:00",
+          "actual": 3.37,
+          "forecast": 0.6206701578480374,
+          "baseline": 3.9943718592964816,
+          "persistence": 0.94,
+          "train_count": 199
+        },
+        {
+          "date": "2009-09-30T00:00:00",
+          "actual": 3.56,
+          "forecast": 1.8180209640004912,
+          "baseline": 3.99125,
+          "persistence": 3.37,
+          "train_count": 200
+        }
+      ]
+    },
+    {
+      "target": "unemployment",
+      "metrics": {
+        "n_oos": 141,
+        "mse": 0.14727564854048875,
+        "baseline_mse": 2.682144813366912,
+        "oos_r2": 0.9450903441877873,
+        "persistence_mse": 0.13489361702127656,
+        "r2_vs_persistence": -0.09179108539479075
+      },
+      "sample_start": "1959-06-30",
+      "sample_end": "2009-09-30",
+      "evidence_level": "alternative_real",
+      "data_snapshot": {
+        "manifest_sha256": "10fd92bedd6857de94e635c97d97d1d13c6a2adf5431eda798a61c04900a9708",
+        "csv_sha256": "26c62a256324686bbe3a1762c5037cd6bec8b75949ffc99e749cc840c329b601"
+      },
+      "run_id": "e310588248784aaca8955b4c100bf73c",
+      "package_id": "155de2225b0a4266ab90227746fa0bf3",
+      "delivery_decision": "followup",
+      "predictions": [
+        {
+          "date": "1974-09-30T00:00:00",
+          "actual": 5.6,
+          "forecast": 5.3203392544813095,
+          "baseline": 4.970000000000001,
+          "persistence": 5.2,
+          "train_count": 60
+        },
+        {
+          "date": "1974-12-31T00:00:00",
+          "actual": 6.6,
+          "forecast": 5.799726262087829,
+          "baseline": 4.98032786885246,
+          "persistence": 5.6,
+          "train_count": 61
+        },
+        {
+          "date": "1975-03-31T00:00:00",
+          "actual": 8.2,
+          "forecast": 6.861906821483547,
+          "baseline": 5.006451612903227,
+          "persistence": 6.6,
+          "train_count": 62
+        },
+        {
+          "date": "1975-06-30T00:00:00",
+          "actual": 8.9,
+          "forecast": 8.528178632698344,
+          "baseline": 5.057142857142859,
+          "persistence": 8.2,
+          "train_count": 63
+        },
+        {
+          "date": "1975-09-30T00:00:00",
+          "actual": 8.5,
+          "forecast": 9.437553587839156,
+          "baseline": 5.1171875,
+          "persistence": 8.9,
+          "train_count": 64
+        },
+        {
+          "date": "1975-12-31T00:00:00",
+          "actual": 8.3,
+          "forecast": 8.789247150562296,
+          "baseline": 5.1692307692307695,
+          "persistence": 8.5,
+          "train_count": 65
+        },
+        {
+          "date": "1976-03-31T00:00:00",
+          "actual": 7.7,
+          "forecast": 8.469069771565467,
+          "baseline": 5.216666666666667,
+          "persistence": 8.3,
+          "train_count": 66
+        },
+        {
+          "date": "1976-06-30T00:00:00",
+          "actual": 7.6,
+          "forecast": 7.608820933055684,
+          "baseline": 5.253731343283582,
+          "persistence": 7.7,
+          "train_count": 67
+        },
+        {
+          "date": "1976-09-30T00:00:00",
+          "actual": 7.7,
+          "forecast": 7.6833706407967854,
+          "baseline": 5.288235294117648,
+          "persistence": 7.6,
+          "train_count": 68
+        },
+        {
+          "date": "1976-12-31T00:00:00",
+          "actual": 7.8,
+          "forecast": 7.775110612209428,
+          "baseline": 5.323188405797102,
+          "persistence": 7.7,
+          "train_count": 69
+        },
+        {
+          "date": "1977-03-31T00:00:00",
+          "actual": 7.5,
+          "forecast": 7.837709162628331,
+          "baseline": 5.3585714285714285,
+          "persistence": 7.8,
+          "train_count": 70
+        },
+        {
+          "date": "1977-06-30T00:00:00",
+          "actual": 7.1,
+          "forecast": 7.655619083422092,
+          "baseline": 5.3887323943661976,
+          "persistence": 7.5,
+          "train_count": 71
+        },
+        {
+          "date": "1977-09-30T00:00:00",
+          "actual": 6.9,
+          "forecast": 7.111980991026788,
+          "baseline": 5.4125,
+          "persistence": 7.1,
+          "train_count": 72
+        },
+        {
+          "date": "1977-12-31T00:00:00",
+          "actual": 6.6,
+          "forecast": 6.928485350793045,
+          "baseline": 5.432876712328767,
+          "persistence": 6.9,
+          "train_count": 73
+        },
+        {
+          "date": "1978-03-31T00:00:00",
+          "actual": 6.3,
+          "forecast": 6.689748716798606,
+          "baseline": 5.448648648648648,
+          "persistence": 6.6,
+          "train_count": 74
+        },
+        {
+          "date": "1978-06-30T00:00:00",
+          "actual": 6.0,
+          "forecast": 6.406919529076009,
+          "baseline": 5.46,
+          "persistence": 6.3,
+          "train_count": 75
+        },
+        {
+          "date": "1978-09-30T00:00:00",
+          "actual": 6.0,
+          "forecast": 6.183262457675722,
+          "baseline": 5.467105263157895,
+          "persistence": 6.0,
+          "train_count": 76
+        },
+        {
+          "date": "1978-12-31T00:00:00",
+          "actual": 5.9,
+          "forecast": 6.177687120513711,
+          "baseline": 5.474025974025974,
+          "persistence": 6.0,
+          "train_count": 77
+        },
+        {
+          "date": "1979-03-31T00:00:00",
+          "actual": 5.9,
+          "forecast": 6.04128787142543,
+          "baseline": 5.47948717948718,
+          "persistence": 5.9,
+          "train_count": 78
+        },
+        {
+          "date": "1979-06-30T00:00:00",
+          "actual": 5.7,
+          "forecast": 6.138421436022893,
+          "baseline": 5.4848101265822775,
+          "persistence": 5.9,
+          "train_count": 79
+        },
+        {
+          "date": "1979-09-30T00:00:00",
+          "actual": 5.9,
+          "forecast": 5.944619395905767,
+          "baseline": 5.4875,
+          "persistence": 5.7,
+          "train_count": 80
+        },
+        {
+          "date": "1979-12-31T00:00:00",
+          "actual": 5.9,
+          "forecast": 6.079566165807492,
+          "baseline": 5.492592592592592,
+          "persistence": 5.9,
+          "train_count": 81
+        },
+        {
+          "date": "1980-03-31T00:00:00",
+          "actual": 6.3,
+          "forecast": 6.126286231094758,
+          "baseline": 5.497560975609756,
+          "persistence": 5.9,
+          "train_count": 82
+        },
+        {
+          "date": "1980-06-30T00:00:00",
+          "actual": 7.3,
+          "forecast": 6.5233186753305885,
+          "baseline": 5.50722891566265,
+          "persistence": 6.3,
+          "train_count": 83
+        },
+        {
+          "date": "1980-09-30T00:00:00",
+          "actual": 7.7,
+          "forecast": 7.384370827134603,
+          "baseline": 5.5285714285714285,
+          "persistence": 7.3,
+          "train_count": 84
+        },
+        {
+          "date": "1980-12-31T00:00:00",
+          "actual": 7.4,
+          "forecast": 7.895694287080774,
+          "baseline": 5.554117647058823,
+          "persistence": 7.7,
+          "train_count": 85
+        },
+        {
+          "date": "1981-03-31T00:00:00",
+          "actual": 7.4,
+          "forecast": 7.663861084559628,
+          "baseline": 5.575581395348837,
+          "persistence": 7.4,
+          "train_count": 86
+        },
+        {
+          "date": "1981-06-30T00:00:00",
+          "actual": 7.4,
+          "forecast": 7.487212455904913,
+          "baseline": 5.59655172413793,
+          "persistence": 7.4,
+          "train_count": 87
+        },
+        {
+          "date": "1981-09-30T00:00:00",
+          "actual": 7.4,
+          "forecast": 7.528340723229462,
+          "baseline": 5.617045454545454,
+          "persistence": 7.4,
+          "train_count": 88
+        },
+        {
+          "date": "1981-12-31T00:00:00",
+          "actual": 8.2,
+          "forecast": 7.420969055738669,
+          "baseline": 5.637078651685393,
+          "persistence": 7.4,
+          "train_count": 89
+        },
+        {
+          "date": "1982-03-31T00:00:00",
+          "actual": 8.8,
+          "forecast": 8.195718075980619,
+          "baseline": 5.665555555555555,
+          "persistence": 8.2,
+          "train_count": 90
+        },
+        {
+          "date": "1982-06-30T00:00:00",
+          "actual": 9.4,
+          "forecast": 8.894615086002275,
+          "baseline": 5.699999999999999,
+          "persistence": 8.8,
+          "train_count": 91
+        },
+        {
+          "date": "1982-09-30T00:00:00",
+          "actual": 9.9,
+          "forecast": 9.588610289560389,
+          "baseline": 5.740217391304347,
+          "persistence": 9.4,
+          "train_count": 92
+        },
+        {
+          "date": "1982-12-31T00:00:00",
+          "actual": 10.7,
+          "forecast": 9.892626905399919,
+          "baseline": 5.784946236559138,
+          "persistence": 9.9,
+          "train_count": 93
+        },
+        {
+          "date": "1983-03-31T00:00:00",
+          "actual": 10.4,
+          "forecast": 10.766265368399896,
+          "baseline": 5.837234042553191,
+          "persistence": 10.7,
+          "train_count": 94
+        },
+        {
+          "date": "1983-06-30T00:00:00",
+          "actual": 10.1,
+          "forecast": 10.43079040120547,
+          "baseline": 5.885263157894736,
+          "persistence": 10.4,
+          "train_count": 95
+        },
+        {
+          "date": "1983-09-30T00:00:00",
+          "actual": 9.4,
+          "forecast": 10.128175835753705,
+          "baseline": 5.929166666666667,
+          "persistence": 10.1,
+          "train_count": 96
+        },
+        {
+          "date": "1983-12-31T00:00:00",
+          "actual": 8.5,
+          "forecast": 9.411546632779803,
+          "baseline": 5.9649484536082475,
+          "persistence": 9.4,
+          "train_count": 97
+        },
+        {
+          "date": "1984-03-31T00:00:00",
+          "actual": 7.9,
+          "forecast": 8.509732058727781,
+          "baseline": 5.990816326530613,
+          "persistence": 8.5,
+          "train_count": 98
+        },
+        {
+          "date": "1984-06-30T00:00:00",
+          "actual": 7.5,
+          "forecast": 7.937207357998117,
+          "baseline": 6.01010101010101,
+          "persistence": 7.9,
+          "train_count": 99
+        },
+        {
+          "date": "1984-09-30T00:00:00",
+          "actual": 7.4,
+          "forecast": 7.5427014450170855,
+          "baseline": 6.025,
+          "persistence": 7.5,
+          "train_count": 100
+        },
+        {
+          "date": "1984-12-31T00:00:00",
+          "actual": 7.3,
+          "forecast": 7.458072863994269,
+          "baseline": 6.038613861386138,
+          "persistence": 7.4,
+          "train_count": 101
+        },
+        {
+          "date": "1985-03-31T00:00:00",
+          "actual": 7.3,
+          "forecast": 7.2688068770669645,
+          "baseline": 6.050980392156862,
+          "persistence": 7.3,
+          "train_count": 102
+        },
+        {
+          "date": "1985-06-30T00:00:00",
+          "actual": 7.3,
+          "forecast": 7.310051891051492,
+          "baseline": 6.063106796116504,
+          "persistence": 7.3,
+          "train_count": 103
+        },
+        {
+          "date": "1985-09-30T00:00:00",
+          "actual": 7.2,
+          "forecast": 7.243447644131994,
+          "baseline": 6.074999999999999,
+          "persistence": 7.3,
+          "train_count": 104
+        },
+        {
+          "date": "1985-12-31T00:00:00",
+          "actual": 7.0,
+          "forecast": 7.152058008559206,
+          "baseline": 6.085714285714285,
+          "persistence": 7.2,
+          "train_count": 105
+        },
+        {
+          "date": "1986-03-31T00:00:00",
+          "actual": 7.0,
+          "forecast": 6.993010687293981,
+          "baseline": 6.09433962264151,
+          "persistence": 7.0,
+          "train_count": 106
+        },
+        {
+          "date": "1986-06-30T00:00:00",
+          "actual": 7.2,
+          "forecast": 6.835284297416409,
+          "baseline": 6.102803738317757,
+          "persistence": 7.0,
+          "train_count": 107
+        },
+        {
+          "date": "1986-09-30T00:00:00",
+          "actual": 7.0,
+          "forecast": 7.1248096882148015,
+          "baseline": 6.112962962962963,
+          "persistence": 7.2,
+          "train_count": 108
+        },
+        {
+          "date": "1986-12-31T00:00:00",
+          "actual": 6.8,
+          "forecast": 6.904843338559636,
+          "baseline": 6.1211009174311934,
+          "persistence": 7.0,
+          "train_count": 109
+        },
+        {
+          "date": "1987-03-31T00:00:00",
+          "actual": 6.6,
+          "forecast": 6.73948856470552,
+          "baseline": 6.127272727272727,
+          "persistence": 6.8,
+          "train_count": 110
+        },
+        {
+          "date": "1987-06-30T00:00:00",
+          "actual": 6.3,
+          "forecast": 6.559357861818442,
+          "baseline": 6.1315315315315315,
+          "persistence": 6.6,
+          "train_count": 111
+        },
+        {
+          "date": "1987-09-30T00:00:00",
+          "actual": 6.0,
+          "forecast": 6.269182265749583,
+          "baseline": 6.133035714285714,
+          "persistence": 6.3,
+          "train_count": 112
+        },
+        {
+          "date": "1987-12-31T00:00:00",
+          "actual": 5.9,
+          "forecast": 6.007099150784635,
+          "baseline": 6.131858407079646,
+          "persistence": 6.0,
+          "train_count": 113
+        },
+        {
+          "date": "1988-03-31T00:00:00",
+          "actual": 5.7,
+          "forecast": 5.888926175895833,
+          "baseline": 6.129824561403509,
+          "persistence": 5.9,
+          "train_count": 114
+        },
+        {
+          "date": "1988-06-30T00:00:00",
+          "actual": 5.5,
+          "forecast": 5.7066619250157125,
+          "baseline": 6.126086956521739,
+          "persistence": 5.7,
+          "train_count": 115
+        },
+        {
+          "date": "1988-09-30T00:00:00",
+          "actual": 5.5,
+          "forecast": 5.5455442833495185,
+          "baseline": 6.120689655172414,
+          "persistence": 5.5,
+          "train_count": 116
+        },
+        {
+          "date": "1988-12-31T00:00:00",
+          "actual": 5.3,
+          "forecast": 5.574247753070573,
+          "baseline": 6.115384615384615,
+          "persistence": 5.5,
+          "train_count": 117
+        },
+        {
+          "date": "1989-03-31T00:00:00",
+          "actual": 5.2,
+          "forecast": 5.405386568402892,
+          "baseline": 6.108474576271186,
+          "persistence": 5.3,
+          "train_count": 118
+        },
+        {
+          "date": "1989-06-30T00:00:00",
+          "actual": 5.2,
+          "forecast": 5.35111836186001,
+          "baseline": 6.100840336134453,
+          "persistence": 5.2,
+          "train_count": 119
+        },
+        {
+          "date": "1989-09-30T00:00:00",
+          "actual": 5.3,
+          "forecast": 5.309146523099599,
+          "baseline": 6.093333333333334,
+          "persistence": 5.2,
+          "train_count": 120
+        },
+        {
+          "date": "1989-12-31T00:00:00",
+          "actual": 5.4,
+          "forecast": 5.369638816156937,
+          "baseline": 6.086776859504132,
+          "persistence": 5.3,
+          "train_count": 121
+        },
+        {
+          "date": "1990-03-31T00:00:00",
+          "actual": 5.3,
+          "forecast": 5.508508149769203,
+          "baseline": 6.081147540983606,
+          "persistence": 5.4,
+          "train_count": 122
+        },
+        {
+          "date": "1990-06-30T00:00:00",
+          "actual": 5.3,
+          "forecast": 5.387713501829803,
+          "baseline": 6.074796747967479,
+          "persistence": 5.3,
+          "train_count": 123
+        },
+        {
+          "date": "1990-09-30T00:00:00",
+          "actual": 5.7,
+          "forecast": 5.389900691806514,
+          "baseline": 6.068548387096773,
+          "persistence": 5.3,
+          "train_count": 124
+        },
+        {
+          "date": "1990-12-31T00:00:00",
+          "actual": 6.1,
+          "forecast": 5.806932541425554,
+          "baseline": 6.0656,
+          "persistence": 5.7,
+          "train_count": 125
+        },
+        {
+          "date": "1991-03-31T00:00:00",
+          "actual": 6.6,
+          "forecast": 6.1033114955534025,
+          "baseline": 6.065873015873016,
+          "persistence": 6.1,
+          "train_count": 126
+        },
+        {
+          "date": "1991-06-30T00:00:00",
+          "actual": 6.8,
+          "forecast": 6.51756118797042,
+          "baseline": 6.07007874015748,
+          "persistence": 6.6,
+          "train_count": 127
+        },
+        {
+          "date": "1991-09-30T00:00:00",
+          "actual": 6.9,
+          "forecast": 6.725520011656892,
+          "baseline": 6.07578125,
+          "persistence": 6.8,
+          "train_count": 128
+        },
+        {
+          "date": "1991-12-31T00:00:00",
+          "actual": 7.1,
+          "forecast": 6.8062586367640305,
+          "baseline": 6.082170542635658,
+          "persistence": 6.9,
+          "train_count": 129
+        },
+        {
+          "date": "1992-03-31T00:00:00",
+          "actual": 7.4,
+          "forecast": 6.967660419217503,
+          "baseline": 6.090000000000001,
+          "persistence": 7.1,
+          "train_count": 130
+        },
+        {
+          "date": "1992-06-30T00:00:00",
+          "actual": 7.6,
+          "forecast": 7.252156454621224,
+          "baseline": 6.1,
+          "persistence": 7.4,
+          "train_count": 131
+        },
+        {
+          "date": "1992-09-30T00:00:00",
+          "actual": 7.6,
+          "forecast": 7.439369415518689,
+          "baseline": 6.111363636363636,
+          "persistence": 7.6,
+          "train_count": 132
+        },
+        {
+          "date": "1992-12-31T00:00:00",
+          "actual": 7.4,
+          "forecast": 7.432526609960923,
+          "baseline": 6.122556390977444,
+          "persistence": 7.6,
+          "train_count": 133
+        },
+        {
+          "date": "1993-03-31T00:00:00",
+          "actual": 7.2,
+          "forecast": 7.241833061593099,
+          "baseline": 6.132089552238806,
+          "persistence": 7.4,
+          "train_count": 134
+        },
+        {
+          "date": "1993-06-30T00:00:00",
+          "actual": 7.1,
+          "forecast": 7.041149999752424,
+          "baseline": 6.14,
+          "persistence": 7.2,
+          "train_count": 135
+        },
+        {
+          "date": "1993-09-30T00:00:00",
+          "actual": 6.8,
+          "forecast": 6.940175694968577,
+          "baseline": 6.147058823529412,
+          "persistence": 7.1,
+          "train_count": 136
+        },
+        {
+          "date": "1993-12-31T00:00:00",
+          "actual": 6.6,
+          "forecast": 6.665023692338199,
+          "baseline": 6.151824817518248,
+          "persistence": 6.8,
+          "train_count": 137
+        },
+        {
+          "date": "1994-03-31T00:00:00",
+          "actual": 6.6,
+          "forecast": 6.461604175965982,
+          "baseline": 6.155072463768116,
+          "persistence": 6.6,
+          "train_count": 138
+        },
+        {
+          "date": "1994-06-30T00:00:00",
+          "actual": 6.2,
+          "forecast": 6.483354761397104,
+          "baseline": 6.158273381294964,
+          "persistence": 6.6,
+          "train_count": 139
+        },
+        {
+          "date": "1994-09-30T00:00:00",
+          "actual": 6.0,
+          "forecast": 6.130852437115736,
+          "baseline": 6.158571428571429,
+          "persistence": 6.2,
+          "train_count": 140
+        },
+        {
+          "date": "1994-12-31T00:00:00",
+          "actual": 5.6,
+          "forecast": 5.947416541832343,
+          "baseline": 6.157446808510638,
+          "persistence": 6.0,
+          "train_count": 141
+        },
+        {
+          "date": "1995-03-31T00:00:00",
+          "actual": 5.5,
+          "forecast": 5.59353259285375,
+          "baseline": 6.153521126760564,
+          "persistence": 5.6,
+          "train_count": 142
+        },
+        {
+          "date": "1995-06-30T00:00:00",
+          "actual": 5.7,
+          "forecast": 5.509914341274816,
+          "baseline": 6.14895104895105,
+          "persistence": 5.5,
+          "train_count": 143
+        },
+        {
+          "date": "1995-09-30T00:00:00",
+          "actual": 5.7,
+          "forecast": 5.67854142275813,
+          "baseline": 6.145833333333333,
+          "persistence": 5.7,
+          "train_count": 144
+        },
+        {
+          "date": "1995-12-31T00:00:00",
+          "actual": 5.6,
+          "forecast": 5.675791703145366,
+          "baseline": 6.142758620689656,
+          "persistence": 5.7,
+          "train_count": 145
+        },
+        {
+          "date": "1996-03-31T00:00:00",
+          "actual": 5.5,
+          "forecast": 5.5850698788456254,
+          "baseline": 6.139041095890412,
+          "persistence": 5.6,
+          "train_count": 146
+        },
+        {
+          "date": "1996-06-30T00:00:00",
+          "actual": 5.5,
+          "forecast": 5.4877081643759915,
+          "baseline": 6.134693877551022,
+          "persistence": 5.5,
+          "train_count": 147
+        },
+        {
+          "date": "1996-09-30T00:00:00",
+          "actual": 5.3,
+          "forecast": 5.476751587868798,
+          "baseline": 6.130405405405407,
+          "persistence": 5.5,
+          "train_count": 148
+        },
+        {
+          "date": "1996-12-31T00:00:00",
+          "actual": 5.3,
+          "forecast": 5.293108585938073,
+          "baseline": 6.124832214765101,
+          "persistence": 5.3,
+          "train_count": 149
+        },
+        {
+          "date": "1997-03-31T00:00:00",
+          "actual": 5.2,
+          "forecast": 5.291248410861461,
+          "baseline": 6.1193333333333335,
+          "persistence": 5.3,
+          "train_count": 150
+        },
+        {
+          "date": "1997-06-30T00:00:00",
+          "actual": 5.0,
+          "forecast": 5.175424969033332,
+          "baseline": 6.113245033112584,
+          "persistence": 5.2,
+          "train_count": 151
+        },
+        {
+          "date": "1997-09-30T00:00:00",
+          "actual": 4.9,
+          "forecast": 4.979506057618719,
+          "baseline": 6.1059210526315795,
+          "persistence": 5.0,
+          "train_count": 152
+        },
+        {
+          "date": "1997-12-31T00:00:00",
+          "actual": 4.7,
+          "forecast": 4.903818766200662,
+          "baseline": 6.098039215686274,
+          "persistence": 4.9,
+          "train_count": 153
+        },
+        {
+          "date": "1998-03-31T00:00:00",
+          "actual": 4.6,
+          "forecast": 4.692359708707196,
+          "baseline": 6.088961038961039,
+          "persistence": 4.7,
+          "train_count": 154
+        },
+        {
+          "date": "1998-06-30T00:00:00",
+          "actual": 4.4,
+          "forecast": 4.581660042052692,
+          "baseline": 6.079354838709679,
+          "persistence": 4.6,
+          "train_count": 155
+        },
+        {
+          "date": "1998-09-30T00:00:00",
+          "actual": 4.5,
+          "forecast": 4.4150175757275605,
+          "baseline": 6.068589743589744,
+          "persistence": 4.4,
+          "train_count": 156
+        },
+        {
+          "date": "1998-12-31T00:00:00",
+          "actual": 4.4,
+          "forecast": 4.48636428972524,
+          "baseline": 6.05859872611465,
+          "persistence": 4.5,
+          "train_count": 157
+        },
+        {
+          "date": "1999-03-31T00:00:00",
+          "actual": 4.3,
+          "forecast": 4.390046224419619,
+          "baseline": 6.048101265822786,
+          "persistence": 4.4,
+          "train_count": 158
+        },
+        {
+          "date": "1999-06-30T00:00:00",
+          "actual": 4.3,
+          "forecast": 4.308061798471565,
+          "baseline": 6.037106918238995,
+          "persistence": 4.3,
+          "train_count": 159
+        },
+        {
+          "date": "1999-09-30T00:00:00",
+          "actual": 4.2,
+          "forecast": 4.297189502974905,
+          "baseline": 6.02625,
+          "persistence": 4.3,
+          "train_count": 160
+        },
+        {
+          "date": "1999-12-31T00:00:00",
+          "actual": 4.1,
+          "forecast": 4.228307218807278,
+          "baseline": 6.014906832298137,
+          "persistence": 4.2,
+          "train_count": 161
+        },
+        {
+          "date": "2000-03-31T00:00:00",
+          "actual": 4.0,
+          "forecast": 4.135895608270687,
+          "baseline": 6.003086419753087,
+          "persistence": 4.1,
+          "train_count": 162
+        },
+        {
+          "date": "2000-06-30T00:00:00",
+          "actual": 3.9,
+          "forecast": 4.064494138466488,
+          "baseline": 5.990797546012271,
+          "persistence": 4.0,
+          "train_count": 163
+        },
+        {
+          "date": "2000-09-30T00:00:00",
+          "actual": 4.0,
+          "forecast": 3.97782613339638,
+          "baseline": 5.978048780487805,
+          "persistence": 3.9,
+          "train_count": 164
+        },
+        {
+          "date": "2000-12-31T00:00:00",
+          "actual": 3.9,
+          "forecast": 4.0585863559462965,
+          "baseline": 5.966060606060607,
+          "persistence": 4.0,
+          "train_count": 165
+        },
+        {
+          "date": "2001-03-31T00:00:00",
+          "actual": 4.2,
+          "forecast": 3.96737191027668,
+          "baseline": 5.953614457831326,
+          "persistence": 3.9,
+          "train_count": 166
+        },
+        {
+          "date": "2001-06-30T00:00:00",
+          "actual": 4.4,
+          "forecast": 4.188396857271178,
+          "baseline": 5.94311377245509,
+          "persistence": 4.2,
+          "train_count": 167
+        },
+        {
+          "date": "2001-09-30T00:00:00",
+          "actual": 4.8,
+          "forecast": 4.365943207590403,
+          "baseline": 5.933928571428572,
+          "persistence": 4.4,
+          "train_count": 168
+        },
+        {
+          "date": "2001-12-31T00:00:00",
+          "actual": 5.5,
+          "forecast": 4.70266104645405,
+          "baseline": 5.9272189349112425,
+          "persistence": 4.8,
+          "train_count": 169
+        },
+        {
+          "date": "2002-03-31T00:00:00",
+          "actual": 5.7,
+          "forecast": 5.3535005705603265,
+          "baseline": 5.924705882352941,
+          "persistence": 5.5,
+          "train_count": 170
+        },
+        {
+          "date": "2002-06-30T00:00:00",
+          "actual": 5.8,
+          "forecast": 5.5992459181938665,
+          "baseline": 5.923391812865497,
+          "persistence": 5.7,
+          "train_count": 171
+        },
+        {
+          "date": "2002-09-30T00:00:00",
+          "actual": 5.7,
+          "forecast": 5.66906352289395,
+          "baseline": 5.922674418604651,
+          "persistence": 5.8,
+          "train_count": 172
+        },
+        {
+          "date": "2002-12-31T00:00:00",
+          "actual": 5.8,
+          "forecast": 5.588607396507688,
+          "baseline": 5.921387283236995,
+          "persistence": 5.7,
+          "train_count": 173
+        },
+        {
+          "date": "2003-03-31T00:00:00",
+          "actual": 5.9,
+          "forecast": 5.686072139458868,
+          "baseline": 5.920689655172414,
+          "persistence": 5.8,
+          "train_count": 174
+        },
+        {
+          "date": "2003-06-30T00:00:00",
+          "actual": 6.2,
+          "forecast": 5.7588628464955764,
+          "baseline": 5.920571428571428,
+          "persistence": 5.9,
+          "train_count": 175
+        },
+        {
+          "date": "2003-09-30T00:00:00",
+          "actual": 6.1,
+          "forecast": 6.049329540532525,
+          "baseline": 5.922159090909091,
+          "persistence": 6.2,
+          "train_count": 176
+        },
+        {
+          "date": "2003-12-31T00:00:00",
+          "actual": 5.8,
+          "forecast": 5.979358656712533,
+          "baseline": 5.92316384180791,
+          "persistence": 6.1,
+          "train_count": 177
+        },
+        {
+          "date": "2004-03-31T00:00:00",
+          "actual": 5.7,
+          "forecast": 5.693352549731679,
+          "baseline": 5.922471910112359,
+          "persistence": 5.8,
+          "train_count": 178
+        },
+        {
+          "date": "2004-06-30T00:00:00",
+          "actual": 5.6,
+          "forecast": 5.588360496079858,
+          "baseline": 5.92122905027933,
+          "persistence": 5.7,
+          "train_count": 179
+        },
+        {
+          "date": "2004-09-30T00:00:00",
+          "actual": 5.4,
+          "forecast": 5.518689864247153,
+          "baseline": 5.919444444444444,
+          "persistence": 5.6,
+          "train_count": 180
+        },
+        {
+          "date": "2004-12-31T00:00:00",
+          "actual": 5.4,
+          "forecast": 5.332860308904714,
+          "baseline": 5.9165745856353595,
+          "persistence": 5.4,
+          "train_count": 181
+        },
+        {
+          "date": "2005-03-31T00:00:00",
+          "actual": 5.3,
+          "forecast": 5.322744564650675,
+          "baseline": 5.913736263736263,
+          "persistence": 5.4,
+          "train_count": 182
+        },
+        {
+          "date": "2005-06-30T00:00:00",
+          "actual": 5.1,
+          "forecast": 5.269411243618682,
+          "baseline": 5.910382513661202,
+          "persistence": 5.3,
+          "train_count": 183
+        },
+        {
+          "date": "2005-09-30T00:00:00",
+          "actual": 5.0,
+          "forecast": 5.047392392659754,
+          "baseline": 5.905978260869564,
+          "persistence": 5.1,
+          "train_count": 184
+        },
+        {
+          "date": "2005-12-31T00:00:00",
+          "actual": 4.9,
+          "forecast": 5.074334140713833,
+          "baseline": 5.90108108108108,
+          "persistence": 5.0,
+          "train_count": 185
+        },
+        {
+          "date": "2006-03-31T00:00:00",
+          "actual": 4.7,
+          "forecast": 4.856103857488172,
+          "baseline": 5.895698924731183,
+          "persistence": 4.9,
+          "train_count": 186
+        },
+        {
+          "date": "2006-06-30T00:00:00",
+          "actual": 4.7,
+          "forecast": 4.706321463489095,
+          "baseline": 5.889304812834224,
+          "persistence": 4.7,
+          "train_count": 187
+        },
+        {
+          "date": "2006-09-30T00:00:00",
+          "actual": 4.7,
+          "forecast": 4.733313064874304,
+          "baseline": 5.882978723404255,
+          "persistence": 4.7,
+          "train_count": 188
+        },
+        {
+          "date": "2006-12-31T00:00:00",
+          "actual": 4.4,
+          "forecast": 4.652863701042912,
+          "baseline": 5.876719576719577,
+          "persistence": 4.7,
+          "train_count": 189
+        },
+        {
+          "date": "2007-03-31T00:00:00",
+          "actual": 4.5,
+          "forecast": 4.435477211219453,
+          "baseline": 5.868947368421052,
+          "persistence": 4.4,
+          "train_count": 190
+        },
+        {
+          "date": "2007-06-30T00:00:00",
+          "actual": 4.5,
+          "forecast": 4.552860692415387,
+          "baseline": 5.861780104712041,
+          "persistence": 4.5,
+          "train_count": 191
+        },
+        {
+          "date": "2007-09-30T00:00:00",
+          "actual": 4.7,
+          "forecast": 4.518293429098848,
+          "baseline": 5.854687500000001,
+          "persistence": 4.5,
+          "train_count": 192
+        },
+        {
+          "date": "2007-12-31T00:00:00",
+          "actual": 4.8,
+          "forecast": 4.707041691277831,
+          "baseline": 5.848704663212436,
+          "persistence": 4.7,
+          "train_count": 193
+        },
+        {
+          "date": "2008-03-31T00:00:00",
+          "actual": 4.9,
+          "forecast": 4.828642504521617,
+          "baseline": 5.8432989690721655,
+          "persistence": 4.8,
+          "train_count": 194
+        },
+        {
+          "date": "2008-06-30T00:00:00",
+          "actual": 5.4,
+          "forecast": 4.838453274711895,
+          "baseline": 5.838461538461538,
+          "persistence": 4.9,
+          "train_count": 195
+        },
+        {
+          "date": "2008-09-30T00:00:00",
+          "actual": 6.0,
+          "forecast": 5.425020567380698,
+          "baseline": 5.836224489795919,
+          "persistence": 5.4,
+          "train_count": 196
+        },
+        {
+          "date": "2008-12-31T00:00:00",
+          "actual": 6.9,
+          "forecast": 5.786783327146864,
+          "baseline": 5.837055837563452,
+          "persistence": 6.0,
+          "train_count": 197
+        },
+        {
+          "date": "2009-03-31T00:00:00",
+          "actual": 8.1,
+          "forecast": 6.5781045970599825,
+          "baseline": 5.842424242424244,
+          "persistence": 6.9,
+          "train_count": 198
+        },
+        {
+          "date": "2009-06-30T00:00:00",
+          "actual": 9.2,
+          "forecast": 7.932557774865733,
+          "baseline": 5.853768844221106,
+          "persistence": 8.1,
+          "train_count": 199
+        },
+        {
+          "date": "2009-09-30T00:00:00",
+          "actual": 9.6,
+          "forecast": 9.084044276739524,
+          "baseline": 5.8705,
+          "persistence": 9.2,
+          "train_count": 200
+        }
+      ]
+    }
+  ],
+  "synthetic_case": {
+    "metrics": {
+      "n_oos": 119,
+      "mse": 7.704226740374541e-05,
+      "baseline_mse": 7.737248769652718e-05,
+      "oos_r2": 0.004267929112955149,
+      "persistence_mse": 0.00017587648637992027,
+      "r2_vs_persistence": 0.5619524304270995
+    },
+    "research_status": "not_evaluated"
+  },
+  "limitations": "Revised historical quarterly snapshot 1959Q2-2009Q3; release lags not modeled; no strict PIT or A-share performance evidence.",
+  "source_documentation": "https://www.statsmodels.org/stable/datasets/generated/macrodata.html",
+  "independent_researcher_review": false
+}
