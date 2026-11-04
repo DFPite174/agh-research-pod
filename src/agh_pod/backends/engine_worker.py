@@ -16,7 +16,7 @@ def perform(request):
     info = inspect_backend(request["engine_root"])
     if not info["version_matches"] or not info["tracked_worktree_clean"]:
         return {**info, "status": "BLOCKED_ENGINE_VERSION", "reason": "pinned clean engine checkout required"}
-    if request.get("action") not in {"probe", "run"}:
+    if request.get("action") not in {"probe", "run", "equity"}:
         raise ValueError("unknown worker action")
     try:
         version = importlib.metadata.version("nautilus_trader")
@@ -25,7 +25,13 @@ def perform(request):
     if version != "1.231.0":
         return {**info, "status": "BLOCKED_DEPENDENCIES", "reason": "NautilusTrader1.231.0 required"}
     info["nautilus_version"] = version
+    info["engine_python"] = sys.version
+    info["engine_dependencies"] = {name: importlib.metadata.version(name) for name in ("numpy", "pandas", "pydantic")}
     sys.path.insert(0, request["engine_root"])
+    if request["action"] == "equity":
+        sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+        from equity_worker import perform_equity
+        return {**info, **perform_equity(request)}
     from contracts.models import ConvertibleBondInstrument, Venue
     from engine import BacktestBar, OrderIntent, run_backtest
     if request["action"] == "probe":

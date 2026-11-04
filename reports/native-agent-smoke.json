@@ -1,0 +1,550 @@
+{
+  "repository": "https://github.com/DFPite174/ashare-nautilus-backtest-engine",
+  "revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+  "expected_revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+  "version_matches": true,
+  "tracked_worktree_clean": true,
+  "paper_short_leg_supported": false,
+  "convertible_cashflow_events_qualified": false,
+  "nautilus_version": "1.231.0",
+  "status": "EXECUTED_NOT_QUALIFIED",
+  "result": {
+    "native_cash": "98994.99",
+    "ledger_cash": "98994.99",
+    "positions": {
+      "600000.SH": "100.0"
+    },
+    "fills": [
+      {
+        "symbol": "600000.SH",
+        "side": "BUY",
+        "quantity": "100",
+        "price": "10.00",
+        "fee": "5.01",
+        "time": 1704245400000000001,
+        "order_id": "O-20240103-013000-001-000-1"
+      }
+    ],
+    "rejections": [],
+    "daily_nav": [
+      {
+        "date": "2024-01-02",
+        "cash": "100000.0",
+        "positions_value": "0.0",
+        "total_equity": "100000.0",
+        "receivable_dividends": "0.0",
+        "holdings": {},
+        "tradable_holdings": {},
+        "native_cash": "100000.0",
+        "native_equity": "100000.0",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-03",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {},
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-04",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-05",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-08",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-09",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-10",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-11",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-12",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-15",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-16",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-17",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-18",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-19",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-22",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-23",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-24",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-25",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-26",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-29",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-30",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-01-31",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-01",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-02",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-05",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-06",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-07",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-08",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-09",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      },
+      {
+        "date": "2024-02-12",
+        "cash": "98994.99",
+        "positions_value": "1000.00",
+        "total_equity": "99994.99",
+        "receivable_dividends": "0.0",
+        "holdings": {
+          "600000.SH": "100.0"
+        },
+        "tradable_holdings": {
+          "600000.SH": "100.0"
+        },
+        "native_cash": "98994.99",
+        "native_equity": "99994.99",
+        "cash_matches": true,
+        "positions_match": true
+      }
+    ],
+    "account_journal": [],
+    "orders": [
+      {
+        "id": "O-20240103-013000-001-000-1",
+        "status": "FILLED",
+        "quantity": "100",
+        "filled_quantity": "100"
+      }
+    ],
+    "pending_intents": [],
+    "execution_model": "bar-synthetic-l2-v1: bar-derived synthetic L2 with native NT matching; next-bar-open IOC; DAY limits: open price improvement, resting limits at limit; O-H-L-C path; shared bar volume cap; inactive-session pending intents rejected; no observed L2/queue/auction reconstruction"
+  },
+  "signal_timing": "closed raw bar only; earliest execution at next bar open",
+  "strategy_language": "bounded historical expressions; no eval/exec",
+  "paper_reproduction_certified": false
+}

@@ -2,23 +2,25 @@
 
 import json
 import os
+import shutil
 from pathlib import Path
 import subprocess
 import sys
 
 ENGINE_URL = "https://github.com/DFPite174/ashare-nautilus-backtest-engine"
-ENGINE_REVISION = "e231d8fb15ad67e4ff9f3525a53376c3cd49db34"
+ENGINE_REVISION = "b8d424df1a7c7c65b29eaab1be667a5368c8be5c"
 
 
 def inspect_backend(engine_root):
     root = Path(engine_root).resolve()
     if not (root / "engine" / "backtest.py").is_file() or not (root / "contracts" / "models.py").is_file():
         raise ValueError("backtest engine repository not found")
-    result = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True,
+    git = os.getenv("AGH_GIT") or shutil.which("git") or "git"
+    result = subprocess.run([git, "-C", str(root), "rev-parse", "HEAD"], capture_output=True,
                             text=True, timeout=10, check=False)
     if result.returncode:
         raise ValueError("engine repository must have verifiable Git revision")
-    dirty = subprocess.run(["git", "-C", str(root), "status", "--porcelain", "--untracked-files=no"],
+    dirty = subprocess.run([git, "-C", str(root), "status", "--porcelain", "--untracked-files=no"],
                            capture_output=True, text=True, timeout=10, check=False)
     revision = result.stdout.strip()
     return {"repository": ENGINE_URL, "revision": revision, "expected_revision": ENGINE_REVISION,
@@ -60,4 +62,11 @@ def run_account_backtest(engine_root, request, *, python_executable=None, proces
     if request.get("asset_class") != "CONVERTIBLE_BOND":
         raise ValueError("this paper adapter requires an explicit CONVERTIBLE_BOND asset class")
     return _invoke(engine_root, {**request, "action": "run"},
+                   python_executable=python_executable, process=process)
+
+
+def run_equity_backtest(engine_root, request, *, python_executable=None, process=None):
+    if request.get("asset_class") != "EQUITY":
+        raise ValueError("ordinary equity adapter requires EQUITY")
+    return _invoke(engine_root, {**request, "action": "equity"},
                    python_executable=python_executable, process=process)

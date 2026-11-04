@@ -15,3 +15,10 @@
 - Persist evidence analysis with input hashes and budgets; expose the same use case through CLI/API/UI.
 - Reject foreign Host/Origin mutation requests; render compact run summaries with full-result links.
 - Preserve all representative-case metrics and strengthen negative tests.
+## 0.3.0 — 2026-11-04
+
+- Add manually triggered API-model research, bounded historical strategy expressions, fixed-budget planning and revision records.
+- Prioritize the selected A-share NautilusTrader engine, pinned to b8d424df1a7c7c65b29eaab1be667a5368c8be5c; add ordinary-equity account execution.
+- Add read-only AStockDB preparation and full task/data/implementation fingerprints.
+- Compare candidate and matched-share buy-and-hold using native reconciliation, costs and drawdowns; preserve holdout when development fails.
+- Export verifiable research packages; provide CLI/API/UI and explicit controlled-model versus real-engine acceptance boundaries.

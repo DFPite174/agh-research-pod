@@ -419,6 +419,9 @@ class Pod:
     def _verify_package(path):
         root = Path(path).resolve()
         manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+        if manifest.get("schema_version") == "research-1":
+            from .research_agent import verify_research_package
+            return verify_research_package(root)
         errors = []
         for name, expected in manifest["files"].items():
             target = (root / name).resolve()
