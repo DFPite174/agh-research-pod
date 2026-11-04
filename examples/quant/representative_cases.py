@@ -60,6 +60,8 @@ def run_case(pod, name, frame, target, features, train, source, source_bytes, sy
     manifest = {'csv': 'data.csv', 'source': source,
                 'license': 'Generated fixture' if synthetic else 'Research use; source terms apply; raw data not committed',
                 'evidence_level': 'synthetic' if synthetic else 'alternative_real', 'limitations': limitation}
+    if not synthetic:
+        manifest['frequency'] = 'quarterly' if 'statsmodels' in source else 'monthly'
     (folder/'manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
     mandate = {'objective': name, 'baseline': 'Expanding mean and last observation',
                'acceptance': 'Compare fixed OOS errors against both baselines, report negative and split-sample findings',

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "priority": "P2",
+    "title": "交付包缺附件仍可能通过校验",
+    "status": "已修复",
+    "location": "workflow.py:verify_package",
+    "detail": "仅校验清单已列文件，删掉数据/证据条目后仍可通过。现要求配方附件完整，并与审批数据哈希、原清单、重跑清单和结果快照一致。"
+  },
+  {
+    "id": 2,
+    "priority": "P2",
+    "title": "有效包可被替换到另一导出目录",
+    "status": "已修复",
+    "location": "workflow.py:receive_package",
+    "detail": "仅做自洽校验未绑定数据库导出记录。现对照已存manifest及run ID，替换包拒收。"
+  },
+  {
+    "id": 3,
+    "priority": "P2",
+    "title": "反馈与机会状态可能部分写入",
+    "status": "已修复",
+    "location": "workflow.py:receive_package",
+    "detail": "反馈先提交、机会更新失败可留下半次操作。现同一SQLite写事务提交，故障注入验证全部回滚。"
+  },
+  {
+    "id": 4,
+    "priority": "P2",
+    "title": "CSV结构错误可被静默修补",
+    "status": "已修复",
+    "location": "quant.py:execute_quant",
+    "detail": "重复表头被自动改名，多余字段被忽略。现检查原始列名及每条非空记录字段数，拒绝静默丢列。"
+  },
+  {
+    "id": 5,
+    "priority": "P2",
+    "title": "观测顺序不足以保证时间资格",
+    "status": "部分补齐",
+    "location": "quant.py:execute_quant",
+    "detail": "加入可选frequency及availability_column和明确资格状态；真实供应商PIT、不同字段发布延迟及修订版本仍需数据治理。"
+  },
+  {
+    "id": 6,
+    "priority": "P2",
+    "title": "输入和PDF预算检查过晚",
+    "status": "已加固",
+    "location": "quant.py:load_dataset; documents.py:prepare_evidence",
+    "detail": "manifest/CSV改为有界读取，PDF逐页检查累计文本。单页解析器CPU/解压内存仍非强隔离，不能声称恶意PDF沙箱。"
+  },
+  {
+    "id": 7,
+    "priority": "P2",
+    "title": "模型分析不能持久复核",
+    "status": "已修复",
+    "location": "workflow.py:analyze_artifacts; cli.py; api.py",
+    "detail": "此前只输出终端。现存analysis对象，保留输入哈希、预算、输出和状态，CLI/API/网页共用。未配置时存NOT_RUN。"
+  },
+  {
+    "id": 8,
+    "priority": "P2",
+    "title": "异常提供方JSON导致非受控崩溃",
+    "status": "已修复",
+    "location": "analyst.py; providers/tushare.py",
+    "detail": "JSON数组等顶层结构触发AttributeError。现验证容器形状，返回FAILED/ERROR且不输出密钥。"
+  },
+  {
+    "id": 9,
+    "priority": "P2",
+    "title": "分析失败仍返回CLI成功码",
+    "status": "已修复",
+    "location": "cli.py:main",
+    "detail": "FAILED/BLOCKED_INPUT现在返回退出码1，避免自动化误把失败当完成；未配置NOT_RUN仍明确显示。"
+  },
+  {
+    "id": 10,
+    "priority": "P2",
+    "title": "首页嵌入大量完整预测",
+    "status": "已修复",
+    "location": "workflow.py:run_summaries; api.py:index",
+    "detail": "改为最多50条去除result的运行摘要，完整结果单独GET；已有200条其他对象列表仍需真正分页与筛选。"
+  },
+  {
+    "id": 11,
+    "priority": "P2",
+    "title": "本地服务未限制Host/Origin",
+    "status": "已加固",
+    "location": "api.py:create_app",
+    "detail": "拒绝非本机Host和跨Origin写请求。当前仍是本地可信单用户，未引入组织认证/RBAC或公网部署资格。"
+  },
+  {
+    "id": 12,
+    "priority": "P2",
+    "title": "损坏包JSON缺少稳定验证结果",
+    "status": "已修复",
+    "location": "workflow.py:verify_package",
+    "detail": "一般损坏结构返回valid=false；路径逃逸继续保留IntegrityError契约，兼容原调用方。"
+  },
+  {
+    "id": 13,
+    "priority": "产品优先",
+    "title": "自动发现与初筛尚未闭环",
+    "status": "待建设",
+    "location": "sources.py:fetch_source; cli.py:source-sync",
+    "detail": "已有A/G/H固定连接器，但仍需人工触发和挑选，缺主题订阅、增量游标、关联去重和机会评分。下一步应先建设可审计采集队列，不直接无人值守执行。"
+  },
+  {
+    "id": 14,
+    "priority": "产品优先",
+    "title": "分析到实验计划仍需人工转换",
+    "status": "待建设",
+    "location": "analyst.py:SCHEMA; workflow.py:create_spec",
+    "detail": "next_experiment是文本，尚无受约束实验计划编译、缺口自动选择和批准后的连续推进。需以可用配方生成可校验候选规格。"
+  },
+  {
+    "id": 15,
+    "priority": "产品优先",
+    "title": "量化与工程验证配方范围有限",
+    "status": "待建设",
+    "location": "cases.py:execute_recipe; quant.py",
+    "detail": "quant为单序列ridge预测，另有专用论文和demo；不是横截面因子、组合优化、事件研究或通用能力基准。扩展应选可独立验收的配方，不开放任意shell。"
+  },
+  {
+    "id": 16,
+    "priority": "运行优先",
+    "title": "预算与停止条件尚未成为强执行约束",
+    "status": "待建设",
+    "location": "workflow.py:execute/cancel/recover; docs/operations.md",
+    "detail": "单个配方有参数预算，但任务书中的停止条件是文本；取消阻止结果发布，不强杀计算。需进程执行器、租约/心跳、并发上限、硬超时，再谈长期无人值守。"
+  },
+  {
+    "id": 17,
+    "priority": "研究优先",
+    "title": "实验可复跑不等于科学验证",
+    "status": "待建设",
+    "location": "reports/representative-cases.md; empirical.py",
+    "detail": "8个真实案例属于相关的本地适配实验，未建立严格PIT、全部试验登记、独立封存测试及多重检验治理。软件/配方版本也应进入审批与实验环境快照。"
+  },
+  {
+    "id": 18,
+    "priority": "集成优先",
+    "title": "旧论文和交易后端仍有资格缺口",
+    "status": "待建设",
+    "location": "backends/nautilus.py; cases.py; reports/acceptance.md",
+    "detail": "NT适配锁旧版本且可转债入口未通过；不能拿统计预测替代账户回测。旧paper交付包不像quant包那样包含全部数据文件，完整可迁移性仍未验收。"
+  },
+  {
+    "id": 19,
+    "priority": "运营优先",
+    "title": "运维与证据存储仍依赖人工流程",
+    "status": "待建设",
+    "location": "workflow.py:Pod; docs/operations.md",
+    "detail": "存在手工备份/恢复说明，但缺数据库模式迁移、备份恢复命令、保留策略；来源去重按原字节线性扫描，未建立版本/语义关联索引。现阶段不应靠更多抽象替代这些实际需求。"
+  },
+  {
+    "id": 20,
+    "priority": "产品优先",
+    "title": "机会队列与结果工作台仍较薄",
+    "status": "待建设",
+    "location": "templates/index.html; workflow.py:set_mandate",
+    "detail": "缺优先级、负责人、全程派生状态、跨实验比较和完整分页。一次规格/回执状态不足以概括多实验项目，需要明确项目层与实验层状态。"
+  }
+]

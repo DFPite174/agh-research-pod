@@ -19,8 +19,13 @@ def prepare_evidence(content, *, max_characters=25000, max_pages=100):
                 raise ValueError("encrypted PDF requires separately authorized extraction")
             if len(reader.pages) > max_pages:
                 raise ValueError("PDF page budget exceeded")
+            text_size = 0
             for i, page in enumerate(reader.pages):
                 text = (page.extract_text() or '').strip()
+                if text:
+                    text_size += len(f'[PDF page {i+1}]\n') + len(text) + (2 if text_size else 0)
+                    if text_size > max_characters:
+                        raise ValueError("extracted text exceeds character budget; select a reviewed excerpt explicitly")
                 result["pages"].append({"page": i+1, "text": text})
                 if not text:
                     result["empty_pages"].append(i+1)

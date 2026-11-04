@@ -1,6 +1,9 @@
 """Local single-user HTTP and HTML interfaces to the evidence workflow."""
 from pathlib import Path
 from typing import Annotated, Literal
+from urllib.parse import urlsplit
+
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from fastapi import BackgroundTasks, Body, FastAPI, Header, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse
@@ -34,6 +37,12 @@ class SpecRequest(StrictRequest):
     ridge: float = Field(default=1.0, gt=0, le=1000000)
 
 
+class AnalysisRequest(StrictRequest):
+    artifact_ids: list[str] = Field(min_length=1, max_length=20)
+    max_output_tokens: int = Field(default=1200, ge=1, lt=100000)
+    max_total_tokens: int = Field(default=5000, gt=1, le=100000)
+
+
 class MandateRequest(StrictRequest):
     objective: str = Field(min_length=1, max_length=3000)
     baseline: str = Field(min_length=1, max_length=3000)
@@ -64,8 +73,22 @@ class ArtifactLinkRequest(StrictRequest):
 def create_app(root="./runtime"):
     """Bind an app to one local Pod. No arbitrary code or file-serving routes."""
     pod = Pod(root)
-    app = FastAPI(title="AGH ResearchPod", version="0.2.0")
+    app = FastAPI(title="AGH ResearchPod", version="0.2.1")
     app.state.pod = pod
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "testserver"])
+
+    @app.middleware("http")
+    async def local_origin(request: Request, call_next):
+        origin = request.headers.get("origin")
+        if origin and request.method not in {"GET", "HEAD", "OPTIONS"}:
+            try:
+                parsed = urlsplit(origin)
+            except ValueError:
+                return JSONResponse(status_code=403, content={"detail": "invalid request origin"})
+            if parsed.scheme not in {"http", "https"} or parsed.netloc != request.headers.get("host"):
+                return JSONResponse(status_code=403, content={"detail": "cross-origin mutation refused"})
+        return await call_next(request)
+
     templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
 
     @app.exception_handler(KeyError)
@@ -101,6 +124,14 @@ def create_app(root="./runtime"):
     @app.post("/v1/packages/{package_id}/receive")
     def receive(package_id: str, body: DeliveryRequest):
         return pod.receive_package(package_id, **body.model_dump())
+
+    @app.post("/v1/analyses", status_code=201)
+    def analyze_evidence(body: AnalysisRequest):
+        return pod.analyze_artifacts(**body.model_dump())
+
+    @app.get("/v1/analyses")
+    def analyses(limit: Annotated[int, Query(ge=1, le=200)] = 50):
+        return pod.list("analysis", limit=limit)
 
     @app.get("/v1/artifacts")
     def artifacts(limit: Annotated[int, Query(ge=1, le=1000)] = 200,
@@ -149,8 +180,8 @@ def create_app(root="./runtime"):
         from .cases import case_status
         return templates.TemplateResponse(request=request, name="index.html", context={
             "opportunities": pod.list("opportunity"), "artifacts": pod.list("artifact"),
-            "specs": pod.list("spec"), "runs": pod.list("run"), "reviews": pod.list("review"),
-            "packages": pod.list("package"), "deliveries": pod.list("delivery"), "case": case_status(),
+            "specs": pod.list("spec"), "runs": pod.run_summaries(), "reviews": pod.list("review"),
+            "analyses": pod.list("analysis", limit=20), "packages": pod.list("package"), "deliveries": pod.list("delivery"), "case": case_status(),
         })
 
     return app

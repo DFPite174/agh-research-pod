@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agh-research-pod"
-version = "0.2.0"
+version = "0.2.1"
 description = "Evidence-first quantitative research workflows and reproducible experiments"
 requires-python = ">=3.12"
 license = "MIT"

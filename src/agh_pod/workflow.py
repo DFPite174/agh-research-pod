@@ -91,6 +91,40 @@ class Pod:
             row = c.execute("SELECT spec,run FROM requests WHERE key=?", (key,)).fetchone()
         return {"spec": row[0], "run": row[1]} if row else None
 
+    def run_summaries(self, limit=50):
+        if type(limit) is not int or not 1 <= limit <= 200:
+            raise ValueError("invalid summary limit")
+        with self._connection() as c:
+            rows = c.execute("SELECT json_remove(body,'$.result') FROM objects WHERE kind='run' ORDER BY rowid DESC LIMIT ?", (limit,)).fetchall()
+        return [{**json.loads(row[0]), "result_url": "/v1/runs/"+json.loads(row[0])["id"]} for row in rows]
+
+    def analyze_artifacts(self, artifact_ids, *, max_output_tokens=1200, max_total_tokens=5000, client=None):
+        from .analyst import analyze
+        from .documents import prepare_evidence
+        if (not isinstance(artifact_ids, list) or not 1 <= len(artifact_ids) <= 20
+                or any(not isinstance(i, str) or not i for i in artifact_ids)
+                or len(set(artifact_ids)) != len(artifact_ids)):
+            raise ValueError("analysis requires 1..20 unique artifact IDs")
+        if (type(max_total_tokens) is not int or type(max_output_tokens) is not int
+                or not 1 <= max_output_tokens < max_total_tokens <= 100000):
+            raise ValueError("invalid token budget")
+        snapshots, evidence = [], []
+        blocked = None
+        for artifact_id in artifact_ids:
+            artifact = self.get("artifact", artifact_id)
+            content = self.read_artifact(artifact_id)
+            snapshots.append({k: artifact[k] for k in ("id", "sha256", "title", "source")})
+            prepared = prepare_evidence(content, max_characters=max_total_tokens)
+            if prepared["status"] != "READY":
+                blocked = {"status": "BLOCKED_INPUT", "artifact_id": artifact_id,
+                           "reason": prepared["status"], "empty_pages": prepared["empty_pages"],
+                           "sha256": prepared["sha256"], "provider_called": False}
+            evidence.append({"id": artifact_id, "title": artifact["title"], "content": prepared["text"]})
+        result = blocked or analyze(evidence, client=client, max_total_tokens=max_total_tokens,
+                                    max_output_tokens=max_output_tokens)
+        return self._new("analysis", **result, evidence=snapshots,
+                         budget={"max_total_tokens": max_total_tokens, "max_output_tokens": max_output_tokens})
+
     def create_opportunity(self, title, research_type, problem=""):
         if research_type not in {"investment_research", "capability_evaluation"}:
             raise ValueError("unknown research type")
@@ -122,11 +156,22 @@ class Pod:
             raise IntegrityError("delivery package verification failed")
         run = self.get("run", package["run_id"])
         spec = self.get("spec", run["spec_id"])
-        feedback = self._new("delivery", package_id=package_id, receiver=receiver,
-                             decision=decision, reason=reason, identity="local assertion; not external authentication")
-        op = self.get("opportunity", spec["opportunity_id"])
-        op.update(status={"accepted":"received", "rejected":"rejected", "followup":"followup"}[decision])
-        self._save("opportunity", op)
+        disk_manifest = json.loads((Path(package["path"]) / "manifest.json").read_bytes())
+        disk_run = json.loads((Path(package["path"]) / "run.json").read_bytes())
+        if disk_manifest != package["manifest"] or disk_run["id"] != package["run_id"]:
+            raise IntegrityError("package differs from recorded export")
+        feedback = {"id": uuid.uuid4().hex, "created_at": now(), "package_id": package_id,
+                    "receiver": receiver, "decision": decision, "reason": reason,
+                    "identity": "local assertion; not external authentication"}
+        with self._connection() as c:
+            c.execute("BEGIN IMMEDIATE")
+            row = c.execute("SELECT body FROM objects WHERE kind='opportunity' AND id=?", (spec["opportunity_id"],)).fetchone()
+            if not row:
+                raise KeyError(spec["opportunity_id"])
+            op = json.loads(row[0])
+            op.update(status={"accepted":"received", "rejected":"rejected", "followup":"followup"}[decision])
+            self._save("delivery", feedback, connection=c)
+            self._save("opportunity", op, connection=c)
         return feedback
 
     def add_artifact(self, source, title, content, metadata=None):
@@ -362,6 +407,16 @@ class Pod:
 
     @staticmethod
     def verify_package(path):
+        try:
+            return Pod._verify_package(path)
+        except IntegrityError:
+            raise
+        except (OSError, ValueError, KeyError, TypeError, AttributeError):
+            return {"valid": False, "errors": ["unreadable or malformed package"],
+                    "scientific_replication_certified": False}
+
+    @staticmethod
+    def _verify_package(path):
         root = Path(path).resolve()
         manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
         errors = []
@@ -391,6 +446,23 @@ class Pod:
                 )
                 if not valid:
                     errors.append("package record relationships invalid")
-            except (KeyError, TypeError, ValueError):
+                for evidence in spec.get("evidence", []):
+                    name = "evidence-" + evidence["sha256"] + ".bin"
+                    if name not in manifest["files"] or digest((root / name).read_bytes()) != evidence["sha256"]:
+                        errors.append("approved evidence attachment missing or changed")
+                if spec["payload"]["recipe"] == "quant":
+                    required_data = {"dataset.csv", "dataset-manifest-original.json", "dataset-manifest.json"}
+                    if not required_data.issubset(manifest["files"]):
+                        errors.append("quant data attachments absent")
+                    else:
+                        snapshot = {"csv_sha256": digest((root / "dataset.csv").read_bytes()),
+                                    "manifest_sha256": digest((root / "dataset-manifest-original.json").read_bytes())}
+                        original = json.loads((root / "dataset-manifest-original.json").read_bytes())
+                        replay = json.loads((root / "dataset-manifest.json").read_bytes())
+                        if snapshot != spec.get("dataset_snapshot") or replay != {**original, "csv": "dataset.csv"}:
+                            errors.append("quant attachments do not match approved snapshot")
+                        if run.get("result", {}).get("data_snapshot") != snapshot:
+                            errors.append("run result does not match approved quant data")
+            except (KeyError, TypeError, ValueError, OSError):
                 errors.append("package record schema invalid")
         return {"valid": not errors, "errors": errors, "scientific_replication_certified": False}
