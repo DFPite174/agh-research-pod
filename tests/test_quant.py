@@ -121,3 +121,35 @@ def test_cli_quant_task(tmp_path,capsys):
     assert main(['--root',str(tmp_path/'cli'),'quant-run',str(p)])==0
     result=json.loads(capsys.readouterr().out)
     assert result['status']=='succeeded'
+
+def test_run_uses_only_approved_bytes_under_file_update(tmp_path,monkeypatch):
+    import agh_pod.quant as quant
+    m=dataset(tmp_path); pod=Pod(tmp_path/'pod')
+    op=pod.create_opportunity('Race','investment_research')
+    s=pod.create_spec(op['id'],payload(m)); pod.approve(s['id'])
+    original=quant.execute_quant
+    def update_then_execute(cfg, **kwargs):
+        p=tmp_path/'data.csv'; df=pd.read_csv(p); df['y']=999; df.to_csv(p,index=False)
+        return original(cfg,**kwargs)
+    monkeypatch.setattr(quant,'execute_quant',update_then_execute)
+    r=pod.run_spec(s['id'])
+    assert r['status']=='failed' and r['error_type']=='IntegrityError'
+
+def test_export_uses_frozen_bytes_even_if_source_updates(tmp_path,monkeypatch):
+    import agh_pod.quant as quant
+    from pathlib import Path
+    m=dataset(tmp_path); pod=Pod(tmp_path/'pod')
+    op=pod.create_opportunity('Export race','investment_research')
+    s=pod.create_spec(op['id'],payload(m)); pod.approve(s['id']); r=pod.run_spec(s['id'])
+    pod.review(r['id'],'local','engineering_verified')
+    original=quant.load_dataset
+    def read_then_replace(path):
+        result=original(path)
+        (tmp_path/'data.csv').write_text('unapproved replacement')
+        return result
+    monkeypatch.setattr(quant,'load_dataset',read_then_replace)
+    package=pod.export_package(r['id'])
+    content=(Path(package['path'])/'dataset.csv').read_bytes()
+    from hashlib import sha256
+    assert sha256(content).hexdigest()==pod.get('spec',s['id'])['dataset_snapshot']['csv_sha256']
+    assert pod.verify_package(package['path'])['valid']

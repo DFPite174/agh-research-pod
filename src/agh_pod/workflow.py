@@ -274,7 +274,7 @@ class Pod:
             from .cases import execute_recipe
             if spec["payload"]["recipe"] == "quant":
                 from .quant import execute_quant
-                result = execute_quant(spec["payload"])
+                result = execute_quant(spec["payload"], expected_snapshot=spec["dataset_snapshot"])
             else:
                 result = execute_recipe(spec["payload"])
             run.update(result=result, evidence_level=result["evidence_level"], research_status=result["research_status"], status=result.get("execution_status", "succeeded"))
@@ -341,13 +341,12 @@ class Pod:
                 raise IntegrityError("source changed before export")
             attachments["evidence-" + evidence["sha256"] + ".bin"] = content
         if spec["payload"]["recipe"] == "quant":
-            from .quant import snapshot_dataset
-            dataset = Path(spec["payload"]["dataset"]).resolve()
-            if snapshot_dataset(dataset) != spec.get("dataset_snapshot"):
+            from .quant import load_dataset
+            metadata, raw, content, snapshot = load_dataset(spec["payload"]["dataset"])
+            if snapshot != spec.get("dataset_snapshot"):
                 raise IntegrityError("quant dataset changed before export")
-            metadata = json.loads(dataset.read_text(encoding="utf-8-sig"))
-            attachments["dataset.csv"] = (dataset.parent / metadata["csv"]).read_bytes()
-            attachments["dataset-manifest-original.json"] = dataset.read_bytes()
+            attachments["dataset.csv"] = content
+            attachments["dataset-manifest-original.json"] = raw
             attachments["dataset-manifest.json"] = canonical({**metadata, "csv":"dataset.csv"})
         package_id = uuid.uuid4().hex
         path = self.root / "packages" / package_id

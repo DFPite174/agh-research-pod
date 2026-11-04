@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 from pathlib import Path
 
@@ -9,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 
-def snapshot_dataset(manifest_path):
+def load_dataset(manifest_path):
     path = Path(manifest_path).resolve()
     raw = path.read_bytes()
     manifest = json.loads(raw)
@@ -22,8 +23,13 @@ def snapshot_dataset(manifest_path):
     if not csv.is_file() or csv.stat().st_size > 25_000_000:
         raise ValueError('quant CSV missing or exceeds 25MB')
     content = csv.read_bytes()
-    return {'manifest_sha256': hashlib.sha256(raw).hexdigest(),
-            'csv_sha256': hashlib.sha256(content).hexdigest()}
+    snapshot = {'manifest_sha256': hashlib.sha256(raw).hexdigest(),
+                'csv_sha256': hashlib.sha256(content).hexdigest()}
+    return manifest, raw, content, snapshot
+
+
+def snapshot_dataset(manifest_path):
+    return load_dataset(manifest_path)[3]
 
 
 def validate_payload(payload):
@@ -44,12 +50,13 @@ def validate_payload(payload):
         raise ValueError('ridge must be finite and positive, at most 1e6')
 
 
-def execute_quant(payload):
+def execute_quant(payload, *, expected_snapshot=None):
     validate_payload(payload)
-    snapshot = snapshot_dataset(payload['dataset'])
-    path = Path(payload['dataset']).resolve()
-    manifest = json.loads(path.read_text(encoding='utf-8-sig'))
-    frame = pd.read_csv(path.parent / manifest['csv'])
+    manifest, _raw, content, snapshot = load_dataset(payload['dataset'])
+    if expected_snapshot is not None and snapshot != expected_snapshot:
+        from .workflow import IntegrityError
+        raise IntegrityError('approved quant dataset changed before calculation')
+    frame = pd.read_csv(io.BytesIO(content))
     cols = list(dict.fromkeys(payload['features'] + [payload['target']]))
     if 'date' not in frame or not set(cols).issubset(frame.columns):
         raise ValueError('CSV requires date and configured target/features')
