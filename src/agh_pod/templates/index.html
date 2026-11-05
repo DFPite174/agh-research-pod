@@ -8,14 +8,15 @@
 </style>
 </head>
 <body><div class="shell">
-<aside><div class="brand">AGH <span style="font-weight:350">/ Pod</span></div><div class="edition">RESEARCH WORKBENCH · 0.2</div>
-<nav aria-label="工作台导航"><a href="#opportunities">01　研究机会</a><a href="#artifacts">02　证据库</a><a href="#specs">03　规格与批准</a><a href="#runs">04　运行与复核</a><a href="#case">05　论文目标与缺口</a></nav>
+<aside><div class="brand">AGH <span style="font-weight:350">/ Pod</span></div><div class="edition">RESEARCH WORKBENCH · 0.3</div>
+<nav aria-label="工作台导航"><a href="#research">00　AI A股研究</a><a href="#opportunities">01　研究机会</a><a href="#artifacts">02　证据库</a><a href="#specs">03　规格与批准</a><a href="#runs">04　运行与复核</a><a href="#case">05　论文目标与缺口</a></nav>
 <div class="local">本地单用户工作台<br>发现 → 规格 → 批准 → 运行 → 复核<br><br>工程验收与科学复现分别记录。</div></aside>
 <main class="main"><header class="top"><div><div class="eyebrow">证据驱动的研究工作流</div><h1>把研究判断落到证据。</h1></div><span class="pill">LOCAL · 受信任单用户</span></header>
 <p class="lede muted">跟踪来源、冻结实验规格、保留运行与复核记录。支持宏观、收益等时序预测研究；可转债论文保留为专用案例。</p>
 <div class="notice"><strong>研究状态须以真实数据审计为准。</strong> Demo 使用合成数据（Synthetic），只检验工程与数学行为；缺少许可历史数据、条款或独立复跑时，完整论文复现仍为 BLOCKED。</div>
 <div class="stats"><div class="stat"><strong>{{ opportunities|length }}</strong><span>研究机会 · 最近 200 条</span></div><div class="stat"><strong>{{ artifacts|length }}</strong><span>来源证据 · 哈希归档</span></div><div class="stat"><strong>{{ specs|length }}</strong><span>不可变实验规格</span></div><div class="stat"><strong>{{ runs|length }}</strong><span>运行与失败记录</span></div></div>
 
+<section id="research"><div class="section-top"><h2>AI 驱动 A 股研究</h2><span class="step">MANUAL TRIGGER</span></div><p>指定对象材料和目标。AI生成受限策略表达式，Pod优先调用指定NautilusTrader引擎，并执行基线比较、固定检验及预算内迭代。任意Python与不支持的方法会阻断，不替换成伪回测。</p><form id="research-form"><label>任务标题<input name="title" required maxlength="300"></label><label>研究目标<input name="goal" required maxlength="10000"></label><label>对象材料<select name="artifact_id" required>{% for a in artifacts %}<option value="{{ a.id }}">{{ a.title }}</option>{% endfor %}</select></label><label>已准备数据manifest（可留空走本机AStockDB）<input name="dataset"></label><label>主板股票（逗号分隔；自动准备时必填）<input name="symbols" placeholder="600519.SH"></label><label>起始日期<input type="date" name="start"></label><label>结束日期<input type="date" name="end"></label><label>最大模型轮数<input type="number" name="max_rounds" value="2" min="1" max="5"></label><button type="submit">创建并执行研究</button></form><p>模型及引擎配置由本机环境变量提供；不在网页输入密钥。默认保留最后20个交易日，仅在选定候选后检验一次。</p>{% for t in research_tasks %}<details><summary>{{ t.request.title }} · {{ t.status }} · {{ t.stage }}</summary><p><a href="/v1/research/{{ t.id }}" target="_blank" rel="noopener">查看计划、回测与检验详情</a></p><pre>{{ t|tojson(indent=2) }}</pre></details>{% endfor %}<form id="research-export-form"><label>完成的研究任务<select name="task_id" required>{% for t in research_tasks if t.stage == 'finished' %}<option value="{{ t.id }}">{{ t.request.title }} · {{ t.status }}</option>{% endfor %}</select></label><button type="submit">导出研究证据包</button></form></section>
 <section id="opportunities"><div class="section-top"><h2>研究机会</h2><span class="step">01 / DISCOVER</span></div><p class="section-note">先写清要回答的问题；投资研究和能力评价分别归档。</p>
 <form id="opportunity-form"><label>标题<input name="title" maxlength="300" required placeholder="例：检验信用利差对模型误定价的影响"></label><label>研究类型<select name="research_type"><option value="investment_research">投资研究</option><option value="capability_evaluation">能力评价</option></select></label><label>研究问题<input name="problem" maxlength="10000" placeholder="数据、假设与需要的证据"></label><button type="submit">创建机会</button></form>
 {% if opportunities %}<div class="table-wrap"><table><thead><tr><th>标题 / ID</th><th>类型</th><th>状态</th></tr></thead><tbody>{% for op in opportunities %}<tr><td>{{ op.title }}<div class="id">{{ op.id }}</div></td><td>{{ op.research_type }}</td><td><span class="badge">{{ op.status }}</span></td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty">还没有研究机会。创建后可在下一步冻结实验规格。</div>{% endif %}</section>
@@ -41,7 +42,7 @@
 <section id="delivery"><h2>交付与反馈</h2><p>接收结论是本地声明；拒绝和继续研究也是有效产出。</p><form id="delivery-form"><label>证据包<select name="package_id" required>{% for p in packages %}<option value="{{ p.id }}">{{ p.id }}</option>{% endfor %}</select></label><label>接收方<input name="receiver" required maxlength="3000"></label><label>决定<select name="decision"><option value="accepted">接收</option><option value="followup">继续研究</option><option value="rejected">拒绝</option></select></label><label>依据<input name="reason" required maxlength="3000"></label><button type="submit">记录反馈</button></form>{% for d in deliveries %}<pre>{{ d|tojson(indent=2) }}</pre>{% endfor %}</section>
 <section id="case"><div class="section-top"><h2>论文目标与缺口</h2><span class="step">05 / EVALUATE</span></div><p class="section-note">逐项保留论文目标、实测值与状态。缺测保持 NOT_RUN / BLOCKED；不能复制原文数字填补。以下展示配方登记状态。</p><pre>{{ case|tojson(indent=2) }}</pre></section>
 <section id="response-panel" aria-live="polite"><div class="section-top"><h2>操作回执</h2><button class="secondary" id="reload" type="button">刷新工作台</button></div><p class="section-note">提交成功后先阅读回执，再刷新查看持久化状态。</p><pre id="response">等待操作。</pre></section>
-<footer>AGH ResearchPod · 0.2 · 本地可信工作台。审批与复核者身份是本地声明，不构成外部身份认证。</footer>
+<footer>AGH ResearchPod · 0.3 · 本地可信工作台。审批与复核者身份是本地声明，不构成外部身份认证。</footer>
 </main></div>
 <script>
 const output=document.getElementById('response');
@@ -50,6 +51,8 @@ async function send(path,body,button,headers={}){button.disabled=true;output.tex
 function bind(id,action){document.getElementById(id).addEventListener('submit',event=>{event.preventDefault();const form=event.currentTarget;action(Object.fromEntries(new FormData(form)),form.querySelector('button'));});}
 bind('mandate-form',(data,button)=>{const id=data.opportunity_id;delete data.opportunity_id;send('/v1/opportunities/'+encodeURIComponent(id)+'/mandate',data,button);});
 bind('delivery-form',(data,button)=>{const id=data.package_id;delete data.package_id;send('/v1/packages/'+encodeURIComponent(id)+'/receive',data,button);});
+bind('research-form',(data,button)=>{const payload={title:data.title,goal:data.goal,artifact_ids:[data.artifact_id],max_rounds:Number(data.max_rounds)};if(data.dataset){payload.dataset=data.dataset;}else{payload.data_request={symbols:data.symbols.split(',').map(x=>x.trim()),start:data.start,end:data.end};}send('/v1/research',payload,button);});
+bind('research-export-form',(data,button)=>send('/v1/research/'+encodeURIComponent(data.task_id)+'/export',{},button));
 bind('analysis-form',(data,button)=>send('/v1/analyses',{artifact_ids:[data.artifact_id]},button));
 bind('opportunity-form',(data,button)=>send('/v1/opportunities',data,button));
 bind('link-form',(data,button)=>{const id=data.opportunity_id;delete data.opportunity_id;send('/v1/opportunities/'+encodeURIComponent(id)+'/artifacts',data,button);});

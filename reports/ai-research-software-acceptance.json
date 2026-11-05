@@ -1,0 +1,18 @@
+{
+  "version": "0.3.0",
+  "tests_passed": 229,
+  "static_checks": "PASS",
+  "independent_static_review": "PASS",
+  "model_protocol": "CONTROLLED_RESPONSE_ONLY",
+  "live_model": "NOT_RUN_BY_USER_CHOICE",
+  "selected_native_engine": "ACTUAL_EXECUTION",
+  "engine_revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+  "native_engine_version": "1.231.0",
+  "controlled_cases": 3,
+  "wheel_sdist_installed_checks": "PASS",
+  "actual_http": "PASS",
+  "browser_visual_qa": "NOT_RUN",
+  "arbitrary_python": "NOT_IMPLEMENTED",
+  "pit_corporate_event_qualification": "NOT_QUALIFIED",
+  "strategy_profitability_or_live_trading": "NOT_CERTIFIED"
+}

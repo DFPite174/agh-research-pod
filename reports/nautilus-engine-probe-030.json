@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/DFPite174/ashare-nautilus-backtest-engine",
+  "revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+  "expected_revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+  "version_matches": true,
+  "tracked_worktree_clean": true,
+  "paper_short_leg_supported": false,
+  "convertible_cashflow_events_qualified": false,
+  "nautilus_version": "1.231.0",
+  "engine_python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "engine_dependencies": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "pydantic": "2.10.6"
+  },
+  "status": "EXECUTED_NOT_QUALIFIED",
+  "convertible_instrument_accepted": true,
+  "result": {
+    "native_cash": "100000.0",
+    "ledger_cash": "100000",
+    "positions": {
+      "110001.SH": "0"
+    },
+    "fills": [],
+    "rejections": [],
+    "daily_nav": [
+      {
+        "date": "2017-01-03",
+        "cash": "100000",
+        "positions_value": "0.0",
+        "total_equity": "100000.0",
+        "receivable_dividends": "0.0",
+        "holdings": {},
+        "tradable_holdings": {},
+        "native_cash": "100000.0",
+        "native_equity": "100000.0",
+        "cash_matches": true,
+        "positions_match": true
+      }
+    ],
+    "account_journal": [],
+    "orders": [],
+    "pending_intents": [],
+    "execution_model": "bar-synthetic-l2-v1: bar-derived synthetic L2 with native NT matching; next-bar-open IOC; DAY limits: open price improvement, resting limits at limit; O-H-L-C path; shared bar volume cap; inactive-session pending intents rejected; no observed L2/queue/auction reconstruction"
+  },
+  "paper_reproduction_certified": false,
+  "reason": "Execution alone does not qualify CB fees,T+0,events or paper short leg."
+}

@@ -11,3 +11,7 @@ Hash checks detect accidental or unapproved byte changes. They are not signature
 Cancellation blocks result publication; trusted inline computation may finish. Before manual recovery or a consistent backup, stop workers. Do not run maintenance against a live experiment and assume it was killed.
 
 For a vulnerability, contact the repository owner privately through an available account channel. Public issues should contain a minimal synthetic reproduction without credentials or private data. No public sensitive-data submission endpoint is supplied by this project.
+
+0.3 adds manually authorized model-generated historical expressions. They are interpreted by a fixed AST allowlist, never eval/exec. Research data, implementation modules and engine revision are frozen in the task contract; model outputs cannot change server paths or evaluation thresholds. Read-only AStockDB queries permit access only to its configured data directory for existing Parquet views. The model sees evidence and data summaries, not credentials or direct database/shell handles.
+
+Research budgets and native-worker timeouts are bounded, but research tasks do not yet offer process-killing cancellation or cross-task holdout access governance. Arbitrary generated Python execution is not implemented; starting Docker alone does not enable it. Old generic run cancellation semantics do not imply cancellation support for new research jobs.

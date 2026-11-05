@@ -61,7 +61,7 @@ def _parser():
     local.add_argument("path")
     local.add_argument("--title")
     listing = commands.add_parser("list")
-    listing.add_argument("kind", choices=["opportunity", "artifact", "spec", "run", "review", "package", "delivery", "analysis"])
+    listing.add_argument("kind", choices=["opportunity", "artifact", "spec", "run", "review", "package", "delivery", "analysis", "research", "research_attempt", "research_package"])
     listing.add_argument("--limit", type=int, default=200)
     listing.add_argument("--offset", type=int, default=0)
     approve = commands.add_parser("approve")
@@ -99,6 +99,12 @@ def _parser():
     receive.add_argument("--receiver", required=True)
     receive.add_argument("--decision", choices=["accepted", "rejected", "followup"], required=True)
     receive.add_argument("--reason", required=True)
+    research = commands.add_parser("research-start", help="manually trigger AI research with selected NT engine")
+    research.add_argument("task")
+    research.add_argument("--engine-root", default=os.getenv("AGH_BACKTEST_ENGINE_ROOT"))
+    research.add_argument("--engine-python", default=os.getenv("AGH_ENGINE_PYTHON"))
+    export = commands.add_parser("research-export")
+    export.add_argument("task_id")
     return parser
 
 
@@ -212,6 +218,17 @@ def main(argv=None):
             result = pod.export_package(args.run_id)
         elif args.command == "receive":
             result = pod.receive_package(args.package_id, args.receiver, args.decision, args.reason)
+        elif args.command == "research-start":
+            from .research_agent import create_research, run_research
+            path = Path(args.task).resolve()
+            payload = json.loads(path.read_text(encoding="utf-8-sig"))
+            if payload.get("dataset"):
+                payload["dataset"] = str((path.parent / payload["dataset"]).resolve())
+            task = create_research(pod, payload)
+            result = run_research(pod, task["id"], engine_root=args.engine_root, engine_python=args.engine_python)
+        elif args.command == "research-export":
+            from .research_agent import export_research
+            result = export_research(pod, args.task_id)
         elif args.command == "case-run":
             payload = {"recipe": "paper", "dataset": str(Path(args.manifest).resolve())}
             previous = pod.get_request(args.idempotency_key) if args.idempotency_key else None
@@ -229,7 +246,7 @@ def main(argv=None):
         _print(result)
         if isinstance(result, dict):
             runs = [result, result.get("run", {}), *result.get("runs", [])]
-            if any(run.get("status") in {"failed", "FAILED", "BLOCKED_INPUT"} for run in runs):
+            if any(run.get("status") in {"failed", "FAILED", "BLOCKED_INPUT", "FAILED_MODEL", "BUDGET_EXHAUSTED", "BLOCKED_BACKTEST", "BLOCKED_METHOD", "BLOCKED_ENGINE_CONFIGURATION", "PROVIDER_BUDGET_OVERRUN"} for run in runs):
                 return 1
         return 0
     except (ValueError, TypeError, KeyError, OSError, ImportError) as exc:

@@ -11,6 +11,7 @@ from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, ConfigDict, Field
 
 from .workflow import IntegrityError, Pod, StateError
+from .research_agent import ResearchRequest, create_research, run_research, export_research
 
 
 class StrictRequest(BaseModel):
@@ -73,7 +74,7 @@ class ArtifactLinkRequest(StrictRequest):
 def create_app(root="./runtime"):
     """Bind an app to one local Pod. No arbitrary code or file-serving routes."""
     pod = Pod(root)
-    app = FastAPI(title="AGH ResearchPod", version="0.2.1")
+    app = FastAPI(title="AGH ResearchPod", version="0.3.0")
     app.state.pod = pod
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "testserver"])
 
@@ -103,6 +104,28 @@ def create_app(root="./runtime"):
     @app.exception_handler(ValueError)
     async def invalid(_request, exc):
         return JSONResponse(status_code=422, content={"detail": str(exc)})
+
+    @app.post("/v1/research", status_code=202)
+    def trigger_research(body: ResearchRequest, tasks: BackgroundTasks):
+        task = create_research(pod, body.model_dump())
+        tasks.add_task(run_research, pod, task["id"])
+        return task
+
+    @app.get("/v1/research")
+    def research_tasks():
+        with pod._connection() as c:
+            rows = c.execute("SELECT json_remove(body,'$.holdout.runs') FROM objects WHERE kind='research' ORDER BY rowid DESC LIMIT 50").fetchall()
+        import json
+        return [json.loads(row[0]) for row in rows]
+
+    @app.get("/v1/research/{task_id}")
+    def research_detail(task_id: str):
+        task = pod.get("research", task_id)
+        return {**task, "attempts": [pod.get("research_attempt", i) for i in task["attempt_ids"]]}
+
+    @app.post("/v1/research/{task_id}/export", status_code=201)
+    def research_export(task_id: str, body: EmptyRequest = Body(default=EmptyRequest())):
+        return export_research(pod, task_id)
 
     @app.get("/v1/health")
     def health():
@@ -179,7 +202,7 @@ def create_app(root="./runtime"):
     def index(request: Request):
         from .cases import case_status
         return templates.TemplateResponse(request=request, name="index.html", context={
-            "opportunities": pod.list("opportunity"), "artifacts": pod.list("artifact"),
+            "research_tasks": research_tasks(), "opportunities": pod.list("opportunity"), "artifacts": pod.list("artifact"),
             "specs": pod.list("spec"), "runs": pod.run_summaries(), "reviews": pod.list("review"),
             "analyses": pod.list("analysis", limit=20), "packages": pod.list("package"), "deliveries": pod.list("delivery"), "case": case_status(),
         })

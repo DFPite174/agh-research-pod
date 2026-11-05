@@ -31,7 +31,7 @@ jobs:
       - name: Behavioral and mathematical tests
         run: python -m pytest -q --basetemp=runtime/ci-tests --junitxml=runtime/junit.xml
       - name: Syntax and unused imports
-        run: python -m pyflakes src tests
+        run: python -m pyflakes src tests examples/quant examples/research
       - name: Installed CLI smoke
         run: agh --root runtime/ci-demo demo
       - uses: actions/upload-artifact@v4

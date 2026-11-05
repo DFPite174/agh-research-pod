@@ -1,0 +1,256 @@
+{
+  "version": "0.3.0",
+  "validation": "controlled model responses with actual specified account engine",
+  "live_model": "NOT_RUN by user choice",
+  "arbitrary_python": "NOT_RUN; Docker daemon unavailable; bounded DSL only",
+  "cases": [
+    {
+      "case": "synthetic",
+      "model_evidence": "CONTROLLED_RESPONSE_NOT_LIVE_MODEL",
+      "engine_evidence": "ACTUAL_NATIVE_NAUTILUS_1.231.0",
+      "task_id": "c7538814efa042b695f5d6b04328cce7",
+      "package_id": "035117f482f44772a969d5ba06e1365e",
+      "status": "COMPLETED_RESEARCH",
+      "rounds": 2,
+      "calls": 2,
+      "reserved_tokens": 10614,
+      "reported_tokens_known": 1200,
+      "selected_attempt": "6dd985e9c69c458994426acf3d66ac49",
+      "selected_rules": {
+        "adaptation": "Shanghai/Shenzhen cash long, historical closed bars, next-bar execution, fixed 100 shares",
+        "assumptions": [
+          "raw-price technical signal",
+          "no standalone claim of PIT or corporate-event completeness"
+        ],
+        "buy": "close > sma(close, 10)",
+        "evidence_ids": [
+          "6e52fbc1dc2f461eb4144c1b097a6414"
+        ],
+        "hypothesis": "Past moving-average timing may improve risk-adjusted exposure; test against equal-share buy-and-hold",
+        "rationale": "Explicit exploratory 10-session variant, registered as a new attempt",
+        "sell": "close < sma(close, 10)",
+        "unsupported_reason": ""
+      },
+      "development": {
+        "excess_return": 6.43299999998348e-05,
+        "meets_fixed_thresholds": true,
+        "sample_adequate": true
+      },
+      "development_metrics": {
+        "baseline": {
+          "fees": 5.01,
+          "fills": 1,
+          "final_equity": 1000123.99,
+          "max_drawdown": 8.499643099990628e-05,
+          "net_return": 0.00012399000000007376,
+          "reconciliation": "PASS",
+          "sessions": 100
+        },
+        "candidate": {
+          "fees": 36.68,
+          "fills": 7,
+          "final_equity": 1000188.32,
+          "max_drawdown": 3.156583678187719e-05,
+          "net_return": 0.00018831999999990856,
+          "reconciliation": "PASS",
+          "sessions": 100
+        }
+      },
+      "holdout": {
+        "status": "EVALUATED",
+        "excess_return": 5.9420000000032225e-05,
+        "meets_fixed_thresholds": true,
+        "sample_adequate": true
+      },
+      "holdout_metrics": {
+        "candidate": {
+          "net_return": -2.5590000000019764e-05,
+          "max_drawdown": 2.5590000000019764e-05,
+          "fees": 10.59,
+          "fills": 2,
+          "sessions": 20,
+          "final_equity": 999974.41,
+          "reconciliation": "PASS"
+        },
+        "baseline": {
+          "net_return": -8.501000000005199e-05,
+          "max_drawdown": 8.700999999999848e-05,
+          "fees": 5.01,
+          "fills": 1,
+          "sessions": 20,
+          "final_equity": 999914.99,
+          "reconciliation": "PASS"
+        }
+      },
+      "holdout_used_once": true,
+      "package_verification": "PASS",
+      "data_snapshot": {
+        "bars_csv": "5e258aea45f2c6229aa5dd0bc2d2341cf5f3e0e6d85f84db454a9c2f657dbc71",
+        "calendar_csv": "459d5738ed888f6665f4d3b5125daabe271cd9c1ddbda5a8414069f8d1d897f6",
+        "manifest_sha256": "8b75bd3a311ba49cd0c0876df85565af36d8ffeda120a7b13fc7d1e8e682ff3d",
+        "rules_csv": "a4cac765ed8a79f946542e79ac69ba29448b7b15db99b9ecaf1c2ad65c24190d"
+      },
+      "engine_revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+      "conclusion": "Exploratory protocol/account integration only; corporate events/PIT and real model competence unqualified"
+    },
+    {
+      "case": "600519.SH",
+      "model_evidence": "CONTROLLED_RESPONSE_NOT_LIVE_MODEL",
+      "engine_evidence": "ACTUAL_NATIVE_NAUTILUS_1.231.0",
+      "task_id": "ef1c6b44e9144c12b417f4c72a2abcd6",
+      "package_id": "79a4fb7e83be415a8c6991b4ee0126b3",
+      "status": "COMPLETED_NEGATIVE",
+      "rounds": 2,
+      "calls": 2,
+      "reserved_tokens": 10835,
+      "reported_tokens_known": 1200,
+      "selected_attempt": "6695c470d4d745e89a564d2b0047db12",
+      "selected_rules": {
+        "adaptation": "Shanghai/Shenzhen cash long, historical closed bars, next-bar execution, fixed 100 shares",
+        "assumptions": [
+          "raw-price technical signal",
+          "no standalone claim of PIT or corporate-event completeness"
+        ],
+        "buy": "close > sma(close, 20)",
+        "evidence_ids": [
+          "6e52fbc1dc2f461eb4144c1b097a6414"
+        ],
+        "hypothesis": "Past moving-average timing may improve risk-adjusted exposure; test against equal-share buy-and-hold",
+        "rationale": "Original 20-session rule",
+        "sell": "close < sma(close, 20)",
+        "unsupported_reason": ""
+      },
+      "development": {
+        "excess_return": -0.008694709999999994,
+        "meets_fixed_thresholds": false,
+        "sample_adequate": true
+      },
+      "development_metrics": {
+        "baseline": {
+          "fees": 53.63,
+          "fills": 1,
+          "final_equity": 1002998.37,
+          "max_drawdown": 0.021488134429926142,
+          "net_return": 0.002998370000000028,
+          "reconciliation": "PASS",
+          "sessions": 78
+        },
+        "candidate": {
+          "fees": 1237.34,
+          "fills": 9,
+          "final_equity": 994303.66,
+          "max_drawdown": 0.007898825271491883,
+          "net_return": -0.005696339999999966,
+          "reconciliation": "PASS",
+          "sessions": 78
+        }
+      },
+      "holdout": {
+        "status": "NOT_RUN",
+        "excess_return": null,
+        "meets_fixed_thresholds": null,
+        "sample_adequate": null
+      },
+      "holdout_metrics": {},
+      "holdout_used_once": false,
+      "package_verification": "PASS",
+      "data_snapshot": {
+        "bars_csv": "0e2f72472f7c5c2884e70521ca51e43f5ee7943332f07328484eb99d81847cd4",
+        "calendar_csv": "f64e1ddb3c667de41fe13384cb9726393af163af94de88e5f12e4be34fe4019d",
+        "manifest_sha256": "baacc35e7f6937298fb31e5c44c78a2a9ce481d356ec9c72a61a6730a0543015",
+        "rules_csv": "40f41fefdc66734c81d2eb41ab9b6c08c584e735840e59c8341c2db51c2bd43f"
+      },
+      "engine_revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+      "conclusion": "Exploratory protocol/account integration only; corporate events/PIT and real model competence unqualified"
+    },
+    {
+      "case": "000001.SZ",
+      "model_evidence": "CONTROLLED_RESPONSE_NOT_LIVE_MODEL",
+      "engine_evidence": "ACTUAL_NATIVE_NAUTILUS_1.231.0",
+      "task_id": "cd365c98bbfd477e8a9602b40a8747b7",
+      "package_id": "0b7e535203074e2ca63b95e8e87db1ca",
+      "status": "COMPLETED_RESEARCH",
+      "rounds": 1,
+      "calls": 1,
+      "reserved_tokens": 5155,
+      "reported_tokens_known": 600,
+      "selected_attempt": "e20a2b2bd71d443692bc7fa0a33c338e",
+      "selected_rules": {
+        "adaptation": "Shanghai/Shenzhen cash long, historical closed bars, next-bar execution, fixed 100 shares",
+        "assumptions": [
+          "raw-price technical signal",
+          "no standalone claim of PIT or corporate-event completeness"
+        ],
+        "buy": "close > sma(close, 20)",
+        "evidence_ids": [
+          "6e52fbc1dc2f461eb4144c1b097a6414"
+        ],
+        "hypothesis": "Past moving-average timing may improve risk-adjusted exposure; test against equal-share buy-and-hold",
+        "rationale": "Original 20-session rule",
+        "sell": "close < sma(close, 20)",
+        "unsupported_reason": ""
+      },
+      "development": {
+        "excess_return": 5.232999999993382e-05,
+        "meets_fixed_thresholds": true,
+        "sample_adequate": true
+      },
+      "development_metrics": {
+        "baseline": {
+          "fees": 5.01,
+          "fills": 1,
+          "final_equity": 999878.99,
+          "max_drawdown": 0.0003049576139412258,
+          "net_return": -0.00012100999999997697,
+          "reconciliation": "PASS",
+          "sessions": 78
+        },
+        "candidate": {
+          "fees": 22.68,
+          "fills": 4,
+          "final_equity": 999931.32,
+          "max_drawdown": 7.966912443635454e-05,
+          "net_return": -6.868000000004315e-05,
+          "reconciliation": "PASS",
+          "sessions": 78
+        }
+      },
+      "holdout": {
+        "status": "EVALUATED",
+        "excess_return": 6.744000000014072e-05,
+        "meets_fixed_thresholds": true,
+        "sample_adequate": true
+      },
+      "holdout_metrics": {
+        "candidate": {
+          "net_return": -5.556999999989376e-05,
+          "max_drawdown": 0.00010628479310803574,
+          "fees": 22.57,
+          "fills": 4,
+          "sessions": 20,
+          "final_equity": 999944.43,
+          "reconciliation": "PASS"
+        },
+        "baseline": {
+          "net_return": -0.00012301000000003448,
+          "max_drawdown": 0.00017199157413283483,
+          "fees": 5.01,
+          "fills": 1,
+          "sessions": 20,
+          "final_equity": 999876.99,
+          "reconciliation": "PASS"
+        }
+      },
+      "holdout_used_once": true,
+      "package_verification": "PASS",
+      "data_snapshot": {
+        "bars_csv": "c0c83f99e08c281ee3c7bd9054d5e44ff4d0f1c437a7c1c04547cc857cbcaaeb",
+        "calendar_csv": "f64e1ddb3c667de41fe13384cb9726393af163af94de88e5f12e4be34fe4019d",
+        "manifest_sha256": "1c99671f0817d117be970d1f3ddcd2624efb24f1c5729cdbae5799401e8c36e7",
+        "rules_csv": "43e8a09e8a5932f69d4c565435fbb8529e96d1d5d66a14f6a14f56c3ff9b6e6a"
+      },
+      "engine_revision": "b8d424df1a7c7c65b29eaab1be667a5368c8be5c",
+      "conclusion": "Exploratory protocol/account integration only; corporate events/PIT and real model competence unqualified"
+    }
+  ]
+}
